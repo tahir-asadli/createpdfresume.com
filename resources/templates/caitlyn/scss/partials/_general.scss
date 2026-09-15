@@ -1,0 +1,61 @@
+@import "colors";
+
+.bold,
+.bold span {
+    font-weight: bold;
+}
+.italic,
+.italic span {
+    font-style: italic;
+}
+.underline,
+.underline span {
+    text-decoration: underline;
+}
+.strikethrough,
+.strikethrough span {
+    text-decoration: line-through;
+}
+
+.uppercase,
+.uppercase span {
+    text-transform: uppercase;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+figure {
+    margin: 0;
+}
+
+ul {
+    li {
+        &.align-right {
+            justify-content: flex-end;
+        }
+        &.align-center {
+            justify-content: center;
+        }
+    }
+}
+
+ol {
+    li {
+        &.align-right {
+            justify-content: flex-end;
+        }
+        &.align-center {
+            justify-content: center;
+        }
+    }
+}

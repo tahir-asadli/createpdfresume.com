@@ -1,0 +1,1372 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+$style_dark_bg: #2c2829;
+$style_dark_fr: #555454;
+$style_dark_text: white;
+$style_dark_border: white;
+
+$style_pink_bg: #ffaeae;
+$style_pink_fr: #a40c0c;
+$style_pink_text: #a40c0c;
+$style_pink_border: white;
+
+$style_coffee_bg: #ecd9cd;
+$style_coffee_fr: #4e1f00;
+$style_coffee_text: #4e1f00;
+$style_coffee_border: #ae7f61;
+$style_coffee_white: #ffffff;
+
+$style_tennis_bg: #e6e6d6;
+$style_tennis_fr: #cbe399;
+$style_tennis_text: #466233;
+$style_tennis_border: #466233;
+$style_tennis_white: #ffffff;
+$style_tennis_blue: #75bad6;
+
+$style_cream_bg: #fceade;
+$style_cream_fr: #040000;
+$style_cream_text: #2350ab;
+$style_cream_border: #c7dde6;
+$style_cream_white: #ffffff;
+$style_cream_blue: #75bad6;
+
+$style_red_bg: #dd4220;
+$style_red_text: #fff;
+$style_red_border: #a6270b;
+
+$style_blue_bg: #0c4cc6;
+$style_blue_fr: #1c5dd9;
+$style_blue_text: #fff;
+
+$style_green_bg: #ffefcb;
+$style_green_fr: #033b0e;
+$style_green_text: #033b0e;
+$style_green_border: #ead8b0;
+$style_green_border: #52865c;
+
+html.template.pdf,
+.html.pdf {
+    background-color: $background_color;
+    body {
+        background-color: $background_color;
+    }
+}
+
+html.template.pdf.dark,
+.html.pdf.dark {
+    background-color: $style_dark_bg;
+    body.dark {
+        background-color: $style_dark_bg;
+    }
+}
+body.template.dark,
+.body.dark {
+    background-color: $style_dark_bg;
+    color: $style_dark_text;
+    .css-circles i {
+        border: solid 1px $style_dark_fr;
+    }
+    .css-lines i {
+        background-color: $style_dark_fr;
+    }
+    a {
+        color: $style_dark_text;
+    }
+    p {
+        color: $style_dark_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_dark_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_dark_text;
+        &::marker {
+            color: $style_dark_text;
+        }
+    }
+    .page {
+        background-color: $style_dark_bg;
+        color: $style_dark_text;
+        p {
+            color: $style_dark_text;
+        }
+        a {
+            color: $style_dark_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_dark_text;
+                span:nth-child(2) {
+                    color: $red;
+                }
+            }
+
+            &.job_title {
+                border: solid 2px $style_dark_text;
+                span:last-of-type {
+                    background: $style_dark_text;
+                    &:before,
+                    &:after {
+                        border-top: solid 2px $style_dark_text;
+                    }
+                }
+            }
+
+            &.experiences {
+                .experiences {
+                    .experience_item {
+                        .experience_years {
+                            background: $red;
+                        }
+                    }
+                }
+            }
+
+            &.educations {
+                .section-title {
+                    padding-bottom: 20px;
+                }
+                .educations {
+                    .education_item {
+                        border: solid 1.5px $style_dark_border;
+                    }
+                }
+            }
+
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_dark_text;
+                            svg {
+                                color: $style_dark_bg;
+                                fill: $style_dark_bg;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.projects {
+                .projects {
+                    .project_item {
+                        a {
+                            color: $style_dark_text;
+                        }
+                        div.project_year {
+                            background: $red;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            &.references {
+                border: solid 1.5px $style_dark_border;
+                .references {
+                    .reference_item {
+                        i {
+                            svg {
+                                color: $style_dark_text;
+                                fill: $style_dark_text;
+                            }
+                        }
+                        svg {
+                            color: $style_dark_text;
+                            fill: $style_dark_text;
+                        }
+                    }
+                }
+            }
+
+            &.awards {
+                .awards {
+                    .award_item {
+                        a {
+                            color: $style_dark_text;
+                        }
+                    }
+                }
+            }
+
+            &.hobbies {
+                .hobbies {
+                    background-color: $style_dark_text;
+                    .hobby_item {
+                        color: $style_dark_bg;
+                    }
+                }
+            }
+            &.certificates {
+                .certificates {
+                    .certificate_year {
+                        background: $red;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .section.sidebar,
+        .section.header-left,
+        .section.footer-left {
+            .widget.hobbies {
+                .hobbies {
+                    background-color: transparent;
+                    .hobby_item {
+                        color: $style_dark_text;
+                        svg {
+                            color: $style_dark_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.pink,
+.html.pdf.pink {
+    background-color: $style_pink_bg;
+    body.pink,
+    .body.pink {
+        background-color: $style_pink_bg;
+    }
+}
+html.template body.pink,
+.html .body.pink {
+    color: $style_pink_text;
+    .css-circles i {
+        border: solid 1px $style_pink_fr;
+    }
+    .css-lines i {
+        background-color: $style_pink_fr;
+    }
+    a {
+        color: $style_pink_text;
+    }
+    p {
+        color: $style_pink_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_pink_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_pink_text;
+        &::marker {
+            color: $style_pink_text;
+        }
+    }
+    .page {
+        background-color: $style_pink_bg;
+        color: $style_pink_text;
+        p {
+            color: $style_pink_text;
+        }
+        a {
+            color: $red;
+        }
+        .widget {
+            &.fullname {
+                color: $style_pink_text;
+                span:nth-child(2) {
+                    color: $red;
+                }
+            }
+
+            &.job_title {
+                border: solid 2px $style_pink_text;
+                span:last-of-type {
+                    background: $style_pink_text;
+                    &:before,
+                    &:after {
+                        border-top: solid 2px $style_pink_text;
+                    }
+                }
+            }
+
+            &.experiences {
+                .experiences {
+                    .experience_item {
+                        .experience_years {
+                            background: $red;
+                        }
+                    }
+                }
+            }
+
+            &.educations {
+                .section-title {
+                    padding-bottom: 20px;
+                }
+                .educations {
+                    .education_item {
+                        border: solid 1.5px $style_pink_text;
+                    }
+                }
+            }
+
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_pink_text;
+                            svg {
+                                color: $style_pink_border;
+                                fill: $style_pink_border;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.projects {
+                .projects {
+                    .project_item {
+                        a {
+                            color: $style_pink_text;
+                        }
+                        div.project_year {
+                            background: $red;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            &.references {
+                border: solid 1.5px $style_pink_text;
+                .references {
+                    .reference_item {
+                        i {
+                            svg {
+                                color: $style_pink_text;
+                                fill: $style_pink_text;
+                            }
+                        }
+                        svg {
+                            color: $style_pink_text;
+                            fill: $style_pink_text;
+                        }
+                    }
+                }
+            }
+
+            &.awards {
+                .awards {
+                    .award_item {
+                        a {
+                            color: $style_pink_text;
+                        }
+                    }
+                }
+            }
+
+            &.hobbies {
+                .hobbies {
+                    background-color: $style_pink_text;
+                    .hobby_item {
+                        color: $style_pink_border;
+                    }
+                }
+            }
+            &.certificates {
+                .certificates {
+                    .certificate_year {
+                        background: $red;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .section.sidebar,
+        .section.header-left,
+        .section.footer-left {
+            .widget.hobbies {
+                .hobbies {
+                    background-color: transparent;
+                    .hobby_item {
+                        color: $style_pink_text;
+                        svg {
+                            color: $style_pink_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.coffee {
+    background-color: $style_coffee_bg;
+    body.coffee {
+        background-color: $style_coffee_bg;
+    }
+}
+body.template.coffee,
+.body.coffee {
+    color: $style_coffee_text;
+    .css-circles i {
+        border: solid 1px $style_coffee_border;
+    }
+    .css-lines i {
+        background-color: $style_coffee_border;
+    }
+    a {
+        color: $style_coffee_text;
+    }
+    p {
+        color: $style_coffee_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_coffee_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_coffee_text;
+        &::marker {
+            color: $style_coffee_text;
+        }
+    }
+    .page {
+        background-color: $style_coffee_bg;
+        color: $style_coffee_text;
+        p {
+            color: $style_coffee_text;
+        }
+        a {
+            color: $style_coffee_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_coffee_text;
+                span:nth-child(2) {
+                    color: $style_coffee_border;
+                }
+            }
+
+            &.job_title {
+                border: solid 2px $style_coffee_border;
+                span:last-of-type {
+                    background: $style_coffee_border;
+                    &:before,
+                    &:after {
+                        border-top: solid 2px $style_coffee_border;
+                    }
+                }
+            }
+
+            &.experiences {
+                .experiences {
+                    .experience_item {
+                        .experience_years {
+                            background: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress {
+                            background: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+
+            &.references {
+                border: solid 1.5px $style_coffee_border;
+                .references {
+                    .reference_item {
+                        i {
+                            svg {
+                                color: $style_coffee_text;
+                                fill: $style_coffee_text;
+                            }
+                        }
+                        svg {
+                            color: $style_coffee_text;
+                            fill: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+            &.educations {
+                .section-title {
+                    padding-bottom: 20px;
+                }
+                .educations {
+                    .education_item {
+                        border: solid 1.5px $style_coffee_border;
+                        .education_years {
+                            background: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_coffee_text;
+                            svg {
+                                color: $style_coffee_white;
+                                fill: $style_coffee_white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.projects {
+                .projects {
+                    .project_item {
+                        a {
+                            color: $style_coffee_text;
+                        }
+                        div.project_year {
+                            background: $style_coffee_text;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            &.awards {
+                .awards {
+                    .award_item {
+                        a {
+                            color: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+
+            &.hobbies {
+                .hobbies {
+                    background-color: $style_coffee_text;
+                    .hobby_item {
+                        color: $style_coffee_white;
+                    }
+                }
+            }
+            &.certificates {
+                .certificates {
+                    .certificate_year {
+                        background: $style_coffee_text;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .section.sidebar,
+        .section.header-left,
+        .section.footer-left {
+            .widget.hobbies {
+                .hobbies {
+                    background-color: transparent;
+                    .hobby_item {
+                        color: $style_coffee_text;
+                        svg {
+                            color: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.tennis,
+.html.pdf.tennis {
+    background-color: $style_tennis_bg;
+    body.tennis {
+        background-color: $style_tennis_bg;
+    }
+}
+body.template.tennis,
+.body.tennis {
+    color: $style_tennis_text;
+    .css-circles i {
+        border: solid 1px $style_tennis_fr;
+    }
+    .css-lines i {
+        background-color: $style_tennis_fr;
+    }
+    a {
+        color: $style_tennis_text;
+    }
+    p {
+        color: $style_tennis_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_tennis_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_tennis_text;
+        &::marker {
+            color: $style_tennis_text;
+        }
+    }
+    .page {
+        background-color: $style_tennis_bg;
+        color: $style_tennis_text;
+        p {
+            color: $style_tennis_text;
+        }
+        a {
+            color: $style_tennis_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_tennis_text;
+                span:nth-child(2) {
+                    color: $style_tennis_blue;
+                }
+            }
+
+            &.job_title {
+                border: solid 2px $style_tennis_border;
+                span:last-of-type {
+                    background: $style_tennis_border;
+                    &:before,
+                    &:after {
+                        border-top: solid 2px $style_tennis_border;
+                    }
+                }
+            }
+
+            &.experiences {
+                .experiences {
+                    .experience_item {
+                        .experience_years {
+                            background: $style_tennis_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress {
+                            background: $style_tennis_text;
+                        }
+                    }
+                }
+            }
+
+            &.references {
+                border: solid 1.5px $style_tennis_border;
+            }
+            &.educations {
+                .section-title {
+                    padding-bottom: 20px;
+                }
+                .educations {
+                    .education_item {
+                        border: solid 1.5px $style_tennis_border;
+                        .education_years {
+                            background: $style_tennis_text;
+                        }
+                    }
+                }
+            }
+
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_tennis_text;
+                            svg {
+                                color: $style_tennis_white;
+                                fill: $style_tennis_white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.projects {
+                .projects {
+                    .project_item {
+                        a {
+                            color: $style_tennis_text;
+                        }
+                        div.project_year {
+                            background: $style_tennis_text;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            &.references {
+                .references {
+                    .reference_item {
+                        i {
+                            svg {
+                                color: $style_tennis_text;
+                                fill: $style_tennis_text;
+                            }
+                        }
+                        svg {
+                            color: $style_tennis_text;
+                            fill: $style_tennis_text;
+                        }
+                    }
+                }
+            }
+
+            &.awards {
+                .awards {
+                    .award_item {
+                        a {
+                            color: $style_tennis_text;
+                        }
+                    }
+                }
+            }
+
+            &.hobbies {
+                .hobbies {
+                    background-color: $style_tennis_text;
+                    .hobby_item {
+                        color: $style_tennis_white;
+                    }
+                }
+            }
+            &.certificates {
+                .certificates {
+                    .certificate_year {
+                        background: $style_tennis_text;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .section.sidebar,
+        .section.header-left,
+        .section.footer-left {
+            .widget.hobbies {
+                .hobbies {
+                    background-color: transparent;
+                    .hobby_item {
+                        color: $style_tennis_text;
+                        svg {
+                            color: $style_tennis_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.cream,
+.html.pdf.cream {
+    background-color: $style_cream_bg;
+    body.cream {
+        background-color: $style_cream_bg;
+    }
+}
+body.template.cream,
+.body.cream {
+    color: $style_cream_text;
+    .css-circles i {
+        border: solid 1px $style_cream_border;
+    }
+    .css-lines i {
+        background-color: $style_cream_border;
+    }
+    a {
+        color: $style_cream_text;
+    }
+    p {
+        color: $style_cream_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_cream_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_cream_text;
+        &::marker {
+            color: $style_cream_text;
+        }
+    }
+    .page {
+        background-color: $style_cream_bg;
+        color: $style_cream_text;
+        p {
+            color: $style_cream_text;
+        }
+        a {
+            color: $style_cream_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_cream_text;
+                span:nth-child(2) {
+                    color: $style_cream_blue;
+                }
+            }
+
+            &.job_title {
+                border: solid 2px $style_cream_border;
+                span:last-of-type {
+                    background: $style_cream_border;
+                    &:before,
+                    &:after {
+                        border-top: solid 2px $style_cream_border;
+                    }
+                }
+            }
+
+            &.experiences {
+                .experiences {
+                    .experience_item {
+                        .experience_years {
+                            background: $style_cream_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress {
+                            background: $style_cream_text;
+                        }
+                    }
+                }
+            }
+
+            &.references {
+                border: solid 1.5px $style_cream_border;
+            }
+            &.educations {
+                .section-title {
+                    padding-bottom: 20px;
+                }
+                .educations {
+                    .education_item {
+                        border: solid 1.5px $style_cream_border;
+                        .education_years {
+                            background: $style_cream_text;
+                        }
+                    }
+                }
+            }
+
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_cream_text;
+                            svg {
+                                color: $style_cream_white;
+                                fill: $style_cream_white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.projects {
+                .projects {
+                    .project_item {
+                        a {
+                            color: $style_cream_text;
+                        }
+                        div.project_year {
+                            background: $style_cream_text;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            &.references {
+                .references {
+                    .reference_item {
+                        i {
+                            svg {
+                                color: $style_cream_text;
+                                fill: $style_cream_text;
+                            }
+                        }
+                        svg {
+                            color: $style_cream_text;
+                            fill: $style_cream_text;
+                        }
+                    }
+                }
+            }
+            &.awards {
+                .awards {
+                    .award_item {
+                        a {
+                            color: $style_cream_text;
+                        }
+                    }
+                }
+            }
+
+            &.hobbies {
+                .hobbies {
+                    background-color: $style_cream_text;
+                    .hobby_item {
+                        color: $style_cream_white;
+                    }
+                }
+            }
+            &.certificates {
+                .certificates {
+                    .certificate_year {
+                        background: $style_cream_text;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .section.sidebar,
+        .section.header-left,
+        .section.footer-left {
+            .widget.hobbies {
+                .hobbies {
+                    background-color: transparent;
+                    .hobby_item {
+                        color: $style_cream_text;
+                        svg {
+                            color: $style_cream_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.green {
+    background-color: $style_green_bg;
+    body.green {
+        background-color: $style_green_bg;
+    }
+}
+body.template.green,
+.body.green {
+    color: $style_green_text;
+    .css-circles i {
+        border: solid 1px $style_green_border;
+    }
+    .css-lines i {
+        background-color: $style_green_border;
+    }
+    a {
+        color: $style_green_text;
+    }
+    p {
+        color: $style_green_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_green_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_green_text;
+        &::marker {
+            color: $style_green_text;
+        }
+    }
+    .page {
+        background-color: $style_green_bg;
+        color: $style_green_text;
+        p {
+            color: $style_green_text;
+        }
+        a {
+            color: $style_green_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_green_text;
+                span:nth-child(2) {
+                    color: $style_green_border;
+                }
+            }
+
+            &.job_title {
+                border: solid 2px $style_green_border;
+                span:last-of-type {
+                    background: $style_green_border;
+                    &:before,
+                    &:after {
+                        border-top: solid 2px $style_green_border;
+                    }
+                }
+            }
+
+            &.experiences {
+                .experiences {
+                    .experience_item {
+                        .experience_years {
+                            background: $style_green_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress {
+                            background: $style_green_text;
+                        }
+                    }
+                }
+            }
+
+            &.references {
+                border: solid 1.5px $style_green_border;
+                .references {
+                    .reference_item {
+                        i {
+                            svg {
+                                color: $style_green_text;
+                                fill: $style_green_text;
+                            }
+                        }
+                        svg {
+                            color: $style_green_text;
+                            fill: $style_green_text;
+                        }
+                    }
+                }
+            }
+            &.educations {
+                .section-title {
+                    padding-bottom: 20px;
+                }
+                .educations {
+                    .education_item {
+                        border: solid 1.5px $style_green_border;
+                        .education_years {
+                            background: $style_green_text;
+                        }
+                    }
+                }
+            }
+
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_green_text;
+                            svg {
+                                // color: $style_green_white;
+                                // fill: $style_green_white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.projects {
+                .projects {
+                    .project_item {
+                        a {
+                            color: $style_green_text;
+                        }
+                        div.project_year {
+                            background: $style_green_text;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            &.awards {
+                .awards {
+                    .award_item {
+                        a {
+                            color: $style_green_text;
+                        }
+                    }
+                }
+            }
+
+            &.hobbies {
+                .hobbies {
+                    background-color: $style_green_text;
+                    .hobby_item {
+                        // color: $style_green_white;
+                    }
+                }
+            }
+            &.certificates {
+                .certificates {
+                    .certificate_year {
+                        background: $style_green_text;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .section.sidebar,
+        .section.header-left,
+        .section.footer-left {
+            .widget.hobbies {
+                .hobbies {
+                    background-color: transparent;
+                    .hobby_item {
+                        color: $style_green_text;
+                        svg {
+                            color: $style_green_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.red {
+    background-color: $style_red_bg;
+    body.red {
+        background-color: $style_red_bg;
+    }
+}
+body.template.red,
+.body.red {
+    color: $style_red_text;
+    .css-circles i {
+        border: solid 1px $style_red_border;
+    }
+    .css-lines i {
+        background-color: $style_red_border;
+    }
+    a {
+        color: $style_red_text;
+    }
+    p {
+        color: $style_red_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_red_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_red_text;
+        &::marker {
+            color: $style_red_text;
+        }
+    }
+    .page {
+        background-color: $style_red_bg;
+        color: $style_red_text;
+        p {
+            color: $style_red_text;
+        }
+        a {
+            color: $style_red_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_red_text;
+                span:nth-child(2) {
+                    color: $style_red_border;
+                }
+            }
+
+            &.job_title {
+                border: solid 2px $style_red_border;
+                span:last-of-type {
+                    background: $style_red_border;
+                    &:before,
+                    &:after {
+                        border-top: solid 2px $style_red_border;
+                    }
+                }
+            }
+
+            &.experiences {
+                .experiences {
+                    .experience_item {
+                        .experience_years {
+                            background: $style_red_text;
+                            color: $style_red_border;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress {
+                            background: $style_red_text;
+                            span {
+                                color: $style_red_border;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.references {
+                border: solid 1.5px $style_red_border;
+                .references {
+                    .reference_item {
+                        i {
+                            svg {
+                                color: $style_red_text;
+                                fill: $style_red_text;
+                            }
+                        }
+                        svg {
+                            color: $style_red_text;
+                            fill: $style_red_text;
+                        }
+                    }
+                }
+            }
+            &.educations {
+                .section-title {
+                    padding-bottom: 20px;
+                }
+                .educations {
+                    .education_item {
+                        border: solid 1.5px $style_red_border;
+                        .education_years {
+                            background: $style_red_text;
+                            color: $style_red_border;
+                        }
+                    }
+                }
+            }
+
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_red_text;
+                            svg {
+                                color: $style_red_border;
+                                fill: $style_red_border;
+                                // color: $style_red_white;
+                                // fill: $style_red_white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.projects {
+                .projects {
+                    .project_item {
+                        a {
+                            color: $style_red_text;
+                        }
+                        div.project_year {
+                            background: $style_red_text;
+                            color: $style_red_border;
+                        }
+                    }
+                }
+            }
+
+            &.awards {
+                .awards {
+                    .award_item {
+                        a {
+                            color: $style_red_text;
+                        }
+                    }
+                }
+            }
+
+            &.hobbies {
+                .hobbies {
+                    background-color: $style_red_text;
+                    .hobby_item {
+                        color: $style_red_border;
+                    }
+                }
+            }
+            &.certificates {
+                .certificates {
+                    .certificate_year {
+                        background: $style_red_text;
+                        color: $style_red_border;
+                    }
+                }
+            }
+        }
+        .section.sidebar,
+        .section.header-left,
+        .section.footer-left {
+            .widget.hobbies {
+                .hobbies {
+                    background-color: transparent;
+                    .hobby_item {
+                        color: $style_red_text;
+                        svg {
+                            color: $style_red_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// green
+// red
+// maroon

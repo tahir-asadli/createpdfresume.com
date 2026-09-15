@@ -1,0 +1,24 @@
+@use "./partials/_colors" as *;
+@use "./partials/_general" as *;
+@use "./partials/_widgets" as *;
+@use "./partials/_styles" as *;
+* {
+    box-sizing: border-box;
+}
+
+html.template,
+.html,
+body.template,
+.body {
+    margin: 0;
+    background: $background_color;
+    background-image: url("https://createpdfresume.com/images/textures/paper-bg.jpg");
+    background-size: cover;
+    background-blend-mode: lighten;
+    .page {
+        background-color: $background_color;
+        background-image: url("https://createpdfresume.com/images/textures/paper-bg.jpg");
+        background-size: cover;
+        background-blend-mode: lighten;
+    }
+}

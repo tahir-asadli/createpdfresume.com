@@ -1,0 +1,117 @@
+// .section.header {
+//     .widget {
+//         margin: 0;
+//     }
+// }
+
+// .section.sidebar {
+//     ul {
+//         li {
+//             &:before {
+//                 background: $black;
+//             }
+//         }
+//     }
+// }
+
+// #page-2,
+// #page-3,
+// #page-4,
+// #page-5,
+// #page-6 {
+//     .section.content {
+//         border-top: none;
+//     }
+// }
+
+.section {
+    padding: 20px 0;
+    &.full {
+        grid-column: 1/-1;
+        // padding: 0 0 20px 0;
+        > *:first-child:not(.section-name) {
+            margin: 0 0 0 0 !important;
+        }
+    }
+    &.header-left,
+    &.header-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .widget {
+            display: block;
+            padding: 0;
+            h3 {
+                display: none;
+            }
+            &.job_title {
+                font-weight: 300;
+            }
+            &.contacts {
+                .contacts {
+                    flex-wrap: wrap;
+                    gap: 40px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    // &.sidebar {
+    //     .widget {
+    //         &.contacts {
+    //             .contacts {
+    //                 grid-template-columns: 1fr;
+    //             }
+    //         }
+    //         &.socials {
+    //             .socials {
+    //                 grid-template-columns: 1fr;
+    //             }
+    //         }
+    //         &.experiences {
+    //             .experiences {
+    //                 grid-template-columns: 1fr;
+    //             }
+    //         }
+    //         &.educations {
+    //             .educations {
+    //                 grid-template-columns: 1fr;
+    //             }
+    //         }
+    //         &.projects {
+    //             .projects {
+    //                 grid-template-columns: 1fr;
+    //             }
+    //         }
+    //         &.awards {
+    //             .awards {
+    //                 grid-template-columns: 1fr;
+    //             }
+    //         }
+    //         &.certificates {
+    //             .certificates {
+    //                 grid-template-columns: 1fr;
+    //             }
+    //         }
+    //         &.references {
+    //             .references {
+    //                 grid-template-columns: 1fr;
+    //             }
+    //         }
+    //     }
+    // }
+    // &.sidebar {
+    //     .widget.references {
+    //         .references {
+    //             gap: 10px;
+    //             grid-template-columns: 1fr;
+    //             .reference_item {
+    //                 border-bottom: solid 1px rgba($black, 0.1);
+    //                 border-right: none;
+    //                 padding-bottom: 10px;
+    //             }
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,107 @@
+
+body.bg {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #ccc;
+}
+
+body.bg > * {
+    opacity: 0.5;
+}
+.canvas-container {
+    width: 100%;
+    background: #fff;
+    background-image: linear-gradient(#f1f4f6 1px, transparent 0.1em),
+        linear-gradient(90deg, #f1f4f6 1px, transparent 0.1em);
+    background-size: 20px 20px;
+    height: 100vh;
+}
+.canvas {
+    width: 100%;
+    padding: 20px;
+    column-gap: 40px;
+    row-gap: 40px;
+    padding-top: 30px;
+}
+.preview {
+    width: 804px;
+    background: repeating-linear-gradient(
+        45deg,
+        #ee8c7c,
+        #ee8c7c 10px,
+        #e8644f 10px,
+        #e8644f 20px
+    );
+    background: repeating-linear-gradient(
+        45deg,
+        #eee,
+        #eee 10px,
+        #ddd 10px,
+        #ddd 20px
+    );
+    padding: 15px;
+}
+.preview img {
+    border-radius: 5px;
+}
+@layer base {
+    body {
+        @apply text-black;
+    }
+    button,
+    .button {
+        @apply focus:ring-4 focus:ring-pinkLight/20 focus:border-darkOrange/30  focus-visible:ring-4 focus-visible:ring-pinkLight/20 focus-visible:border-darkOrange/30 outline-none focus:outline-none;
+    }
+}
+@layer components {
+    .v-seperator {
+        @apply border-r border-[#cfd5dc] h-full;
+    }
+    .button {
+        @apply border border-[#ccd1da] text-[#09162f] rounded-xl pl-6 pr-5 py-3.5 inline-flex gap-3 items-center text-[20px] font-[600] leading-none  shadow-cs focus:ring-4 focus:ring-pinkLight/20 focus:border-darkOrange/30
+        /* #6e3fd4 */;
+    }
+    .shadow-cs {
+        box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.1);
+    }
+    .button svg {
+        @apply text-[#fb2e0c];
+    }
+    .section {
+        @apply flex flex-col gap-4 relative border-2 px-3 py-4 border-dashed rounded-md border-gray-400/30;
+    }
+    .block {
+        @apply bg-white p-2 relative rounded-lg shadow hover:shadow-md border border-gray-200;
+    }
+    .block-title {
+        @apply flex items-center gap-2 font-semibold text-darkGrey cursor-pointer select-none;
+    }
+    .block-title-text {
+        @apply text-clip overflow-hidden flex-shrink h-[25px];
+    }
+    .block-icon {
+        @apply text-white bg-black rounded p-1 -ml-8 group-hover:ml-0 relative transition-all duration-300;
+    }
+    .block-icon svg {
+        @apply w-4 h-4;
+    }
+    .block-handle {
+        @apply text-gray-600 opacity-0 cursor-pointer flex-shrink-0;
+    }
+    .block-expand {
+        @apply ml-auto opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all group-hover:bg-gray-400/20 rounded-full p-1 cursor-pointer select-none focus:opacity-100;
+    }
+    .block-settings {
+        @apply py-2;
+    }
+    .content {
+        @apply bg-white p-2 rounded-xl pt-10 relative z-[2];
+    }
+    .title {
+        @apply text-xl font-semibold text-gray-600 mb-5;
+    }
+
+    .text-input {
+        @apply border border-gray-300 rounded w-full py-1.5 px-3 focus:ring-4 focus:ring-pinkLight/20 focus:border-darkOrange/30;
+    }
+}

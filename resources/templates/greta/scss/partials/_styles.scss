@@ -1,0 +1,207 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+html.template.pdf.dark,
+.html.pdf.dark {
+    --color-background: #333333;
+    body.dark {
+        --color-background: #333333;
+    }
+}
+body.template.dark,
+.body.dark {
+    --color-background: #333333;
+    --color-text-primary: #ffffff;
+    --color-section-title-dot-border: var(--color-background);
+    --color-icon-bg: #626262;
+    --color-section-title-dot: #535353;
+    --color-hobbie-color: #848484;
+    --color-progress-bg: var(--color-text-secondary);
+    --color-progress-fr: #cccccc;
+    --color-heading-1: #cccccc;
+}
+
+html.template.pdf.pink,
+.html.pdf.pink {
+    --color-background: #ff69b4;
+    body.pink {
+        --color-background: #ff69b4;
+    }
+}
+body.template.pink,
+.body.pink {
+    --color-background: #ff69b4;
+    --color-text-primary: #80164b;
+    --color-primary: #80164b;
+    --color-section-title-dot-border: #ff7ebe;
+    --color-section-title-dot: #ea1f84;
+    --color-icon-bg: #c1176c;
+    --color-hobbie-color: #80164b;
+    --color-progress-bg: #ffacd6;
+    --color-progress-fr: #80164b;
+    --color-border: #80164b;
+    --color-heading-1: #ffffff;
+
+    .section.sidebar:before,
+    .section.sidebar:after {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 8' width='3' height='8'%3E%3Cstyle%3E .s0 %7B opacity: .7;fill: %2380164b %7D %3C/style%3E%3Cpath id='Shape 1' fill-rule='evenodd' class='s0' d='m1.5 3c-0.83 0-1.5-0.67-1.5-1.5 0-0.83 0.67-1.5 1.5-1.5 0.83 0 1.5 0.67 1.5 1.5 0 0.83-0.67 1.5-1.5 1.5z'/%3E%3C/svg%3E");
+    }
+}
+
+html.template.pdf.coffee,
+.html.pdf.coffee {
+    --color-background: #ae7f61;
+    body.coffee {
+        --color-background: #ae7f61;
+    }
+}
+body.template.coffee,
+.body.coffee {
+    --color-background: #ae7f61;
+    --color-text-primary: #443328;
+    --color-primary: #443328;
+    --color-section-title-dot-border: #996849;
+    --color-section-title-dot: #443328;
+    --color-icon-bg: #996849;
+    --color-hobbie-color: #443328;
+    --color-progress-bg: #996849;
+    --color-progress-fr: #443328;
+    --color-border: #443328;
+    --color-heading-1: #ffffff;
+    .section.sidebar:before,
+    .section.sidebar:after {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 8' width='3' height='8'%3E%3Cstyle%3E .s0 %7B opacity: .7;fill: %23443328 %7D %3C/style%3E%3Cpath id='Shape 1' fill-rule='evenodd' class='s0' d='m1.5 3c-0.83 0-1.5-0.67-1.5-1.5 0-0.83 0.67-1.5 1.5-1.5 0.83 0 1.5 0.67 1.5 1.5 0 0.83-0.67 1.5-1.5 1.5z'/%3E%3C/svg%3E");
+    }
+}
+
+html.template.pdf.tennis,
+.html.pdf.tennis {
+    --color-background: #cbe399;
+    body.tennis {
+        --color-background: #cbe399;
+    }
+}
+body.template.tennis,
+.body.tennis {
+    --color-background: #cbe399;
+    --color-text-primary: #466a2d;
+    --color-primary: #466a2d;
+    --color-section-title-dot-border: #bad286;
+    --color-section-title-dot: #466233;
+    --color-icon-bg: #466233;
+    --color-hobbie-color: #466233;
+    --color-progress-bg: #bad286;
+    --color-progress-fr: #466233;
+    --color-border: #466233;
+    --color-heading-1: #ffffff;
+    .section.sidebar:before,
+    .section.sidebar:after {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 8' width='3' height='8'%3E%3Cstyle%3E .s0 %7B opacity: .7;fill: %23466233 %7D %3C/style%3E%3Cpath id='Shape 1' fill-rule='evenodd' class='s0' d='m1.5 3c-0.83 0-1.5-0.67-1.5-1.5 0-0.83 0.67-1.5 1.5-1.5 0.83 0 1.5 0.67 1.5 1.5 0 0.83-0.67 1.5-1.5 1.5z'/%3E%3C/svg%3E");
+    }
+}
+
+html.template.pdf.cream,
+.html.pdf.cream {
+    --color-background: #fff9c9;
+    body.cream {
+        --color-background: #fff9c9;
+    }
+}
+body.template.cream,
+.body.cream {
+    --color-background: #fff9c9;
+    --color-text-primary: #0a307b;
+    --color-primary: #0a307b;
+    --color-section-title-dot-border: #dfe4ec;
+    --color-section-title-dot: #2350ab;
+    --color-icon-bg: #0a307b;
+    --color-hobbie-color: #0a307b;
+    --color-progress-bg: #d2dcf2;
+    --color-progress-fr: #0a307b;
+    --color-border: #2350ab;
+    --color-heading-1: #0a307b;
+    .section.sidebar:before,
+    .section.sidebar:after {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 8' width='3' height='8'%3E%3Cstyle%3E .s0 %7B opacity: .7;fill: %232350ab %7D %3C/style%3E%3Cpath id='Shape 1' fill-rule='evenodd' class='s0' d='m1.5 3c-0.83 0-1.5-0.67-1.5-1.5 0-0.83 0.67-1.5 1.5-1.5 0.83 0 1.5 0.67 1.5 1.5 0 0.83-0.67 1.5-1.5 1.5z'/%3E%3C/svg%3E");
+    }
+}
+
+html.template.pdf.green,
+.html.pdf.green {
+    --color-background: #53ae65;
+    body.green {
+        --color-background: #53ae65;
+    }
+}
+body.template.green,
+.body.green {
+    --color-background: #53ae65;
+    --color-text-primary: #1e5129;
+    --color-primary: #1e5129;
+    --color-section-title-dot-border: #5db970;
+    --color-section-title-dot: #1e5129;
+    --color-icon-bg: #1e5129;
+    --color-hobbie-color: #1e5129;
+    --color-progress-bg: #159932;
+    --color-progress-fr: #1e5129;
+    --color-border: #1e5129;
+    --color-heading-1: #ffffff;
+    .section.sidebar:before,
+    .section.sidebar:after {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 8' width='3' height='8'%3E%3Cstyle%3E .s0 %7B opacity: .7;fill: %231e5129 %7D %3C/style%3E%3Cpath id='Shape 1' fill-rule='evenodd' class='s0' d='m1.5 3c-0.83 0-1.5-0.67-1.5-1.5 0-0.83 0.67-1.5 1.5-1.5 0.83 0 1.5 0.67 1.5 1.5 0 0.83-0.67 1.5-1.5 1.5z'/%3E%3C/svg%3E");
+    }
+}
+
+html.template.pdf.red,
+.html.pdf.red {
+    --color-background: #f2003c;
+    body.red {
+        --color-background: #f2003c;
+    }
+}
+body.template.red,
+.body.red {
+    --color-background: #f2003c;
+    --color-text-primary: #71041f;
+    --color-primary: #71041f;
+    --color-section-title-dot-border: #c10e3b;
+    --color-section-title-dot: #71041f;
+    --color-icon-bg: #71041f;
+    --color-hobbie-color: #71041f;
+    --color-progress-bg: #c10e3b;
+    --color-progress-fr: #71041f;
+    --color-border: #71041f;
+    --color-heading-1: #ffffff;
+    .section.sidebar:before,
+    .section.sidebar:after {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 8' width='3' height='8'%3E%3Cstyle%3E .s0 %7B opacity: .7;fill: %2371041f %7D %3C/style%3E%3Cpath id='Shape 1' fill-rule='evenodd' class='s0' d='m1.5 3c-0.83 0-1.5-0.67-1.5-1.5 0-0.83 0.67-1.5 1.5-1.5 0.83 0 1.5 0.67 1.5 1.5 0 0.83-0.67 1.5-1.5 1.5z'/%3E%3C/svg%3E");
+    }
+}
+
+html.template.pdf.blue,
+.html.pdf.blue {
+    --color-background: #1e90ff;
+    body.blue {
+        --color-background: #1e90ff;
+    }
+}
+body.template.blue,
+.body.blue {
+    --color-background: #1e90ff;
+    --color-text-primary: #191970;
+    --color-primary: #191970;
+    --color-section-title-dot-border: #5eabf4;
+    --color-section-title-dot: #191970;
+    --color-icon-bg: #191970;
+    --color-hobbie-color: #191970;
+    --color-progress-bg: #ffffff;
+    --color-progress-fr: #191970;
+    --color-border: #191970;
+    --color-heading-1: #ffffff;
+    .section.sidebar:before,
+    .section.sidebar:after {
+        background-image: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 8' width='3' height='8'%3E%3Cstyle%3E .s0 %7B opacity: .7;fill: %23191970 %7D %3C/style%3E%3Cpath id='Shape 1' fill-rule='evenodd' class='s0' d='m1.5 3c-0.83 0-1.5-0.67-1.5-1.5 0-0.83 0.67-1.5 1.5-1.5 0.83 0 1.5 0.67 1.5 1.5 0 0.83-0.67 1.5-1.5 1.5z'/%3E%3C/svg%3E");
+    }
+}

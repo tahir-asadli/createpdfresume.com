@@ -1,0 +1,1484 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+$style_dark_bg: #313131;
+$style_dark_text: #ffffff;
+$style_dark_border: #3c3c3c;
+$style_dark_icon: #a2a2a2;
+$style_dark_accent: #a2a2a2;
+$style_dark_sidebar_border: #3c3c3c;
+$style_dark_sidebar_bg: #282828;
+$style_dark_sidebar_icon: #ffffff;
+
+$style_pink_bg: hotpink;
+$style_pink_text: #61212d;
+$style_pink_border: #ec57a2;
+$style_pink_accent: #9d1f5f;
+$style_pink_icon: #61212d;
+$style_pink_sidebar_text: #61212d;
+$style_pink_sidebar_border: #e6549d;
+$style_pink_sidebar_bg: #f760ac;
+$style_pink_sidebar_icon: #61212d;
+
+$style_coffee_bg: #ae7f61;
+$style_coffee_text: #5a3e2d;
+$style_coffee_border: #9d6d4e;
+$style_coffee_accent: #5a3e2d;
+$style_coffee_icon: #5a3e2d;
+$style_coffee_sidebar_bg: #a87758;
+$style_coffee_sidebar_text: #5a3e2d;
+$style_coffee_sidebar_border: #a26c49;
+$style_coffee_sidebar_icon: #5a3e2d;
+
+$style_tennis_bg: #cbe399;
+$style_tennis_text: #466233;
+$style_tennis_border: #bad286;
+$style_tennis_accent: #5b8240;
+$style_tennis_icon: #466233;
+$style_tennis_sidebar_bg: #c0d98c;
+$style_tennis_sidebar_text: #466233;
+$style_tennis_sidebar_border: #a8c174;
+$style_tennis_sidebar_icon: #466233;
+
+$style_cream_bg: #fffef2;
+$style_cream_text: #2350ab;
+$style_cream_border: #d2dcf2;
+$style_cream_accent: #2350ab;
+$style_cream_icon: #2350ab;
+$style_cream_sidebar_bg: #fff9c9;
+$style_cream_sidebar_text: #2350ab;
+$style_cream_sidebar_border: #dfe4ec;
+$style_cream_sidebar_icon: #2350ab;
+
+$style_green_bg: #53ae65;
+$style_green_text: #1e5129;
+$style_green_border: #3fa254;
+$style_green_accent: #1e5129;
+$style_green_icon: #1e5129;
+$style_green_sidebar_bg: #4ea861;
+$style_green_sidebar_text: #1e5129;
+$style_green_sidebar_border: #159932;
+$style_green_sidebar_icon: #1e5129;
+
+$style_red_bg: #f2003c;
+$style_red_text: #ffffff;
+$style_red_border: #dd1414;
+$style_red_accent: #ffffff;
+$style_red_icon: #ffffff;
+$style_red_sidebar_bg: #ea003a;
+$style_red_sidebar_text: #ffffff;
+$style_red_sidebar_border: #ea3864;
+$style_red_sidebar_icon: #ffffff;
+
+$style_blue_bg: #1e90ff;
+$style_blue_text: #191970;
+$style_blue_border: #2f8be3;
+$style_blue_accent: #191970;
+$style_blue_icon: #191970;
+$style_blue_sidebar_bg: #2e98ff;
+$style_blue_sidebar_text: #191970;
+$style_blue_sidebar_border: #2b91f4;
+$style_blue_sidebar_icon: #191970;
+
+html.template.pdf,
+.html.pdf {
+    background-color: $background_color;
+    body {
+        background-color: $background_color;
+    }
+}
+
+html.template.pdf.dark,
+.html.pdf.dark {
+    background-color: $style_dark_bg;
+    body.dark {
+        background-color: $style_dark_bg;
+    }
+}
+body.template.dark,
+.body.dark {
+    background-color: $style_dark_bg;
+    color: $style_dark_text;
+    a {
+        color: $style_dark_text;
+    }
+    p {
+        color: $style_dark_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_dark_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_dark_text;
+        &::marker {
+            color: $style_dark_text;
+        }
+    }
+    .page {
+        background-color: $style_dark_bg;
+        color: $style_dark_text;
+        p {
+            color: $style_dark_text;
+        }
+        a {
+            color: $style_dark_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_dark_accent;
+            }
+            &.job_title {
+                border-bottom: solid 1px $style_dark_border;
+                border-top: solid 1px $style_dark_border;
+            }
+
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                color: $style_dark_icon;
+                                fill: $style_dark_icon;
+                                stroke: $style_dark_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                color: $style_dark_icon;
+                                fill: $style_dark_icon;
+                                stroke: $style_dark_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.hobbies {
+                .hobbies {
+                    .hobby_item {
+                        i {
+                            svg {
+                                color: $style_dark_icon;
+                                fill: $style_dark_icon;
+                                stroke: $style_dark_icon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section {
+            &.sidebar {
+                background: $style_dark_sidebar_bg;
+                .widget {
+                    h3,
+                    &.h3 {
+                        &:before,
+                        &:after {
+                            background: $style_dark_sidebar_border;
+                        }
+                    }
+
+                    &.contacts {
+                        .contacts {
+                            .contact_item {
+                                i {
+                                    svg {
+                                        color: $style_dark_sidebar_icon;
+                                        fill: $style_dark_sidebar_icon;
+                                        stroke: $style_dark_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.socials {
+                        .socials {
+                            .social_item {
+                                i {
+                                    svg {
+                                        color: $style_dark_sidebar_icon;
+                                        fill: $style_dark_sidebar_icon;
+                                        stroke: $style_dark_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hobbies {
+                        .hobbies {
+                            .hobby_item {
+                                i {
+                                    svg {
+                                        color: $style_dark_sidebar_icon;
+                                        fill: $style_dark_sidebar_icon;
+                                        stroke: $style_dark_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.pink,
+.html.pdf.pink {
+    background-color: $style_pink_bg;
+    body.pink {
+        background-color: $style_pink_bg;
+    }
+}
+body.template.pink,
+.body.pink {
+    background-color: $style_pink_bg;
+    color: $style_pink_text;
+    a {
+        color: $style_pink_text;
+    }
+    p {
+        color: $style_pink_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_pink_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_pink_text;
+        &::marker {
+            color: $style_pink_text;
+        }
+    }
+    .page {
+        background-color: $style_pink_bg;
+        color: $style_pink_text;
+        p {
+            color: $style_pink_text;
+        }
+        a {
+            color: $style_pink_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_pink_accent;
+            }
+            &.job_title {
+                border-bottom: solid 1px $style_pink_border;
+                border-top: solid 1px $style_pink_border;
+            }
+
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                color: $style_pink_icon;
+                                fill: $style_pink_icon;
+                                stroke: $style_pink_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                color: $style_pink_icon;
+                                fill: $style_pink_icon;
+                                stroke: $style_pink_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.hobbies {
+                .hobbies {
+                    .hobby_item {
+                        i {
+                            svg {
+                                color: $style_pink_icon;
+                                fill: $style_pink_icon;
+                                stroke: $style_pink_icon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section {
+            &.sidebar {
+                background: $style_pink_sidebar_bg;
+                color: $style_pink_sidebar_text;
+                a {
+                    color: $style_pink_sidebar_text;
+                }
+                p {
+                    color: $style_pink_sidebar_text;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    color: $style_pink_sidebar_text;
+                }
+
+                ul li,
+                ol li {
+                    color: $style_pink_sidebar_text;
+                    &::marker {
+                        color: $style_pink_sidebar_text;
+                    }
+                }
+                .widget {
+                    h3,
+                    &.h3 {
+                        &:before,
+                        &:after {
+                            background: $style_pink_sidebar_border;
+                        }
+                    }
+                    &.job_title {
+                        border-bottom: solid 1px $style_pink_sidebar_border;
+                        border-top: solid 1px $style_pink_sidebar_border;
+                    }
+
+                    &.contacts {
+                        .contacts {
+                            .contact_item {
+                                i {
+                                    svg {
+                                        color: $style_pink_sidebar_icon;
+                                        fill: $style_pink_sidebar_icon;
+                                        stroke: $style_pink_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.socials {
+                        .socials {
+                            .social_item {
+                                i {
+                                    svg {
+                                        color: $style_pink_sidebar_icon;
+                                        fill: $style_pink_sidebar_icon;
+                                        stroke: $style_pink_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hobbies {
+                        .hobbies {
+                            .hobby_item {
+                                i {
+                                    svg {
+                                        color: $style_pink_sidebar_icon;
+                                        fill: $style_pink_sidebar_icon;
+                                        stroke: $style_pink_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.coffee,
+.html.pdf.coffee {
+    background-color: $style_coffee_bg;
+    body.coffee {
+        background-color: $style_coffee_bg;
+    }
+}
+body.template.coffee,
+.body.coffee {
+    background-color: $style_coffee_bg;
+    color: $style_coffee_text;
+    a {
+        color: $style_coffee_text;
+    }
+    p {
+        color: $style_coffee_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_coffee_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_coffee_text;
+        &::marker {
+            color: $style_coffee_text;
+        }
+    }
+    .page {
+        background-color: $style_coffee_bg;
+        color: $style_coffee_text;
+        p {
+            color: $style_coffee_text;
+        }
+        a {
+            color: $style_coffee_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_coffee_accent;
+            }
+            &.job_title {
+                border-bottom: solid 1px $style_coffee_border;
+                border-top: solid 1px $style_coffee_border;
+            }
+
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                color: $style_coffee_icon;
+                                fill: $style_coffee_icon;
+                                stroke: $style_coffee_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                color: $style_coffee_icon;
+                                fill: $style_coffee_icon;
+                                stroke: $style_coffee_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.hobbies {
+                .hobbies {
+                    .hobby_item {
+                        i {
+                            svg {
+                                color: $style_coffee_icon;
+                                fill: $style_coffee_icon;
+                                stroke: $style_coffee_icon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section {
+            &.sidebar {
+                background: $style_coffee_sidebar_bg;
+                color: $style_coffee_sidebar_text;
+                a {
+                    color: $style_coffee_sidebar_text;
+                }
+                p {
+                    color: $style_coffee_sidebar_text;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    color: $style_coffee_sidebar_text;
+                }
+
+                ul li,
+                ol li {
+                    color: $style_coffee_sidebar_text;
+                    &::marker {
+                        color: $style_coffee_sidebar_text;
+                    }
+                }
+                .widget {
+                    h3,
+                    &.h3 {
+                        &:before,
+                        &:after {
+                            background: $style_coffee_sidebar_border;
+                        }
+                    }
+                    &.job_title {
+                        border-bottom: solid 1px $style_coffee_sidebar_border;
+                        border-top: solid 1px $style_coffee_sidebar_border;
+                    }
+
+                    &.contacts {
+                        .contacts {
+                            .contact_item {
+                                i {
+                                    svg {
+                                        color: $style_coffee_sidebar_icon;
+                                        fill: $style_coffee_sidebar_icon;
+                                        stroke: $style_coffee_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.socials {
+                        .socials {
+                            .social_item {
+                                i {
+                                    svg {
+                                        color: $style_coffee_sidebar_icon;
+                                        fill: $style_coffee_sidebar_icon;
+                                        stroke: $style_coffee_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hobbies {
+                        .hobbies {
+                            .hobby_item {
+                                i {
+                                    svg {
+                                        color: $style_coffee_sidebar_icon;
+                                        fill: $style_coffee_sidebar_icon;
+                                        stroke: $style_coffee_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.tennis,
+.html.pdf.tennis {
+    background-color: $style_tennis_bg;
+    body.tennis {
+        background-color: $style_tennis_bg;
+    }
+}
+body.template.tennis,
+.body.tennis {
+    background-color: $style_tennis_bg;
+    color: $style_tennis_text;
+    a {
+        color: $style_tennis_text;
+    }
+    p {
+        color: $style_tennis_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_tennis_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_tennis_text;
+        &::marker {
+            color: $style_tennis_text;
+        }
+    }
+    .page {
+        background-color: $style_tennis_bg;
+        color: $style_tennis_text;
+        p {
+            color: $style_tennis_text;
+        }
+        a {
+            color: $style_tennis_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_tennis_accent;
+            }
+            &.job_title {
+                border-bottom: solid 1px $style_tennis_border;
+                border-top: solid 1px $style_tennis_border;
+            }
+
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                color: $style_tennis_icon;
+                                fill: $style_tennis_icon;
+                                stroke: $style_tennis_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                color: $style_tennis_icon;
+                                fill: $style_tennis_icon;
+                                stroke: $style_tennis_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.hobbies {
+                .hobbies {
+                    .hobby_item {
+                        i {
+                            svg {
+                                color: $style_tennis_icon;
+                                fill: $style_tennis_icon;
+                                stroke: $style_tennis_icon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section {
+            &.sidebar {
+                background: $style_tennis_sidebar_bg;
+                color: $style_tennis_sidebar_text;
+                a {
+                    color: $style_tennis_sidebar_text;
+                }
+                p {
+                    color: $style_tennis_sidebar_text;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    color: $style_tennis_sidebar_text;
+                }
+
+                ul li,
+                ol li {
+                    color: $style_tennis_sidebar_text;
+                    &::marker {
+                        color: $style_tennis_sidebar_text;
+                    }
+                }
+                .widget {
+                    h3,
+                    &.h3 {
+                        &:before,
+                        &:after {
+                            background: $style_tennis_sidebar_border;
+                        }
+                    }
+
+                    &.job_title {
+                        border-bottom: solid 1px $style_tennis_sidebar_border;
+                        border-top: solid 1px $style_tennis_sidebar_border;
+                    }
+                    &.contacts {
+                        .contacts {
+                            .contact_item {
+                                i {
+                                    svg {
+                                        color: $style_tennis_sidebar_icon;
+                                        fill: $style_tennis_sidebar_icon;
+                                        stroke: $style_tennis_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.socials {
+                        .socials {
+                            .social_item {
+                                i {
+                                    svg {
+                                        color: $style_tennis_sidebar_icon;
+                                        fill: $style_tennis_sidebar_icon;
+                                        stroke: $style_tennis_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hobbies {
+                        .hobbies {
+                            .hobby_item {
+                                i {
+                                    svg {
+                                        color: $style_tennis_sidebar_icon;
+                                        fill: $style_tennis_sidebar_icon;
+                                        stroke: $style_tennis_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.cream,
+.html.pdf.cream {
+    background-color: $style_cream_bg;
+    body.cream {
+        background-color: $style_cream_bg;
+    }
+}
+body.template.cream,
+.body.cream {
+    background-color: $style_cream_bg;
+    color: $style_cream_text;
+    a {
+        color: $style_cream_text;
+    }
+    p {
+        color: $style_cream_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_cream_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_cream_text;
+        &::marker {
+            color: $style_cream_text;
+        }
+    }
+    .page {
+        background-color: $style_cream_bg;
+        color: $style_cream_text;
+        p {
+            color: $style_cream_text;
+        }
+        a {
+            color: $style_cream_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_cream_accent;
+            }
+            &.job_title {
+                border-bottom: solid 1px $style_cream_border;
+                border-top: solid 1px $style_cream_border;
+            }
+
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                color: $style_cream_icon;
+                                fill: $style_cream_icon;
+                                stroke: $style_cream_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                color: $style_cream_icon;
+                                fill: $style_cream_icon;
+                                stroke: $style_cream_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.hobbies {
+                .hobbies {
+                    .hobby_item {
+                        i {
+                            svg {
+                                color: $style_cream_icon;
+                                fill: $style_cream_icon;
+                                stroke: $style_cream_icon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section {
+            &.sidebar {
+                background: $style_cream_sidebar_bg;
+                color: $style_cream_sidebar_text;
+                a {
+                    color: $style_cream_sidebar_text;
+                }
+                p {
+                    color: $style_cream_sidebar_text;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    color: $style_cream_sidebar_text;
+                }
+
+                ul li,
+                ol li {
+                    color: $style_cream_sidebar_text;
+                    &::marker {
+                        color: $style_cream_sidebar_text;
+                    }
+                }
+                .widget {
+                    h3,
+                    &.h3 {
+                        &:before,
+                        &:after {
+                            background: $style_cream_sidebar_border;
+                        }
+                    }
+
+                    &.job_title {
+                        border-bottom: solid 1px $style_cream_sidebar_border;
+                        border-top: solid 1px $style_cream_sidebar_border;
+                    }
+                    &.contacts {
+                        .contacts {
+                            .contact_item {
+                                i {
+                                    svg {
+                                        color: $style_cream_sidebar_icon;
+                                        fill: $style_cream_sidebar_icon;
+                                        stroke: $style_cream_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.socials {
+                        .socials {
+                            .social_item {
+                                i {
+                                    svg {
+                                        color: $style_cream_sidebar_icon;
+                                        fill: $style_cream_sidebar_icon;
+                                        stroke: $style_cream_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hobbies {
+                        .hobbies {
+                            .hobby_item {
+                                i {
+                                    svg {
+                                        color: $style_cream_sidebar_icon;
+                                        fill: $style_cream_sidebar_icon;
+                                        stroke: $style_cream_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.green,
+.html.pdf.green {
+    background-color: $style_green_bg;
+    body.green {
+        background-color: $style_green_bg;
+    }
+}
+body.template.green,
+.body.green {
+    background-color: $style_green_bg;
+    color: $style_green_text;
+    a {
+        color: $style_green_text;
+    }
+    p {
+        color: $style_green_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_green_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_green_text;
+        &::marker {
+            color: $style_green_text;
+        }
+    }
+    .page {
+        background-color: $style_green_bg;
+        color: $style_green_text;
+        p {
+            color: $style_green_text;
+        }
+        a {
+            color: $style_green_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_green_accent;
+            }
+            &.job_title {
+                border-bottom: solid 1px $style_green_border;
+                border-top: solid 1px $style_green_border;
+            }
+
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                color: $style_green_icon;
+                                fill: $style_green_icon;
+                                stroke: $style_green_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                color: $style_green_icon;
+                                fill: $style_green_icon;
+                                stroke: $style_green_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.hobbies {
+                .hobbies {
+                    .hobby_item {
+                        i {
+                            svg {
+                                color: $style_green_icon;
+                                fill: $style_green_icon;
+                                stroke: $style_green_icon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section {
+            &.sidebar {
+                background: $style_green_sidebar_bg;
+                color: $style_green_sidebar_text;
+                a {
+                    color: $style_green_sidebar_text;
+                }
+                p {
+                    color: $style_green_sidebar_text;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    color: $style_green_sidebar_text;
+                }
+
+                ul li,
+                ol li {
+                    color: $style_green_sidebar_text;
+                    &::marker {
+                        color: $style_green_sidebar_text;
+                    }
+                }
+                .widget {
+                    h3,
+                    &.h3 {
+                        &:before,
+                        &:after {
+                            background: $style_green_sidebar_border;
+                        }
+                    }
+
+                    &.job_title {
+                        border-bottom: solid 1px $style_green_sidebar_border;
+                        border-top: solid 1px $style_green_sidebar_border;
+                    }
+                    &.contacts {
+                        .contacts {
+                            .contact_item {
+                                i {
+                                    svg {
+                                        color: $style_green_sidebar_icon;
+                                        fill: $style_green_sidebar_icon;
+                                        stroke: $style_green_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.socials {
+                        .socials {
+                            .social_item {
+                                i {
+                                    svg {
+                                        color: $style_green_sidebar_icon;
+                                        fill: $style_green_sidebar_icon;
+                                        stroke: $style_green_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hobbies {
+                        .hobbies {
+                            .hobby_item {
+                                i {
+                                    svg {
+                                        color: $style_green_sidebar_icon;
+                                        fill: $style_green_sidebar_icon;
+                                        stroke: $style_green_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.red,
+.html.pdf.red {
+    background-color: $style_red_bg;
+    body.red {
+        background-color: $style_red_bg;
+    }
+}
+body.template.red,
+.body.red {
+    background-color: $style_red_bg;
+    color: $style_red_text;
+    a {
+        color: $style_red_text;
+    }
+    p {
+        color: $style_red_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_red_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_red_text;
+        &::marker {
+            color: $style_red_text;
+        }
+    }
+    .page {
+        background-color: $style_red_bg;
+        color: $style_red_text;
+        p {
+            color: $style_red_text;
+        }
+        a {
+            color: $style_red_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_red_accent;
+            }
+            &.job_title {
+                border-bottom: solid 1px $style_red_border;
+                border-top: solid 1px $style_red_border;
+            }
+
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                color: $style_red_icon;
+                                fill: $style_red_icon;
+                                stroke: $style_red_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                color: $style_red_icon;
+                                fill: $style_red_icon;
+                                stroke: $style_red_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.hobbies {
+                .hobbies {
+                    .hobby_item {
+                        i {
+                            svg {
+                                color: $style_red_icon;
+                                fill: $style_red_icon;
+                                stroke: $style_red_icon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section {
+            &.sidebar {
+                background: $style_red_sidebar_bg;
+                color: $style_red_sidebar_text;
+                a {
+                    color: $style_red_sidebar_text;
+                }
+                p {
+                    color: $style_red_sidebar_text;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    color: $style_red_sidebar_text;
+                }
+
+                ul li,
+                ol li {
+                    color: $style_red_sidebar_text;
+                    &::marker {
+                        color: $style_red_sidebar_text;
+                    }
+                }
+                .widget {
+                    h3,
+                    &.h3 {
+                        &:before,
+                        &:after {
+                            background: $style_red_sidebar_border;
+                        }
+                    }
+
+                    &.job_title {
+                        border-bottom: solid 1px $style_red_sidebar_border;
+                        border-top: solid 1px $style_red_sidebar_border;
+                    }
+                    &.contacts {
+                        .contacts {
+                            .contact_item {
+                                i {
+                                    svg {
+                                        color: $style_red_sidebar_icon;
+                                        fill: $style_red_sidebar_icon;
+                                        stroke: $style_red_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.socials {
+                        .socials {
+                            .social_item {
+                                i {
+                                    svg {
+                                        color: $style_red_sidebar_icon;
+                                        fill: $style_red_sidebar_icon;
+                                        stroke: $style_red_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hobbies {
+                        .hobbies {
+                            .hobby_item {
+                                i {
+                                    svg {
+                                        color: $style_red_sidebar_icon;
+                                        fill: $style_red_sidebar_icon;
+                                        stroke: $style_red_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.blue,
+.html.pdf.blue {
+    background-color: $style_blue_bg;
+    body.blue {
+        background-color: $style_blue_bg;
+    }
+}
+body.template.blue,
+.body.blue {
+    background-color: $style_blue_bg;
+    color: $style_blue_text;
+    a {
+        color: $style_blue_text;
+    }
+    p {
+        color: $style_blue_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_blue_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_blue_text;
+        &::marker {
+            color: $style_blue_text;
+        }
+    }
+    .page {
+        background-color: $style_blue_bg;
+        color: $style_blue_text;
+        p {
+            color: $style_blue_text;
+        }
+        a {
+            color: $style_blue_text;
+        }
+        .widget {
+            &.fullname {
+                color: $style_blue_accent;
+            }
+            &.job_title {
+                border-bottom: solid 1px $style_blue_border;
+                border-top: solid 1px $style_blue_border;
+            }
+
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                color: $style_blue_icon;
+                                fill: $style_blue_icon;
+                                stroke: $style_blue_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                color: $style_blue_icon;
+                                fill: $style_blue_icon;
+                                stroke: $style_blue_icon;
+                            }
+                        }
+                    }
+                }
+            }
+            &.hobbies {
+                .hobbies {
+                    .hobby_item {
+                        i {
+                            svg {
+                                color: $style_blue_icon;
+                                fill: $style_blue_icon;
+                                stroke: $style_blue_icon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .section {
+            &.sidebar {
+                background: $style_blue_sidebar_bg;
+                color: $style_blue_sidebar_text;
+                a {
+                    color: $style_blue_sidebar_text;
+                }
+                p {
+                    color: $style_blue_sidebar_text;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    color: $style_blue_sidebar_text;
+                }
+
+                ul li,
+                ol li {
+                    color: $style_blue_sidebar_text;
+                    &::marker {
+                        color: $style_blue_sidebar_text;
+                    }
+                }
+                .widget {
+                    h3,
+                    &.h3 {
+                        &:before,
+                        &:after {
+                            background: $style_blue_sidebar_border;
+                        }
+                    }
+
+                    &.job_title {
+                        border-bottom: solid 1px $style_blue_sidebar_border;
+                        border-top: solid 1px $style_blue_sidebar_border;
+                    }
+                    &.contacts {
+                        .contacts {
+                            .contact_item {
+                                i {
+                                    svg {
+                                        color: $style_blue_sidebar_icon;
+                                        fill: $style_blue_sidebar_icon;
+                                        stroke: $style_blue_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.socials {
+                        .socials {
+                            .social_item {
+                                i {
+                                    svg {
+                                        color: $style_blue_sidebar_icon;
+                                        fill: $style_blue_sidebar_icon;
+                                        stroke: $style_blue_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hobbies {
+                        .hobbies {
+                            .hobby_item {
+                                i {
+                                    svg {
+                                        color: $style_blue_sidebar_icon;
+                                        fill: $style_blue_sidebar_icon;
+                                        stroke: $style_blue_sidebar_icon;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.new-builder-canvas {
+    html.template,
+    .html.template {
+        .page {
+            &:hover {
+                .main-layout {
+                    grid-template-columns: 260px auto;
+                }
+            }
+        }
+        &.drag-over {
+            .main-layout {
+                &.has-1-children {
+                    grid-template-columns: 260px auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,428 @@
+.widget {
+    padding: 15px 0 15px 0;
+    grid-template-columns: 220px auto;
+    display: grid;
+    gap: 30px;
+    row-gap: 0;
+    > * {
+        min-width: 0;
+    }
+    > h3 {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: baseline;
+    }
+    &.fullname {
+        margin: 0;
+        // padding: 0;
+        line-height: 1;
+        font-size: 25px;
+        display: block;
+    }
+    &.job_title {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1;
+        color: $dark_gray;
+        font-weight: 600;
+    }
+    &.image {
+        figure {
+            position: relative;
+            display: inline-block;
+            width: 170px;
+            height: 170px;
+            &.radius-5 {
+                &:after {
+                    border-radius: 5px;
+                }
+            }
+            &.radius-9999 {
+                &:after {
+                    border-radius: 9999px;
+                }
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // opacity: 0.85;
+            // mix-blend-mode: screen;
+        }
+        &.align-center {
+            justify-content: center;
+        }
+        &.align-right {
+            justify-content: end;
+        }
+    }
+    // &.about {
+    // }
+    &.skills {
+        > h3 {
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5px;
+            margin-top: 0;
+            > * {
+                min-width: 0;
+            }
+            .skill_item {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .progress {
+                    width: 100%;
+                    position: relative;
+                    background-color: #555;
+                    height: 2px;
+                    span {
+                        display: block;
+                        height: 6px;
+                        background-color: #555;
+                        position: absolute;
+                        top: -2px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    // &.slogan {
+    //     font-size: 30px;
+    // }
+    &.contacts {
+        .contacts {
+            margin-top: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5px;
+            margin-top: 0;
+            .contact_item {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                i {
+                    flex-shrink: 0;
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        fill: $black;
+                    }
+                }
+            }
+        }
+    }
+    &.languages {
+        .languages {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5px;
+            margin-top: 0;
+            > * {
+                min-width: 0;
+            }
+            .language_item {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .progress {
+                    width: 100%;
+                    position: relative;
+                    height: 3px;
+                    background-color: $ultra_light_gray;
+                    span {
+                        display: block;
+                        height: 3px;
+                        background-color: $black;
+                        position: absolute;
+                        // top: -2px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    &.experiences {
+        .section_title {
+        }
+        .experiences {
+            margin-top: 0;
+            .experience_item {
+                position: relative;
+                min-width: 0;
+                margin-bottom: 20px;
+                .experience_position {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    position: relative;
+                    text-transform: uppercase;
+                    color: $gray;
+                    letter-spacing: 0.2px;
+                    font-weight: bold;
+                    margin-bottom: 4px;
+                }
+                .experience_location {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $light_gray;
+                    margin-bottom: 4px;
+                }
+                .experience_years {
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: $gray;
+                }
+                .experience_about {
+                    font-size: 14px;
+                }
+                &:last-child {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &.educations {
+        .educations {
+            margin-top: 0;
+            display: grid;
+            gap: 20px;
+            .education_item {
+                position: relative;
+                .education_years {
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: $gray;
+                }
+                .education_school {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    position: relative;
+                    text-transform: uppercase;
+                    color: $gray;
+                    letter-spacing: 0.2px;
+                    font-weight: bold;
+                    margin-bottom: 4px;
+                }
+                .education_degree {
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                .education_location {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $light_gray;
+                    margin-bottom: 4px;
+                }
+                &:last-child {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &.socials {
+        .socials {
+            margin-top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            .social_item {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                font-size: 11px;
+                i {
+                    flex-shrink: 0;
+                    border-radius: 4px;
+                    padding: 4px;
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                    span {
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+    &.projects {
+        .projects {
+            margin-top: 0;
+            display: grid;
+            gap: 20px;
+            .project_item {
+                position: relative;
+                margin-bottom: 15px;
+                .project_name {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    position: relative;
+                    display: flex;
+                    text-transform: uppercase;
+                    color: $gray;
+                    margin-bottom: 4px;
+                    font-weight: bold;
+                }
+                h5.project_year {
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: $gray;
+                }
+            }
+        }
+    }
+    &.awards {
+        .awards {
+            margin-top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            .award_item {
+                position: relative;
+                .award_title {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    position: relative;
+                    display: flex;
+                    text-transform: uppercase;
+                    color: $gray;
+                    margin-bottom: 4px;
+                    font-weight: bold;
+                }
+                .award_organization {
+                }
+                .award_year {
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: $gray;
+                }
+            }
+        }
+    }
+    &.certificates {
+        .certificates {
+            margin-top: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            .certificate_item {
+                position: relative;
+                .certificate_name {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    position: relative;
+                    display: flex;
+                    text-transform: uppercase;
+                    color: $gray;
+                    margin-bottom: 4px;
+                    font-weight: bold;
+                    em {
+                        font-style: normal;
+                        margin-right: 10px;
+                    }
+                }
+                .certificate_organization {
+                }
+                .certificate_year {
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: $gray;
+                }
+            }
+        }
+    }
+    &.hobbies {
+        .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            column-gap: 15px;
+            margin-top: 0;
+            border-radius: 5px;
+            .hobby_item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 16px;
+                    svg {
+                        width: 16px;
+                    }
+                }
+            }
+        }
+    }
+    // &.references {
+    //     .references {
+    //         margin-top: 0;
+    //         display: grid;
+    //         grid-template-columns: 1fr 1fr;
+    //         gap: 20px;
+    //         .reference_item {
+    //             position: relative;
+    //             padding-bottom: 5px;
+    //             .reference_name {
+    //                 color: $blue;
+    //                 font-weight: 600;
+    //                 font-size: 16px;
+    //                 text-transform: uppercase;
+    //             }
+    //             .reference_job_title {
+    //                 margin-bottom: 3px;
+    //                 font-size: 14px;
+    //                 font-weight: 400;
+    //                 color: $light_gray;
+    //                 margin-bottom: 4px;
+    //             }
+    //             .reference_job_phone,
+    //             .reference_job_email {
+    //                 display: flex;
+    //                 align-items: center;
+    //                 font-size: 11px;
+    //                 gap: 6px;
+    //             }
+    //             i {
+    //                 display: inline-flex;
+    //                 justify-content: center;
+    //                 align-items: center;
+    //                 svg {
+    //                     width: 14px;
+    //                     color: $black;
+    //                     fill: $black;
+    //                 }
+    //             }
+    //             &:nth-child(2n) {
+    //                 border-right: none;
+    //             }
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,23 @@
+@import "partials/general";
+@import "partials/fonts";
+@import "partials/colors";
+@import "partials/typography";
+@import "partials/icons";
+@import "partials/elements";
+@import "partials/widgets";
+@import "partials/sections";
+@import "partials/layouts";
+@import "partials/lines";
+* {
+    box-sizing: border-box;
+    line-height: 1.2;
+}
+html,
+body {
+    margin: 0;
+    background: white;
+    color: $black;
+    .page {
+        background-color: white;
+    }
+}

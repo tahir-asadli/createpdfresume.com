@@ -1,0 +1,24 @@
+// $orange: #f3a75c;
+// $black: #292829;
+// $dark_gray: #414042;
+// $gray: #58595b;
+// $light_gray: #808285;
+// $ultra_light_gray: #ccc;
+// $background_color: white;
+
+:root {
+    // new colors
+    --color-background: white;
+    --color-border: #a7a9ab;
+    --color-primary: #f3a75c;
+    --color-text-primary: #414042;
+    --color-text-secondary: #58595b;
+    --color-text-tertiary: #292829;
+    --color-progress-bg: #cccccc;
+    --color-progress-fr: var(--color-text-secondary);
+    --color-section-title-dot: var(--color-primary);
+    --color-section-title-dot-border: #ffffff;
+    --color-icon-bg: var(--color-primary);
+    --color-hobbie-color: var(--color-primary);
+    --color-heading-1: var(--color-primary);
+}

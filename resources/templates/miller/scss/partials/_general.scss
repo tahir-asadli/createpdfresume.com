@@ -1,0 +1,320 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+/* ==========================================================================
+[Fonts]
+========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ==========================================================================
+[Helper classes]
+========================================================================== */
+html.template:not(.builder) {
+    div,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    i,
+    p {
+        &:empty,
+        &:empty:before,
+        &:empty:after {
+            display: none !important;
+        }
+    }
+}
+html.template,
+.html.template {
+    img {
+        display: inline;
+    }
+    ul li {
+        list-style-type: disc !important;
+    }
+    ol li {
+        list-style-type: decimal !important;
+    }
+    .bold,
+    .bold span {
+        font-weight: 900;
+    }
+    .italic,
+    .italic span {
+        font-style: italic;
+    }
+    .underline,
+    .underline span {
+        text-decoration: underline !important;
+    }
+    .strikethrough,
+    .strikethrough span {
+        text-decoration: line-through !important;
+    }
+
+    .uppercase,
+    .uppercase span {
+        text-transform: uppercase;
+    }
+
+    .align-left {
+        text-align: left;
+    }
+
+    .align-center {
+        text-align: center;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+
+    figure {
+        margin: 0;
+    }
+    a {
+        color: $black;
+    }
+    ul,
+    ol {
+        padding: 0;
+        margin: 15px 0 15px 0;
+        li {
+            list-style-position: inside;
+            // display: block;
+            // &:before {
+            //     margin-right: 10px;
+            // }
+        }
+    }
+    // ul li:before {
+    //     content: "";
+    //     display: inline-block;
+    //     width: 7px;
+    //     height: 7px;
+    //     border-radius: 7px;
+    //     flex-shrink: 0;
+    //     flex-grow: 0;
+    // }
+    // ol li:before {
+    //     content: attr(data-order);
+    // }
+
+    figure {
+        width: 100%;
+        margin: 0;
+    }
+
+    .has-children {
+        &.dash {
+            > * {
+                &:after {
+                    content: " - ";
+                }
+                &:last-child:after {
+                    display: none;
+                }
+            }
+        }
+        &.slash {
+            > * {
+                &:after {
+                    content: " / ";
+                }
+                &:last-child:after {
+                    display: none;
+                }
+            }
+        }
+        &.comma {
+            > * {
+                &:after {
+                    content: ", ";
+                }
+                &:last-child:after {
+                    display: none;
+                }
+            }
+        }
+        &.pipe {
+            > * {
+                &:after {
+                    content: " | ";
+                }
+                &:last-child:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    /* ==========================================================================
+[Typography]
+========================================================================== */
+
+    &,
+    body {
+        font-family: "Work Sans", sans-serif;
+        font-optical-sizing: auto;
+        color: $black;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.3;
+    }
+    a {
+        text-decoration: underline;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 0 5px 0;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        color: $black;
+    }
+    p {
+        margin: 0 0 5px 0;
+        color: $black;
+        &.small {
+            font-size: 10px;
+        }
+    }
+
+    h1 {
+        font-size: 75px;
+        line-height: 70px;
+        font-style: normal;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 23px;
+        border-bottom: solid 2px $black;
+        padding-bottom: 5px;
+    }
+
+    h4 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    h5 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    h6 {
+        font-size: 11px;
+        font-weight: 500;
+    }
+    // p {
+    //     margin: 0 0 5px 0;
+    //     font-size: 15px;
+    //     font-weight: 400;
+    //     letter-spacing: 0.2px;
+    //     line-height: 1.4;
+    // }
+
+    ol,
+    ul {
+        padding: 0;
+        margin: 10px 0;
+        li {
+            // color: $black;
+            margin-bottom: 5px;
+        }
+    }
+    // ul {
+    //     li {
+    //         &:before {
+    //             content: "";
+    //             display: inline-block;
+    //             width: 7px;
+    //             height: 7px;
+    //             border-radius: 7px;
+    //             background: $black;
+    //         }
+    //     }
+    // }
+
+    // ol {
+    //     li {
+    //         &:before {
+    //             content: attr(data-order);
+    //         }
+    //     }
+    // }
+    // .bold,
+    // .bold span {
+    //     font-weight: bold;
+    // }
+    // .italic,
+    // .italic span {
+    //     font-style: italic;
+    // }
+    // .underline,
+    // .underline span {
+    //     text-decoration: underline;
+    // }
+    // .strikethrough,
+    // .strikethrough span {
+    //     text-decoration: line-through;
+    // }
+
+    // .uppercase,
+    // .uppercase span {
+    //     text-transform: uppercase;
+    // }
+
+    // .align-left {
+    //     text-align: left;
+    // }
+
+    // .align-center {
+    //     text-align: center;
+    // }
+
+    // .align-right {
+    //     text-align: right;
+    // }
+
+    // figure {
+    //     margin: 0;
+    // }
+
+    // ul {
+    //     li {
+    //         &.align-right {
+    //             justify-content: flex-end;
+    //         }
+    //         &.align-center {
+    //             justify-content: center;
+    //         }
+    //     }
+    // }
+
+    // ol {
+    //     li {
+    //         &.align-right {
+    //             justify-content: flex-end;
+    //         }
+    //         &.align-center {
+    //             justify-content: center;
+    //         }
+    //     }
+    // }
+}

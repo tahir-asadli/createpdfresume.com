@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" class="template {{canvas}} {{style}}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style></style>
+  <style id="global"></style>
+  <style id="view"></style>
+  <title id="title">{{title}}</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const divs = document.querySelectorAll('.has-children');
+      Object.keys(divs).forEach(function (index) {
+        const item = divs[index];
+        let childrenCount = 0;
+        const visibleChildren = Array.from(item.children).filter(
+          function (child) {
+            if (getComputedStyle(child).display == 'none') {
+              delete child.remove();
+            }
+            return getComputedStyle(child).display !== 'none'
+          }
+        );
+        item.classList.add(`has-${visibleChildren.length}-children`)
+      });
+    });
+  </script>
+</head>
+
+<body class="template {{style}}">
+  <div id="page-{{page}}" class="page relative">
+    <div class="main-layout">
+      <div class="section header-left" name="header-left">
+        <div class="widget about" name="about">
+          <h3 id="about_title">{{about_title}}</h3>
+          <p id="about_content">{{about_content}}</p>
+        </div>
+        <h2 class="widget job_title" name="job_title"><span>{{job_title}}</span></h2>
+        <div class="certificates widget" name="certificates">
+          <h3 id="certificates_title" class="font-medium">{{certificates_title}}</h3>
+          <div class="certificate_item">
+            <h4 class="certificate_name"><em>{{certificate_name}}</em></h4>
+            <p class="certificate_organization">{{certificate_organization}}</p>
+            <h6><span class="certificate_year">{{certificate_year}}</span></h6>
+          </div>
+        </div>
+        <div class="widget experiences" name="experiences">
+          <h3 class="section_title" id="experiences_title">{{experiences_title}}</h3>
+          <div class="experience_item">
+            <h4 class="experience_position">{{experience_position}}</h4>
+            <h5 class="experience_location">{{experience_company}}, {{experience_location}}</h5>
+            <p class="experience_about">{{experience_about}}</p>
+            <h4 class="experience_years">{{experience_years}}</h4>
+          </div>
+        </div>
+        <div class="widget references" name="references">
+          <h3 class="references_title">{{references_title}}</h3>
+          <div class="reference_item">
+            <div class="reference_name">{{reference_name}}</div>
+            <div class="reference_job_title">{{reference_position}}</div>
+            <div class="reference_job_phone"><i>{{phone_icon}}</i>{{reference_phone}}</div>
+            <div class="reference_job_email"><i>{{email_icon}}</i>{{reference_email}}</div>
+          </div>
+        </div>
+        <div class="widget hobbies" name="hobbies">
+          <h3 class="hobbies_title">{{hobbies_title}}</h3>
+          <div class="hobby_item"><i>{{icon}}</i> <span>{{hobby_title}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="section header-right" name="header-right">
+        <div class="widget image" name="image"> {{image}} </div>
+        <div class="widget contacts" name="contacts">
+          <h3 id="contact_title">{{contact_title}}</h3>
+          <div class="contact_item"><i>{{icon}}</i>{{contact_item}}</div>
+        </div>
+        <div class="languages widget" name="languages">
+          <h3 id="languages_title">{{languages_title}}</h3>
+          <div class="language_item">
+            <div>{{language_name}}</div>
+          </div>
+        </div>
+        <div class="widget socials" name="socials">
+          <h3 id="socials_title">{{socials_title}}</h3>
+          <div class="social_item">
+            <i>{{icon}}</i>
+            <div>
+              <b>{{social_name}}</b>
+              <span class="social_item_handle">{{social_handle}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="educations widget" name="educations">
+          <h3 class="section-title" id="educations_title">{{educations_title}}</h3>
+          <div class="education_item">
+            <h4 class="education_school">{{education_field}}<span></span>
+            </h4>
+            <h5 class="education_location">{{education_location}}</h5>
+            <p class="education_description">{{education_description}}</p>
+            <h4 class="education_years">{{education_years}}</h4>
+          </div>
+        </div>
+        <div class="skills widget" name="skills">
+          <h3 id="skills_title">{{skills_title}}</h3>
+          <div class="skill_item">
+            <div>{{skill_name}}</div>
+          </div>
+        </div>
+        <div class="widget social" name="social">
+          <h3 id="socials_title">{{socials_title}}</h3>
+          <div class="social_item">
+            <div>{{icon}}</div>
+            <div>
+              <span>{{social_name}}</span>
+              <span class="social_item_handle">{{social_url}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="widget awards" name="awards">
+          <h3 id="awards_title">{{awards_title}}</h3>
+          <div class="award_item">
+            <h4 class="award_title">{{award_name}}</h4>
+            <p class="award_organization"><span>{{award_organization}} </span>
+            </p>
+            <h6 class="award_year">{{award_year}}</h6>
+          </div>
+        </div>
+        <div class="widget projects" name="projects">
+          <h3 id="projects_title">{{projects_title}}</h3>
+          <div class="project_item">
+            <h4 class="project_name">{{project_name}}</h4>
+            <p class="project_description">{{project_description}}</p>
+            <h5 class="project_year">{{project_year}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="section full" name="full">
+      </div>
+    </div>
+  </div><!-- .page relative -->
+</body>
+
+</html>

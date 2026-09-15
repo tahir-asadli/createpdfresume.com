@@ -1,0 +1,442 @@
+@use "colors" as *;
+
+/* ==========================================================================
+[Layouts]
+========================================================================== */
+html.template,
+.html.template {
+    .main-layout {
+        // padding: 30px 30px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 260px auto;
+        gap: 20px;
+        row-gap: 0;
+        > * {
+            min-width: 0;
+        }
+    }
+
+    /* ==========================================================================
+[Widgets]
+========================================================================== */
+
+    .widget {
+        padding: 15px 0 15px 0;
+        > h3,
+        &.h3 {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:empty {
+                display: none;
+            }
+        }
+
+        &.fullname {
+            margin: 0;
+            font-size: 40px;
+            color: $green;
+        }
+
+        &.job_title {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 1;
+            font-family: Montserrat;
+            letter-spacing: 1.9px;
+            border-bottom: solid 1px #dcdddd;
+            padding: 7px 0;
+            border-top: solid 1px #dcdddd;
+            margin: 5px auto;
+        }
+
+        &.image {
+            margin: 20px 0;
+            img {
+                width: 100%;
+            }
+            figure {
+                &.radius-9999,
+                &.radius-5 {
+                    img {
+                        width: 190px;
+                        height: 190px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        &.contacts {
+            .contacts {
+                margin-top: 10px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                .contact_item {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: bold;
+                    i {
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 16px;
+                        svg {
+                            width: 16px;
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
+        &.skills {
+            .skills {
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+                .skill_item {
+                    position: relative;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &.languages {
+            .languages {
+                gap: 5px;
+                display: flex;
+                margin-top: 10px;
+                .language_item {
+                    position: relative;
+                    margin-bottom: 0;
+                    font-weight: bold;
+                    &:after {
+                        content: ",";
+                    }
+                    &:last-child:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.experiences {
+            .experiences {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .experience_item {
+                    .experience_position {
+                        display: flex;
+                        justify-content: space-between;
+                        text-transform: uppercase;
+                        position: relative;
+                    }
+                    .experience_years {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        &.educations {
+            .educations {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .education_item {
+                }
+            }
+        }
+        &.socials {
+            .socials {
+                margin-top: 10px;
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                .social_item {
+                    display: flex;
+                    gap: 7px;
+                    align-items: center;
+                    font-weight: bold;
+                    i {
+                        flex-shrink: 0;
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                            fill: $green;
+                        }
+                    }
+                }
+            }
+        }
+        &.projects {
+            .projects {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .project_item {
+                    .project_year {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        &.awards {
+            .awards {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .award_item {
+                    .award_title {
+                    }
+                    .award_organization {
+                    }
+                    .award_year {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        &.certificates {
+            .certificates {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .certificate_item {
+                    .certificate_name {
+                    }
+                    .certificate_organization {
+                    }
+                    .certificate_year {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        &.hobbies {
+            .hobbies {
+                margin-top: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                .hobby_item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: bold;
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 16px;
+                        height: 16px;
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        &.references {
+            .references {
+                margin-top: 10px;
+                gap: 15px;
+                display: flex;
+                flex-direction: column;
+                .reference_item {
+                    .reference_position {
+                        display: inline;
+                    }
+                    .reference-contact {
+                        display: flex;
+                        gap: 15px;
+                    }
+                    .reference_job_phone,
+                    .reference_job_email {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 6px;
+                    }
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+                    &:nth-child(2n) {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+
+        &.web,
+        &.address,
+        &.email,
+        &.phone {
+            padding: 0;
+            margin: 0 0 5px 0;
+            display: block;
+        }
+    }
+
+    /* ==========================================================================
+[Sections]
+========================================================================== */
+    .section {
+        &.sidebar,
+        &.content {
+            min-height: 29.666cm;
+        }
+        &.content {
+            padding-top: 20px;
+            padding-right: 20px;
+            .widget {
+                &.fullname {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                &.image {
+                    img {
+                        max-width: 190px;
+                        max-height: 190px;
+                    }
+                }
+            }
+        }
+        &.sidebar {
+            background: $green;
+            color: white;
+            a {
+                color: white;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            ol,
+            ul {
+                color: white;
+            }
+            h1 {
+                line-height: 1;
+            }
+            h2,
+            h3,
+            h4 {
+                line-height: 1.1;
+            }
+
+            ul li:before {
+                background: white;
+            }
+            ol li:before {
+                color: white;
+            }
+            .widget {
+                &:first-child.image {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+                padding-left: 20px;
+                padding-right: 20px;
+                h3,
+                &.h3 {
+                    text-align: center;
+                    position: relative;
+                    padding: 5px 20px;
+                    margin-bottom: 15px;
+                    &:before,
+                    &:after {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        background: $green_light;
+                        margin: auto;
+                    }
+                    &:before {
+                        top: -3px;
+                    }
+                    &:after {
+                        bottom: -3px;
+                    }
+                }
+                &.image {
+                    padding-left: 0;
+                    padding-right: 0;
+                    color: white;
+                }
+                &.job_title {
+                    // margin: 0;
+                    // padding: 0 20px;
+                    border: 0;
+                }
+                &.references {
+                    .references {
+                        gap: 20px;
+                        .reference_item {
+                            .reference_name {
+                                font-size: 14px;
+                                font-weight: 600;
+                            }
+                            .reference-contact {
+                                flex-direction: column;
+                                gap: 5px;
+                            }
+                        }
+                    }
+                }
+
+                &.contacts {
+                    .contacts {
+                        .contact_item {
+                            i {
+                                svg {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.socials {
+                    .socials {
+                        .social_item {
+                            i {
+                                svg {
+                                    fill: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-layout {
+        &.has-1-children {
+            grid-template-columns: 1fr;
+            .section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+}

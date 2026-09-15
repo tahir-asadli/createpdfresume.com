@@ -1,0 +1,329 @@
+@import "@splidejs/splide/css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-Italic.woff2") format("woff2"),
+        url("../fonts/Poppins-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-Medium.woff2") format("woff2"),
+        url("../fonts/Poppins-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-ExtraLightItalic.woff2") format("woff2"),
+        url("../fonts/Poppins-ExtraLightItalic.woff") format("woff");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-ExtraBold.woff2") format("woff2"),
+        url("../fonts/Poppins-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-BoldItalic.woff2") format("woff2"),
+        url("../fonts/Poppins-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-LightItalic.woff2") format("woff2"),
+        url("../fonts/Poppins-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-BlackItalic.woff2") format("woff2"),
+        url("../fonts/Poppins-BlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-ExtraLight.woff2") format("woff2"),
+        url("../fonts/Poppins-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-Light.woff2") format("woff2"),
+        url("../fonts/Poppins-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-Bold.woff2") format("woff2"),
+        url("../fonts/Poppins-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-ExtraBoldItalic.woff2") format("woff2"),
+        url("../fonts/Poppins-ExtraBoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-Black.woff2") format("woff2"),
+        url("../fonts/Poppins-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-MediumItalic.woff2") format("woff2"),
+        url("../fonts/Poppins-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-Regular.woff2") format("woff2"),
+        url("../fonts/Poppins-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-SemiBold.woff2") format("woff2"),
+        url("../fonts/Poppins-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-SemiBoldItalic.woff2") format("woff2"),
+        url("../fonts/Poppins-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-Thin.woff2") format("woff2"),
+        url("../fonts/Poppins-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src:
+        url("../fonts/Poppins-ThinItalic.woff2") format("woff2"),
+        url("../fonts/Poppins-ThinItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 500;
+    color: #464647;
+}
+body.inner-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+@layer base {
+    body {
+        @apply text-black;
+    }
+    h1 {
+        @apply text-[30px] leading-10 lg:text-[50px] font-semibold lg:leading-[1.4];
+    }
+    h2 {
+        @apply text-[25px] lg:text-[40px] font-semibold leading-[1.5];
+    }
+    h3 {
+        @apply text-[20px] lg:text-[35px] font-semibold leading-[1.4];
+    }
+    h4 {
+        @apply text-[27px] font-semibold leading-[1.4];
+    }
+    h5 {
+        @apply text-[20px] font-[700];
+    }
+    h6 {
+        @apply text-[19px] font-semibold leading-[1.4];
+    }
+    p {
+        @apply text-black/50;
+    }
+    .page {
+        padding-bottom: 50px;
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            color: #222;
+            margin-bottom: 5px;
+        }
+        ul,
+        ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            li {
+                color: #333;
+                list-style-type: disc;
+            }
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
+@layer components {
+    .container {
+        @apply mx-auto max-w-xl px-4 lg:px-6;
+    }
+    .button {
+        @apply bg-violet-500 text-white rounded-full py-3 px-6 lg:py-3.5 lg:px-10;
+    }
+    .badge {
+        @apply text-violet-600 bg-violet-500/20 rounded-full py-3.5 px-9 text-lg font-bold;
+    }
+    .check {
+        @apply block bg-purple-500/20 rounded-full w-[24px] h-[24px] bg-check bg-no-repeat bg-center;
+    }
+    .hamburger {
+        @apply relative w-[35px] h-[21px] m-1 lg:hidden;
+    }
+    .hamburger span {
+        @apply absolute inline-block h-1 w-full bg-black rounded-lg left-0 transition-all origin-center;
+    }
+    .hamburger span:nth-child(1) {
+        @apply top-0;
+    }
+    .hamburger span:nth-child(2) {
+        @apply top-2.5;
+    }
+    .hamburger span:nth-child(3) {
+        @apply top-5 group-hover:opacity-0;
+    }
+    body.mmo .hamburger span:nth-child(1) {
+        @apply rotate-45 top-1.5;
+    }
+    body.mmo .hamburger span:nth-child(2) {
+        @apply -rotate-45 top-1.5;
+    }
+    body.mmo .hamburger span:nth-child(3) {
+        @apply opacity-0;
+    }
+    .mobile-menu {
+        @apply pointer-events-none z-10 fixed top-[80px] w-full h-full transition-all opacity-0 lg:hidden;
+    }
+    .mobile-menu .mobile-menu-content {
+        @apply p-4 bg-white w-[100vw] z-20 fixed shadow-md transition-all duration-200 border-t border-black/10;
+    }
+    .mobile-menu .mobile-menu-overlay {
+        @apply bg-black/10 fixed top-[80px] w-full h-full;
+    }
+    .mobile-menu .mobile-menu-items {
+        @apply w-[100vw] transition-all duration-200 relative -left-[100vw];
+    }
+    body.mmo .mobile-menu {
+        @apply pointer-events-auto opacity-100;
+    }
+    body.mmo .mobile-menu .mobile-menu-content {
+        @apply left-0;
+    }
+    body.mmo .mobile-menu .mobile-menu-items {
+        @apply left-0;
+    }
+    body.mmo {
+        overflow: hidden;
+    }
+    .plan-premium {
+        @apply bg-[#ff0084];
+    }
+    .plan-standart {
+        @apply bg-[#0085ff];
+    }
+    .language-switcher .language-list {
+        transition: all 0.3s ease-in-out;
+        height: 0;
+        overflow: hidden;
+        padding-top: 0;
+    }
+    .language-switcher.open .language-list {
+        height: 180px;
+    }
+}

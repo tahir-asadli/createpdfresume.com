@@ -1,0 +1,4 @@
+  2025-10-18 05:58:11 App\Jobs\GenerateResumePDF ..................... RUNNING
+  2025-10-18 05:58:15 App\Jobs\GenerateResumePDF ..................... 3s DONE
+  2025-10-18 12:00:04 App\Mail\AdminNotification ..................... RUNNING
+  2025-10-18 12:00:04 App\Mail\AdminNotification ............... 269.60ms DONE

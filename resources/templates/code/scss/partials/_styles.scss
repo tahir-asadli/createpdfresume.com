@@ -1,0 +1,443 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+$style_dark_bg: #3c3c3c;
+$style_dark_text: white;
+$style_dark_h4: #d4d4d4;
+$style_dark_h5: #d4d4d4;
+
+$style_pink_bg: hotpink;
+$style_pink_text: #752a38;
+$style_pink_h4: #752a38;
+$style_pink_h5: #752a38;
+
+$style_red_bg: #dd4220;
+$style_red_text: #fff;
+$style_red_h4: #fff;
+$style_red_h5: #fff;
+
+$style_blue_bg: #fff;
+$style_blue_text: #002875;
+$style_blue_h4: #002875;
+$style_blue_h5: #002875;
+
+$style_green_bg: #ffefcb;
+$style_green_text: #033b0e;
+$style_green_h4: #033b0e;
+$style_green_h5: #033b0e;
+
+$style_coffee_bg: #ecd9cd;
+$style_coffee_text: #4e1f00;
+$style_coffee_h4: #4e1f00;
+$style_coffee_h5: #4e1f00;
+
+$style_cream_bg: #fceade;
+$style_cream_text: #2350ab;
+$style_cream_h4: #2350ab;
+$style_cream_h5: #2350ab;
+
+$style_tennis_bg: #e6e6d6;
+$style_tennis_fr: #466233;
+$style_tennis_text: #466233;
+$style_tennis_h4: #466233;
+$style_tennis_h5: #466233;
+
+html.template.pdf.dark,
+.html.pdf.dark {
+    background-color: $style_dark_bg;
+    color: $style_dark_text;
+    body.dark {
+        background-color: $style_dark_bg;
+    }
+}
+body.template.dark,
+.body.dark {
+    color: $style_dark_text;
+    a {
+        color: $style_dark_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_dark_text;
+    }
+    .page {
+        background-color: $style_dark_bg;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $style_dark_text;
+        }
+        h4 {
+            // color: $style_dark_h4;
+        }
+        h5 {
+            // color: $style_dark_h5;
+        }
+        .widget {
+            &.socials {
+                .socials {
+                    color: $style_dark_text;
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.pink,
+.html.pdf.pink {
+    background-color: $style_pink_bg;
+    color: $style_pink_text;
+    body.pink {
+        background-color: $style_pink_bg;
+    }
+}
+body.template.pink,
+.body.pink {
+    color: $style_pink_text;
+    a {
+        color: $style_pink_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_pink_text;
+    }
+    .page {
+        background-color: $style_pink_bg;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $style_pink_text;
+        }
+        h4 {
+            color: $style_pink_h4;
+            font-weight: bold;
+        }
+        h5 {
+            color: $style_pink_h5;
+            font-style: italic;
+        }
+        .widget {
+            &.socials {
+                .socials {
+                    color: $style_pink_h4;
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.red,
+.html.pdf.red {
+    background-color: $style_red_bg;
+    color: $style_red_text;
+    body.red {
+        background-color: $style_red_bg;
+    }
+}
+body.template.red,
+.body.red {
+    color: $style_red_text;
+    a {
+        color: $style_red_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_red_text;
+    }
+    .page {
+        background-color: $style_red_bg;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $style_red_text;
+        }
+        h4 {
+            color: $style_red_h4;
+            font-weight: bold;
+        }
+        h5 {
+            color: $style_red_h5;
+            font-style: italic;
+        }
+        .widget {
+            &.socials {
+                .socials {
+                    color: $style_red_h4;
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.blue,
+.html.pdf.blue {
+    background-color: $style_blue_bg;
+    color: $style_blue_text;
+    body.blue {
+        background-color: $style_blue_bg;
+    }
+}
+body.template.blue,
+.body.blue {
+    color: $style_blue_text;
+    a {
+        color: $style_blue_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_blue_text;
+    }
+    .page {
+        background-color: $style_blue_bg;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $style_blue_text;
+        }
+        h4 {
+            color: $style_blue_h4;
+            font-weight: bold;
+        }
+        h5 {
+            color: $style_blue_h5;
+            font-style: italic;
+        }
+        .widget {
+            &.socials {
+                .socials {
+                    color: $style_blue_h4;
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.green,
+.html.pdf.green {
+    background-color: $style_green_bg;
+    color: $style_green_text;
+    body.green {
+        background-color: $style_green_bg;
+    }
+}
+body.template.green,
+.body.green {
+    color: $style_green_text;
+    a {
+        color: $style_green_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_green_text;
+    }
+    .page {
+        background-color: $style_green_bg;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $style_green_text;
+        }
+        h4 {
+            color: $style_green_h4;
+            font-weight: bold;
+        }
+        h5 {
+            color: $style_green_h5;
+            font-style: italic;
+        }
+        .widget {
+            &.socials {
+                .socials {
+                    color: $style_green_h4;
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.coffee,
+.html.pdf.coffee {
+    background-color: $style_coffee_bg;
+    color: $style_coffee_text;
+    body.coffee {
+        background-color: $style_coffee_bg;
+    }
+}
+body.template.coffee,
+.body.coffee {
+    color: $style_coffee_text;
+    a {
+        color: $style_coffee_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_coffee_text;
+    }
+    .page {
+        background-color: $style_coffee_bg;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $style_coffee_text;
+        }
+        h4 {
+            color: $style_coffee_h4;
+            font-weight: bold;
+        }
+        h5 {
+            color: $style_coffee_h5;
+            font-style: italic;
+        }
+        .widget {
+            &.socials {
+                .socials {
+                    color: $style_coffee_h4;
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.cream,
+.html.pdf.cream {
+    background-color: $style_cream_bg;
+    color: $style_cream_text;
+    body.cream {
+        background-color: $style_cream_bg;
+    }
+}
+body.template.cream,
+.body.cream {
+    color: $style_cream_text;
+    a {
+        color: $style_cream_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_cream_text;
+    }
+    .page {
+        background-color: $style_cream_bg;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $style_cream_text;
+        }
+        h4 {
+            color: $style_cream_h4;
+            font-weight: bold;
+        }
+        h5 {
+            color: $style_cream_h5;
+            font-style: italic;
+        }
+        .widget {
+            &.socials {
+                .socials {
+                    color: $style_cream_h4;
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.tennis,
+.html.pdf.tennis {
+    background-color: $style_tennis_bg;
+    color: $style_tennis_text;
+    body.tennis {
+        background-color: $style_tennis_bg;
+    }
+}
+body.template.tennis,
+.body.tennis {
+    color: $style_tennis_text;
+    a {
+        color: $style_tennis_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_tennis_text;
+    }
+    .page {
+        background-color: $style_tennis_bg;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $style_tennis_text;
+        }
+        h4 {
+            color: $style_tennis_h4;
+            font-weight: bold;
+        }
+        h5 {
+            color: $style_tennis_h5;
+            font-style: italic;
+        }
+        .widget {
+            &.socials {
+                .socials {
+                    color: $style_tennis_h4;
+                }
+            }
+        }
+    }
+}

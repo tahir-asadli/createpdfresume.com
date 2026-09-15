@@ -1,0 +1,387 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+/* ==========================================================================
+[Layouts]
+========================================================================== */
+html.template,
+.html.template {
+    .main-layout {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 10px;
+        > * {
+            min-width: 0;
+        }
+    }
+    .page {
+        > * {
+            padding: 0 50px 0 50px;
+            &:first-child {
+                padding: 50px 50px 0 50px;
+            }
+        }
+    }
+
+    /* ==========================================================================
+[Widgets]
+========================================================================== */
+    .widget {
+        padding: 0 0 15px 0;
+        border-bottom: solid $purple 1px;
+        margin-bottom: 15px;
+        &:last-child {
+            border-bottom: 0;
+        }
+        &.space {
+            border: none;
+        }
+        > h3,
+        &.h3 {
+            margin: 0 0 5px 0;
+        }
+        h5 {
+            font-weight: normal;
+        }
+        &.fullname {
+            text-transform: uppercase;
+            color: $purple;
+            font-weight: bold;
+            border: none;
+            margin: 0;
+            padding: 0 0 5px 0;
+        }
+        &.job_title {
+            font-size: 16px;
+            font-weight: 400;
+            border: none;
+            margin: 0;
+            padding: 0 0 5px 0;
+        }
+        &.slogan {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        &.image {
+            border: none;
+            padding: 0;
+            figure {
+                position: relative;
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                &.radius-5 {
+                    &:after {
+                        border-radius: 5px;
+                    }
+                }
+                &.radius-9999 {
+                    &:after {
+                        border-radius: 9999px;
+                    }
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &.contacts {
+            .contacts {
+                margin-top: 0;
+                .contact_item {
+                    position: relative;
+                    margin-right: 10px;
+                    margin-bottom: 5px;
+                    &:after {
+                        position: relative;
+                        display: inline-block;
+                        top: -2px;
+                        left: 5px;
+                        right: 0;
+                        margin: auto;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 4px;
+                        background: #1e1e1e;
+                        content: "";
+                    }
+                    &:last-child:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &.web,
+        &.address,
+        &.email,
+        &.phone {
+            display: block;
+            border: none;
+            margin: 0 0 5px 0;
+            padding: 0;
+        }
+        &.skills {
+            .skills {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 10px;
+                margin-top: 0;
+                h5 {
+                    font-weight: normal;
+                    font-style: normal;
+                }
+                h4 {
+                    margin: 0;
+                }
+                > * {
+                    min-width: 0;
+                }
+                .skill_item {
+                    display: flex;
+                    gap: 5px;
+                    align-items: baseline;
+                    &:before {
+                        content: "";
+                        flex-shrink: 0;
+                        display: inline-block;
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 7px;
+                        background: $purple;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        &.languages {
+            .languages {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 5px;
+                margin-top: 0;
+                > * {
+                    min-width: 0;
+                }
+                .language_item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    gap: 5px;
+                    h5 {
+                        font-style: normal;
+                    }
+                    h4 {
+                        margin: 0;
+                    }
+                    .progress-container {
+                        width: 55px;
+                        .progress {
+                            position: relative;
+                            span {
+                                display: flex;
+                                gap: 5px;
+                                position: absolute;
+                                overflow: hidden;
+                                top: 0;
+                                left: 0;
+                                .dots {
+                                    .dot {
+                                        background-color: $purple;
+                                    }
+                                }
+                                &.percent5,
+                                &.percent10,
+                                &.percent15 {
+                                    width: 0;
+                                }
+                                &.percent20,
+                                &.percent25,
+                                &.percent30,
+                                &.percent35 {
+                                    width: calc(20%);
+                                }
+                                &.percent40,
+                                &.percent45,
+                                &.percent50,
+                                &.percent55 {
+                                    width: calc(40%);
+                                }
+                                &.percent60,
+                                &.percent65,
+                                &.percent70,
+                                &.percent75 {
+                                    width: calc(60%);
+                                }
+                                &.percent80,
+                                &.percent85,
+                                &.percent90,
+                                &.percent95 {
+                                    width: calc(80%);
+                                }
+                                &.percent100 {
+                                    width: calc(100%);
+                                }
+                            }
+                        }
+                        .dots {
+                            display: inline-flex;
+                            gap: 5px;
+                            .dot {
+                                width: 7px;
+                                height: 7px;
+                                border-radius: 7px;
+                                background: $ultra_light_gray;
+                                flex-shrink: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.experiences {
+            .experiences {
+                .experience_item {
+                    position: relative;
+                    min-width: 0;
+                    margin-bottom: 20px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &.educations {
+            .educations {
+                margin-top: 0;
+                display: grid;
+                gap: 20px;
+                .education_item {
+                }
+            }
+        }
+        &.socials {
+            .socials {
+                margin-top: 0;
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 20px;
+                row-gap: 10px;
+                .social_item {
+                    gap: 10px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 13px;
+                    font-weight: 400;
+                    i {
+                        flex-shrink: 0;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            fill: $black;
+                        }
+                    }
+                    > div {
+                        display: flex;
+                        flex-direction: column;
+                        span {
+                            color: $gray;
+                        }
+                    }
+                }
+            }
+        }
+        &.projects {
+            .projects {
+                margin-top: 0;
+                display: grid;
+                gap: 20px;
+            }
+        }
+        &.awards {
+            .awards {
+                margin-top: 0;
+                display: grid;
+                gap: 20px;
+            }
+        }
+        &.certificates {
+            .certificates {
+                margin-top: 0;
+                display: grid;
+                gap: 20px;
+                .certificate_item {
+                }
+            }
+        }
+        &.hobbies {
+            .hobbies {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 0;
+                h5 {
+                    font-weight: normal;
+                    font-style: normal;
+                }
+                .hobby_item {
+                    display: flex;
+                    gap: 5px;
+                    &:before {
+                        content: ", ";
+                    }
+                    &:first-child::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &.references {
+            .references {
+                margin-top: 0;
+                display: grid;
+                gap: 20px;
+                .reference_item {
+                    display: flex;
+                    flex-direction: column;
+                    grid-area: 10px;
+                    > div {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        .reference_job_phone,
+                        .reference_job_email {
+                            display: flex;
+                            align-items: center;
+                            gap: 6px;
+                        }
+                        svg {
+                            width: 14px;
+                            color: $black;
+                            fill: $black;
+                        }
+                        &:nth-child(2n) {
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ==========================================================================
+[Sections]
+========================================================================== */
+
+    .section {
+        &.content {
+        }
+    }
+}

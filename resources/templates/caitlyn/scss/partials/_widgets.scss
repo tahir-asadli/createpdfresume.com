@@ -1,0 +1,427 @@
+.widget {
+    &.fullname {
+        border: $gold solid 1px;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        // overflow: hidden;
+        display: inline-block;
+        padding: 5px 30px 10px 30px;
+        margin: 30px auto 0 auto !important;
+        font-size: 33px;
+        letter-spacing: 3px;
+        span {
+            position: relative;
+            z-index: 1;
+        }
+        > div.background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            &:before,
+            &:after {
+                position: absolute;
+                top: 0;
+                content: "";
+                display: inline-block;
+                width: 23px;
+                height: 21px;
+                background-repeat: no-repeat;
+                background-position: top left;
+                background-size: 14px;
+                z-index: 1;
+            }
+            &:before {
+                left: 0;
+                background-image: url('data:image/svg+xml, %3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 21" width="23" height="21"%3E%3Cpath fill="%23a9925b" d="m17.9 11.4c0 2.3-1.8 4.6-5.1 4.6-1.7 0-3.5-0.8-4.5-2.6l-5.7-10.7q0-0.1 0-0.2c0-0.4 0.2-0.6 0.6-0.6q0 0 0 0c0.2 0 0.7 0.2 11.9 5.3 1.9 0.9 2.8 2.5 2.8 4.2zm5-10.4c0 1.1-1.9 3.4-4.9 3.4q-0.8 0-1.7-0.3c-8.6-2.7-8.6-2.5-8.6-3.1 0-0.3 0.2-0.6 0.6-0.6h14c0.4 0 0.6 0.2 0.6 0.6zm-17.9 13.5q0.3 0.9 0.3 1.7c0 2.7-2.5 4.5-3.7 4.5-0.4 0-0.6-0.2-0.6-0.6v-12.9c0-0.4 0.3-0.6 0.6-0.6 0.3 0 0.5 0.1 0.6 0.4z"/%3E%3C/svg%3E');
+            }
+            &:after {
+                background-position: top right;
+                background-image: url('data:image/svg+xml, %3Csvg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 21" width="23" height="21"%3E%3Cpath fill="%23a9925b" class="s0" d="m7.9 7.2c11.2-5.1 11.7-5.3 11.9-5.3q0 0 0 0c0.4 0 0.6 0.2 0.6 0.6q0 0.1 0 0.2l-5.7 10.7c-1 1.8-2.8 2.6-4.5 2.6-3.3 0-5.1-2.3-5.1-4.6 0-1.7 0.9-3.3 2.8-4.2zm-7.2-6.8h14c0.4 0 0.6 0.3 0.6 0.6 0 0.6 0 0.4-8.6 3.1q-0.9 0.3-1.7 0.3c-3 0-4.9-2.3-4.9-3.4 0-0.4 0.2-0.6 0.6-0.6zm20.1 6.6c0.1-0.3 0.3-0.4 0.6-0.4 0.3 0 0.6 0.2 0.6 0.6v12.9c0 0.4-0.2 0.6-0.6 0.6-1.2 0-3.7-1.8-3.7-4.5q0-0.8 0.3-1.7z"/%3E%3C/svg%3E');
+                right: 0;
+            }
+        }
+        > div.line {
+            border-bottom: solid 1px $gold;
+            position: absolute;
+            left: 0;
+            bottom: 7px;
+            width: 100%;
+            z-index: 1;
+        }
+        > div.top {
+            position: absolute;
+            top: -51px;
+            height: 50px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: "Cormorant Garamond";
+            font-size: 19px;
+            background-size: 260px;
+            line-height: 51px;
+            letter-spacing: 0;
+            text-align: center;
+            padding-right: 2px;
+            background-image: url("data:image/png;base64,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");
+            margin: auto;
+            left: 0;
+            right: 0;
+            background-size: 260px;
+        }
+    }
+}
+
+// .widget {
+//     margin: 0 0 30px 0;
+//     > h3 {
+//         position: relative;
+//         &:before {
+//             content: "";
+//             display: block;
+//             background-color: $gold;
+//             width: 100%;
+//             height: 2px;
+//             margin-bottom: 20px;
+//         }
+//         &:after {
+//             content: "";
+//             display: block;
+//             background-color: $gold;
+//             width: 50px;
+//             height: 6px;
+//             position: absolute;
+//             top: -2px;
+//             left: 0;
+//         }
+//     }
+// }
+
+// .widget.image {
+//     text-align: center;
+//     img {
+//         width: 160px;
+//         height: 160px;
+//         object-fit: cover;
+//     }
+// }
+
+// .widget.hobby {
+//     .hobbies {
+//         display: flex;
+//         flex-wrap: wrap;
+//         gap: 20px;
+//         .hobby_item {
+//             display: flex;
+//             flex-direction: column;
+//             min-width: 50px;
+//             align-items: center;
+//             gap: 10px;
+//             i {
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 width: 50px;
+//                 height: 50px;
+//                 border-radius: 50px;
+//                 background-color: $gold;
+//                 color: $gray;
+//                 svg {
+//                     width: 32px;
+//                 }
+//             }
+//             span {
+//                 font-weight: bold;
+//             }
+//             &:nth-child(1n) {
+//                 i {
+//                     background-color: #42b6a1;
+//                 }
+//             }
+//             &:nth-child(2n) {
+//                 i {
+//                     background-color: #b8aa3c;
+//                 }
+//             }
+//             &:nth-child(3n) {
+//                 i {
+//                     background-color: #f17e57;
+//                 }
+//             }
+//             &:nth-child(4n) {
+//                 i {
+//                     background-color: #e56251;
+//                 }
+//             }
+//             &:nth-child(5n) {
+//                 i {
+//                     background-color: #e1614d;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .widget.languages {
+//     .languages {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 10px;
+//         .language_item {
+//             display: flex;
+//             gap: 10px;
+//             align-items: center;
+//             .progress {
+//                 position: relative;
+//                 margin: 3px 0;
+//                 background-color: $gold;
+//                 flex-grow: 1;
+//                 > span {
+//                     background-color: $black;
+//                     display: block;
+//                     height: 6px;
+//                 }
+//             }
+//         }
+//     }
+// }
+// .widget.socials {
+//     .socials {
+//         .social_item {
+//             svg {
+//                 width: 32px;
+//             }
+//             > div {
+//                 display: flex;
+//                 flex-direction: column;
+//             }
+//         }
+//     }
+// }
+
+// .widget.contacts {
+//     .contacts {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 10px;
+//         .contact_item {
+//             display: inline-flex;
+//             align-items: center;
+//             gap: 10px;
+//             i {
+//                 display: inline-flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 background-color: $gold;
+//                 width: 32px;
+//                 height: 32px;
+//                 border-radius: 32px;
+//                 svg {
+//                     width: 32px;
+//                     color: $gray;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .widget.socials {
+//     .socials {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 10px;
+//         .social_item {
+//             display: inline-flex;
+//             align-items: center;
+//             gap: 10px;
+//             i {
+//                 display: inline-flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 background-color: $gold;
+//                 width: 32px;
+//                 height: 32px;
+//                 border-radius: 32px;
+//                 svg {
+//                     width: 14px;
+//                     color: $gray;
+//                     fill: $gray;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .widget.experiences {
+//     .experiences {
+//         .experience_item {
+//             position: relative;
+//             padding-left: 10px;
+//             margin-bottom: 20px;
+//             &:before,
+//             &:after {
+//                 position: absolute;
+//                 left: 0;
+//                 content: "";
+//                 display: inline-block;
+//                 width: 6px;
+//                 background-color: $black;
+//             }
+//             &:before {
+//                 height: 6px;
+//                 border-radius: 6px;
+//                 top: 2px;
+//             }
+//             &:after {
+//                 width: 2px;
+//                 left: 2px;
+//                 height: calc(100% - 20px);
+//                 top: 15px;
+//             }
+//             .experience_position {
+//                 font-family: Poppins;
+//                 font-weight: 700;
+//                 display: flex;
+//                 justify-content: space-between;
+//             }
+//             .experience_location {
+//                 font-family: Poppins;
+//             }
+//             .experience_about {
+//                 font-family: Poppins;
+//             }
+//         }
+//     }
+// }
+
+// .widget.educations {
+//     .educations {
+//         .education_item {
+//             position: relative;
+//             padding-left: 10px;
+//             margin-bottom: 20px;
+//             &:before,
+//             &:after {
+//                 position: absolute;
+//                 left: 0;
+//                 content: "";
+//                 display: inline-block;
+//                 width: 6px;
+//                 background-color: $black;
+//             }
+//             &:before {
+//                 height: 6px;
+//                 border-radius: 6px;
+//                 top: 2px;
+//             }
+//             &:after {
+//                 width: 2px;
+//                 left: 2px;
+//                 height: calc(100% - 20px);
+//                 top: 15px;
+//             }
+//             .education_school {
+//                 font-weight: 700;
+//                 display: flex;
+//                 justify-content: space-between;
+//             }
+//             .education_degree {
+//                 font-style: italic;
+//             }
+//         }
+//     }
+// }
+
+// .widget.awards {
+//     .awards {
+//         .award_item {
+//             position: relative;
+//             margin-bottom: 10px;
+//             .award_title {
+//                 font-weight: 700;
+//                 display: flex;
+//                 justify-content: space-between;
+//             }
+//             .award_organization {
+//                 font-style: italic;
+//             }
+//             .award_year {
+//                 font-style: italic;
+//                 &:before {
+//                     content: " - ";
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .widget.references {
+//     .references {
+//         margin-top: 15px;
+//         display: grid;
+//         grid-template-columns: 1fr 1fr;
+//         gap: 20px;
+//         .reference_item {
+//             position: relative;
+//             padding-bottom: 5px;
+//             border-right: solid 1px rgba($gold, 0.3);
+//             .reference_name {
+//                 font-weight: bold;
+//             }
+//             .reference_job_title {
+//                 font-style: italic;
+//                 margin-bottom: 3px;
+//             }
+//             .reference_job_phone,
+//             .reference_job_email {
+//                 display: flex;
+//                 align-items: center;
+//                 gap: 6px;
+//             }
+//             i {
+//                 display: inline-flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 svg {
+//                     width: 14px;
+//                     color: $gold;
+//                     fill: $gold;
+//                 }
+//             }
+//             &:nth-child(2n) {
+//                 border-right: none;
+//             }
+//         }
+//     }
+// }
+
+// .widget.projects {
+//     .projects {
+//         .project_item {
+//             position: relative;
+//             margin-bottom: 15px;
+//             .project_name {
+//                 display: flex;
+//                 justify-content: space-between;
+//             }
+//             .project_description {
+//                 font-style: italic;
+//             }
+//             span.project_year {
+//                 font-weight: 700;
+//                 &:before {
+//                     content: " - ";
+//                 }
+//             }
+//             h5.project_year {
+//                 display: none;
+//             }
+//         }
+//     }
+// }
+
+// .job_title {
+//     font-size: 14px;
+// }

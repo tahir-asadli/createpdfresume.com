@@ -1,0 +1,83 @@
+{
+  "full_name": "string",
+  "about": "string",
+  "job_title": "",
+  "email": "string",
+  "phone": "string",
+  "website": "string",
+  "address": {
+    "city": "string",
+    "country": "string"
+  },
+  "skills": [
+    "string"
+  ],
+  "languages": [
+    "string"
+  ],
+  "hobbies": [
+    "string"
+  ],
+  "socials": [
+    {
+      "site": "string",
+      "link": "string"
+    }
+  ],
+  "work_experiences": [
+    {
+      "company": "string",
+      "position": "string",
+      "start_date": "string",
+      "end_date": "string",
+      "address": "string",
+      "about": "string"
+    }
+  ],
+  "educations": [
+    {
+      "institution": "string",
+      "degree": "string",
+      "start_date": "string",
+      "end_date": "string",
+      "address": "string",
+      "about": "string"
+    }
+  ],
+  "projects": [
+    {
+      "name": "string",
+      "link": "string",
+      "start_date": "string",
+      "end_date": "string",
+      "description": "string"
+    }
+  ],
+  "awards": [
+    {
+      "name": "string",
+      "organization": "string",
+      "start_date": "string",
+      "end_date": "string",
+      "description": "string"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "string",
+      "organization": "string",
+      "start_date": "string",
+      "end_date": "string",
+      "description": "string"
+    }
+  ],
+  "references": [
+    {
+      "fullname": "string",
+      "company": "string",
+      "position": "string",
+      "email": "string",
+      "phone": "string"
+    }
+  ]
+}

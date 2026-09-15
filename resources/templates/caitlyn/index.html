@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" class="template {{canvas}} {{style}}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style></style>
+  <style id="global"></style>
+  <style id="view"></style>
+  <title id="title">{{title}}</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const divs = document.querySelectorAll('.has-children');
+      Object.keys(divs).forEach(function (index) {
+        const item = divs[index];
+        let childrenCount = 0;
+        const visibleChildren = Array.from(item.children).filter(
+          function (child) {
+            if (getComputedStyle(child).display == 'none') {
+              delete child.remove();
+            }
+            return getComputedStyle(child).display !== 'none'
+          }
+        );
+        item.classList.add(`has-${visibleChildren.length}-children`)
+      });
+      document.querySelectorAll('a').forEach(anchor => {
+        if (anchor.childNodes.length === 1 && anchor.firstChild.nodeType === Node.TEXT_NODE) {
+          const originalText = anchor.textContent;
+          anchor.innerHTML = `<span>${originalText}</span>`;
+        }
+      });
+    });
+  </script>
+</head>
+
+<body class="template {{style}}">
+  <div id="page-{{page}}" class="page relative">
+    <div class="main-layout">
+      <div class="section header" name="header">
+        <h1 name="fullname" class="widget fullname"> {{fullname}} <div class="top">OM</div>
+          <div class="background"></div>
+          <div class="line"></div>
+          <div class="lines-container">
+            <div class="lines">
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+              <em></em>
+            </div>
+          </div>
+        </h1>
+      </div>
+      <div class="section sidebar" name="sidebar"></div>
+      <div class="section content" name="content">
+        <h3 name="slogan" class="widget slogan">{{slogan}}</h3>
+      </div>
+    </div>
+  </div><!-- .page relative -->
+</body>
+
+</html>

@@ -1,0 +1,1071 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+$style_dark_bg: #313131;
+$style_dark_fr: #282828;
+$style_dark_text: #ffffff;
+$style_dark_border: #c4c4c4;
+
+$style_pink_bg: #ff69b4;
+$style_pink_fr: #ffffff;
+$style_pink_text: #61212d;
+$style_pink_border: #ec5ba4;
+
+$style_coffee_bg: #ae7f61;
+$style_coffee_fr: #996849;
+$style_coffee_text: #5a3e2d;
+$style_coffee_border: #ffffff;
+
+$style_tennis_bg: #cbe399;
+$style_tennis_fr: #8dc16a;
+$style_tennis_text: #466233;
+$style_tennis_border: #ffffff;
+$style_tennis_blue: #50a8cc;
+
+$style_cream_bg: #fff39a;
+$style_cream_fr: #2350ab;
+$style_cream_text: #2350ab;
+$style_cream_border: #eee07a;
+
+$style_green_bg: #52865c;
+$style_green_fr: #2b6a38;
+$style_green_text: #ffffff;
+$style_green_border: #41794d;
+$style_green_dark: #1e5129;
+
+$style_red_bg: #f2003c;
+$style_red_fr: #e44d2e;
+$style_red_text: #ffffff;
+$style_red_border: #db0439;
+$style_red_dark: #711616;
+
+$style_blue_bg: #1e90ff;
+$style_blue_fr: #ffffff;
+$style_blue_text: #191970;
+$style_blue_border: #0d79e1;
+
+html.template.pdf,
+.html.pdf {
+    background-color: $background_color;
+    body {
+        background-color: $background_color;
+    }
+}
+
+html.template.pdf.dark,
+.html.pdf.dark {
+    background-color: $style_dark_bg;
+    body.dark {
+        background-color: $style_dark_bg;
+    }
+}
+body.template.dark,
+.body.dark {
+    background-color: $style_dark_bg;
+    color: $style_dark_text;
+    a {
+        color: $style_dark_text;
+    }
+    p {
+        color: $style_dark_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_dark_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_dark_text;
+        &::marker {
+            color: $style_dark_text;
+        }
+    }
+    .page {
+        background-color: $style_dark_bg;
+        color: $style_dark_text;
+        p {
+            color: $style_dark_text;
+        }
+        a {
+            color: $style_dark_text;
+        }
+        .widget {
+            border-bottom-color: $style_dark_border;
+            &.fullname {
+                color: $style_dark_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        &:after {
+                            background: $style_dark_text;
+                        }
+                    }
+                }
+            }
+            &.skills {
+                .skills {
+                    .skill_item {
+                        &:before {
+                            background: $style_dark_border;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_dark_border;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: none;
+                                    border: solid 1px $style_dark_border;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                fill: $style_dark_border;
+                            }
+                        }
+                        > div {
+                            span {
+                                color: $style_dark_border;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    margin-top: 0;
+                    display: grid;
+                    gap: 20px;
+                    .reference_item {
+                        > div {
+                            svg {
+                                width: 14px;
+                                color: $style_dark_border;
+                                fill: $style_dark_border;
+                            }
+                            &:nth-child(2n) {
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.pink,
+.html.pdf.pink {
+    background-color: $style_pink_bg;
+    body.pink {
+        background-color: $style_pink_bg;
+    }
+}
+body.template.pink,
+.body.pink {
+    background-color: $style_pink_bg;
+    color: $style_pink_text;
+    a {
+        color: $style_pink_text;
+    }
+    p {
+        color: $style_pink_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_pink_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_pink_text;
+        &::marker {
+            color: $style_pink_text;
+        }
+    }
+    .page {
+        background-color: $style_pink_bg;
+        color: $style_pink_text;
+        p {
+            color: $style_pink_text;
+        }
+        a {
+            color: $style_pink_text;
+        }
+        .widget {
+            border-bottom-color: $style_pink_border;
+            &.fullname {
+                color: $style_pink_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        &:after {
+                            background: $style_pink_text;
+                        }
+                    }
+                }
+            }
+            &.skills {
+                .skills {
+                    .skill_item {
+                        &:before {
+                            background: $style_pink_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_pink_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: none;
+                                    border: solid 1px $style_pink_text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                fill: $style_pink_text;
+                            }
+                        }
+                        > div {
+                            span {
+                                color: $style_pink_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    margin-top: 0;
+                    display: grid;
+                    gap: 20px;
+                    .reference_item {
+                        > div {
+                            svg {
+                                width: 14px;
+                                color: $style_pink_text;
+                                fill: $style_pink_text;
+                            }
+                            &:nth-child(2n) {
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.coffee,
+.html.pdf.coffee {
+    background-color: $style_coffee_bg;
+    body.coffee {
+        background-color: $style_coffee_bg;
+    }
+}
+body.template.coffee,
+.body.coffee {
+    background-color: $style_coffee_bg;
+    color: $style_coffee_text;
+    a {
+        color: $style_coffee_text;
+    }
+    p {
+        color: $style_coffee_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_coffee_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_coffee_text;
+        &::marker {
+            color: $style_coffee_text;
+        }
+    }
+    .page {
+        background-color: $style_coffee_bg;
+        color: $style_coffee_text;
+        p {
+            color: $style_coffee_text;
+        }
+        a {
+            color: $style_coffee_text;
+        }
+        .widget {
+            border-bottom-color: $style_coffee_fr;
+            &.fullname {
+                color: $style_coffee_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        &:after {
+                            background: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+            &.skills {
+                .skills {
+                    .skill_item {
+                        &:before {
+                            background: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_coffee_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: none;
+                                    border: solid 1px $style_coffee_text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                fill: $style_coffee_text;
+                            }
+                        }
+                        > div {
+                            span {
+                                color: $style_coffee_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    margin-top: 0;
+                    display: grid;
+                    gap: 20px;
+                    .reference_item {
+                        > div {
+                            svg {
+                                width: 14px;
+                                color: $style_coffee_text;
+                                fill: $style_coffee_text;
+                            }
+                            &:nth-child(2n) {
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.tennis,
+.html.pdf.tennis {
+    background-color: $style_tennis_bg;
+    body.tennis {
+        background-color: $style_tennis_bg;
+    }
+}
+body.template.tennis,
+.body.tennis {
+    background-color: $style_tennis_bg;
+    color: $style_tennis_text;
+    a {
+        color: $style_tennis_text;
+    }
+    p {
+        color: $style_tennis_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_tennis_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_tennis_text;
+        &::marker {
+            color: $style_tennis_text;
+        }
+    }
+    .page {
+        background-color: $style_tennis_bg;
+        color: $style_tennis_text;
+        p {
+            color: $style_tennis_text;
+        }
+        a {
+            color: $style_tennis_text;
+        }
+        .widget {
+            border-bottom-color: $style_tennis_fr;
+            &.fullname {
+                color: $style_tennis_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        &:after {
+                            background: $style_tennis_text;
+                        }
+                    }
+                }
+            }
+            &.skills {
+                .skills {
+                    .skill_item {
+                        &:before {
+                            background: $style_tennis_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_tennis_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: none;
+                                    border: solid 1px $style_tennis_text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                fill: $style_tennis_text;
+                            }
+                        }
+                        > div {
+                            span {
+                                color: $style_tennis_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    margin-top: 0;
+                    display: grid;
+                    gap: 20px;
+                    .reference_item {
+                        > div {
+                            svg {
+                                width: 14px;
+                                color: $style_tennis_text;
+                                fill: $style_tennis_text;
+                            }
+                            &:nth-child(2n) {
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.cream,
+.html.pdf.cream {
+    background-color: $style_cream_bg;
+    body.cream {
+        background-color: $style_cream_bg;
+    }
+}
+body.template.cream,
+.body.cream {
+    background-color: $style_cream_bg;
+    color: $style_cream_text;
+    a {
+        color: $style_cream_text;
+    }
+    p {
+        color: $style_cream_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_cream_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_cream_text;
+        &::marker {
+            color: $style_cream_text;
+        }
+    }
+    .page {
+        background-color: $style_cream_bg;
+        color: $style_cream_text;
+        p {
+            color: $style_cream_text;
+        }
+        a {
+            color: $style_cream_text;
+        }
+        .widget {
+            border-bottom-color: $style_cream_fr;
+            &.fullname {
+                color: $style_cream_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        &:after {
+                            background: $style_cream_text;
+                        }
+                    }
+                }
+            }
+            &.skills {
+                .skills {
+                    .skill_item {
+                        &:before {
+                            background: $style_cream_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_cream_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: none;
+                                    border: solid 1px $style_cream_text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                fill: $style_cream_text;
+                            }
+                        }
+                        > div {
+                            span {
+                                color: $style_cream_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    margin-top: 0;
+                    display: grid;
+                    gap: 20px;
+                    .reference_item {
+                        > div {
+                            svg {
+                                width: 14px;
+                                color: $style_cream_text;
+                                fill: $style_cream_text;
+                            }
+                            &:nth-child(2n) {
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.green,
+.html.pdf.green {
+    background-color: $style_green_bg;
+    body.green {
+        background-color: $style_green_bg;
+    }
+}
+body.template.green,
+.body.green {
+    background-color: $style_green_bg;
+    color: $style_green_text;
+    a {
+        color: $style_green_text;
+    }
+    p {
+        color: $style_green_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_green_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_green_text;
+        &::marker {
+            color: $style_green_text;
+        }
+    }
+    .page {
+        background-color: $style_green_bg;
+        color: $style_green_text;
+        p {
+            color: $style_green_text;
+        }
+        a {
+            color: $style_green_text;
+        }
+        .widget {
+            border-bottom-color: $style_green_border;
+            &.fullname {
+                color: $style_green_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        &:after {
+                            background: $style_green_text;
+                        }
+                    }
+                }
+            }
+            &.skills {
+                .skills {
+                    .skill_item {
+                        &:before {
+                            background: $style_green_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_green_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: none;
+                                    border: solid 1px $style_green_text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                fill: $style_green_text;
+                            }
+                        }
+                        > div {
+                            span {
+                                color: $style_green_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    margin-top: 0;
+                    display: grid;
+                    gap: 20px;
+                    .reference_item {
+                        > div {
+                            svg {
+                                width: 14px;
+                                color: $style_green_text;
+                                fill: $style_green_text;
+                            }
+                            &:nth-child(2n) {
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.red,
+.html.pdf.red {
+    background-color: $style_red_bg;
+    body.red {
+        background-color: $style_red_bg;
+    }
+}
+body.template.red,
+.body.red {
+    background-color: $style_red_bg;
+    color: $style_red_text;
+    a {
+        color: $style_red_text;
+    }
+    p {
+        color: $style_red_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_red_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_red_text;
+        &::marker {
+            color: $style_red_text;
+        }
+    }
+    .page {
+        background-color: $style_red_bg;
+        color: $style_red_text;
+        p {
+            color: $style_red_text;
+        }
+        a {
+            color: $style_red_text;
+        }
+        .widget {
+            border-bottom-color: $style_red_border;
+            &.fullname {
+                color: $style_red_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        &:after {
+                            background: $style_red_text;
+                        }
+                    }
+                }
+            }
+            &.skills {
+                .skills {
+                    .skill_item {
+                        &:before {
+                            background: $style_red_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_red_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: none;
+                                    border: solid 1px $style_red_text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                fill: $style_red_text;
+                            }
+                        }
+                        > div {
+                            span {
+                                color: $style_red_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    margin-top: 0;
+                    display: grid;
+                    gap: 20px;
+                    .reference_item {
+                        > div {
+                            svg {
+                                width: 14px;
+                                color: $style_red_text;
+                                fill: $style_red_text;
+                            }
+                            &:nth-child(2n) {
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.blue,
+.html.pdf.blue {
+    background-color: $style_blue_bg;
+    body.blue {
+        background-color: $style_blue_bg;
+    }
+}
+body.template.blue,
+.body.blue {
+    background-color: $style_blue_bg;
+    color: $style_blue_text;
+    a {
+        color: $style_blue_text;
+    }
+    p {
+        color: $style_blue_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_blue_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_blue_text;
+        &::marker {
+            color: $style_blue_text;
+        }
+    }
+    .page {
+        background-color: $style_blue_bg;
+        color: $style_blue_text;
+        p {
+            color: $style_blue_text;
+        }
+        a {
+            color: $style_blue_text;
+        }
+        .widget {
+            border-bottom-color: $style_blue_border;
+            &.fullname {
+                color: $style_blue_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        &:after {
+                            background: $style_blue_text;
+                        }
+                    }
+                }
+            }
+            &.skills {
+                .skills {
+                    .skill_item {
+                        &:before {
+                            background: $style_blue_text;
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_blue_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: none;
+                                    border: solid 1px $style_blue_text;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            svg {
+                                fill: $style_blue_text;
+                            }
+                        }
+                        > div {
+                            span {
+                                color: $style_blue_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    margin-top: 0;
+                    display: grid;
+                    gap: 20px;
+                    .reference_item {
+                        > div {
+                            svg {
+                                width: 14px;
+                                color: $style_blue_text;
+                                fill: $style_blue_text;
+                            }
+                            &:nth-child(2n) {
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

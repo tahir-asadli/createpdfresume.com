@@ -1,0 +1,651 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+$wheat: wheat;
+
+$style_dark_bg: #333;
+$style_dark_fr: #555454;
+$style_dark_text: white;
+$style_dark_border: #555454;
+
+$style_maroon_bg: #c31952;
+$style_maroon_fr: #ee8c8c;
+$style_maroon_text: wheat;
+$style_maroon_border: #e6467b;
+
+$style_pink_bg: white;
+$style_pink_fr: #ec3253;
+$style_pink_text: #ec3253;
+$style_pink_border: #ec3253;
+
+$style_red_bg: #dd4220;
+$style_red_fr: #ee5e3e;
+$style_red_text: #fff;
+$style_red_border: #f77659;
+
+$style_blue_bg: #002875;
+$style_blue_fr: #002875;
+$style_blue_text: #fff;
+$style_blue_border: #244fa4;
+
+$style_green_bg: #ffefcb;
+$style_green_fr: #033b0e;
+$style_green_text: #033b0e;
+$style_green_border: #033b0e;
+
+$style_cream_bg: #fceade;
+$style_cream_fr: #040000;
+$style_cream_text: #2350ab;
+$style_cream_border: #819dd7;
+
+$style_coffee_bg: #ecd9cd;
+$style_coffee_fr: #4e1f00;
+$style_coffee_text: #4e1f00;
+$style_coffee_border: #ae7f61;
+
+$style_tennis_bg: #e6e6d6;
+$style_tennis_fr: #466233;
+$style_tennis_text: #466233;
+$style_tennis_border: #a6c369;
+$style_tennis_blue: #11759d;
+
+html.template.pdf.dark,
+.html.pdf.dark {
+    background-color: $style_dark_bg;
+    color: $style_dark_text;
+    body.dark {
+        background-color: $style_dark_bg;
+    }
+}
+body.template.dark,
+.body.dark {
+    color: $style_dark_text;
+    a {
+        color: $style_dark_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_dark_text;
+    }
+    .page {
+        background-color: $style_dark_bg;
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background: $style_dark_text;
+                            color: $style_dark_bg;
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        span {
+                            color: $style_dark_text;
+                        }
+                        i svg {
+                            fill: $style_dark_text;
+                        }
+                    }
+                }
+            }
+            &.experiences .experiences .experience_item,
+            &.educations .educations .education_item,
+            &.projects .projects .project_item,
+            &.awards .awards .award_item,
+            &.certificates .certificates .certificate_item {
+                border-color: $style_dark_border;
+            }
+        }
+    }
+    .section {
+        &.header {
+            .widget {
+                &.contacts,
+                &.about,
+                &.languages,
+                &.socials,
+                &.hobbies {
+                    border-top: solid 1px $style_dark_border;
+                    border-bottom: solid 1px $style_dark_border;
+                }
+            }
+        }
+        &.sidebar {
+            border-right: solid 1px $style_dark_border;
+        }
+    }
+}
+
+html.template.pdf.maroon,
+.html.pdf.maroon {
+    background-color: $style_maroon_bg;
+    color: $style_maroon_text;
+    body.maroon {
+        background-color: $style_maroon_bg;
+    }
+}
+body.template.maroon,
+.body.maroon {
+    color: $style_maroon_text;
+    a {
+        color: $style_maroon_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_maroon_text;
+    }
+    .page {
+        background-color: $style_maroon_bg;
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background: $style_maroon_text;
+                            color: $style_maroon_bg;
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        span {
+                            color: $style_maroon_text;
+                        }
+                        i svg {
+                            fill: $style_maroon_text;
+                        }
+                    }
+                }
+            }
+            &.experiences .experiences .experience_item,
+            &.educations .educations .education_item,
+            &.projects .projects .project_item,
+            &.awards .awards .award_item,
+            &.certificates .certificates .certificate_item {
+                border-color: $style_maroon_border;
+            }
+        }
+    }
+    .section {
+        &.header {
+            .widget {
+                &.contacts,
+                &.about,
+                &.languages,
+                &.socials,
+                &.hobbies {
+                    border-top: solid 1px $style_maroon_border;
+                    border-bottom: solid 1px $style_maroon_border;
+                }
+            }
+        }
+        &.sidebar {
+            border-right: solid 1px $style_maroon_border;
+        }
+    }
+}
+
+html.template.pdf.pink,
+.html.pdf.pink {
+    background-color: $style_pink_bg;
+    color: $style_pink_text;
+    body.pink {
+        background-color: $style_pink_bg;
+    }
+}
+body.template.pink,
+.body.pink {
+    color: $style_pink_text;
+    a {
+        color: $style_pink_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_pink_text;
+    }
+    .page {
+        background-color: $style_pink_bg;
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background: $style_pink_text;
+                            color: $style_pink_bg;
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        span {
+                            color: $style_pink_text;
+                        }
+                        i svg {
+                            fill: $style_pink_text;
+                        }
+                    }
+                }
+            }
+            &.experiences .experiences .experience_item,
+            &.educations .educations .education_item,
+            &.projects .projects .project_item,
+            &.awards .awards .award_item,
+            &.certificates .certificates .certificate_item {
+                border-color: $style_pink_border;
+            }
+        }
+    }
+    .section {
+        &.header {
+            .widget {
+                &.contacts,
+                &.about,
+                &.languages,
+                &.socials,
+                &.hobbies {
+                    border-top: solid 1px $style_pink_border;
+                    border-bottom: solid 1px $style_pink_border;
+                }
+            }
+        }
+        &.sidebar {
+            border-right: solid 1px $style_pink_border;
+        }
+    }
+}
+
+html.template.pdf.red,
+.html.pdf.red {
+    background-color: $style_red_bg;
+    color: $style_red_text;
+    body.red {
+        background-color: $style_red_bg;
+    }
+}
+body.template.red,
+.body.red {
+    color: $style_red_text;
+    a {
+        color: $style_red_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_red_text;
+    }
+    .page {
+        background-color: $style_red_bg;
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background: $style_red_text;
+                            color: $style_red_bg;
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        span {
+                            color: $style_red_text;
+                        }
+                        i svg {
+                            fill: $style_red_text;
+                        }
+                    }
+                }
+            }
+            &.experiences .experiences .experience_item,
+            &.educations .educations .education_item,
+            &.projects .projects .project_item,
+            &.awards .awards .award_item,
+            &.certificates .certificates .certificate_item {
+                border-color: $style_red_border;
+            }
+        }
+    }
+    .section {
+        &.header {
+            .widget {
+                &.contacts,
+                &.about,
+                &.languages,
+                &.socials,
+                &.hobbies {
+                    border-top: solid 1px $style_red_border;
+                    border-bottom: solid 1px $style_red_border;
+                }
+            }
+        }
+        &.sidebar {
+            border-right: solid 1px $style_red_border;
+        }
+    }
+}
+
+html.template.pdf.blue,
+.html.pdf.blue {
+    background-color: $style_blue_bg;
+    color: $style_blue_text;
+    body.blue {
+        background-color: $style_blue_bg;
+    }
+}
+body.template.blue,
+.body.blue {
+    color: $style_blue_text;
+    a {
+        color: $style_blue_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_blue_text;
+    }
+    .page {
+        background-color: $style_blue_bg;
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background: $style_blue_text;
+                            color: $style_blue_bg;
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        span {
+                            color: $style_blue_text;
+                        }
+                        i svg {
+                            fill: $style_blue_text;
+                        }
+                    }
+                }
+            }
+            &.experiences .experiences .experience_item,
+            &.educations .educations .education_item,
+            &.projects .projects .project_item,
+            &.awards .awards .award_item,
+            &.certificates .certificates .certificate_item {
+                border-color: $style_blue_border;
+            }
+        }
+    }
+    .section {
+        &.header {
+            .widget {
+                &.contacts,
+                &.about,
+                &.languages,
+                &.socials,
+                &.hobbies {
+                    border-top: solid 1px $style_blue_border;
+                    border-bottom: solid 1px $style_blue_border;
+                }
+            }
+        }
+        &.sidebar {
+            border-right: solid 1px $style_blue_border;
+        }
+    }
+}
+
+html.template.pdf.green,
+.html.pdf.green {
+    background-color: $style_green_bg;
+    color: $style_green_text;
+    body.green {
+        background-color: $style_green_bg;
+    }
+}
+body.template.green,
+.body.green {
+    color: $style_green_text;
+    a {
+        color: $style_green_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_green_text;
+    }
+    .page {
+        background-color: $style_green_bg;
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background: $style_green_text;
+                            color: $style_green_bg;
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        span {
+                            color: $style_green_text;
+                        }
+                        i svg {
+                            fill: $style_green_text;
+                        }
+                    }
+                }
+            }
+            &.experiences .experiences .experience_item,
+            &.educations .educations .education_item,
+            &.projects .projects .project_item,
+            &.awards .awards .award_item,
+            &.certificates .certificates .certificate_item {
+                border-color: $style_green_border;
+            }
+        }
+    }
+    .section {
+        &.header {
+            .widget {
+                &.contacts,
+                &.about,
+                &.languages,
+                &.socials,
+                &.hobbies {
+                    border-top: solid 1px $style_green_border;
+                    border-bottom: solid 1px $style_green_border;
+                }
+            }
+        }
+        &.sidebar {
+            border-right: solid 1px $style_green_border;
+        }
+    }
+}
+
+html.template.pdf.coffee,
+.html.pdf.coffee {
+    background-color: $style_coffee_bg;
+    color: $style_coffee_text;
+    body.coffee {
+        background-color: $style_coffee_bg;
+    }
+}
+body.template.coffee,
+.body.coffee {
+    color: $style_coffee_text;
+    a {
+        color: $style_coffee_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_coffee_text;
+    }
+    .page {
+        background-color: $style_coffee_bg;
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background: $style_coffee_text;
+                            color: $style_coffee_bg;
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        span {
+                            color: $style_coffee_text;
+                        }
+                        i svg {
+                            fill: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+            &.experiences .experiences .experience_item,
+            &.educations .educations .education_item,
+            &.projects .projects .project_item,
+            &.awards .awards .award_item,
+            &.certificates .certificates .certificate_item {
+                border-color: $style_coffee_border;
+            }
+        }
+    }
+    .section {
+        &.header {
+            .widget {
+                &.contacts,
+                &.about,
+                &.languages,
+                &.socials,
+                &.hobbies {
+                    border-top: solid 1px $style_coffee_border;
+                    border-bottom: solid 1px $style_coffee_border;
+                }
+            }
+        }
+        &.sidebar {
+            border-right: solid 1px $style_coffee_border;
+        }
+    }
+}
+
+html.template.pdf.cream,
+.html.pdf.cream {
+    background-color: $style_cream_bg;
+    color: $style_cream_text;
+    body.cream {
+        background-color: $style_cream_bg;
+    }
+}
+body.template.cream,
+.body.cream {
+    color: $style_cream_text;
+    a {
+        color: $style_cream_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_cream_text;
+    }
+    .page {
+        background-color: $style_cream_bg;
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background: $style_cream_text;
+                            color: $style_cream_bg;
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        span {
+                            color: $style_cream_text;
+                        }
+                        i svg {
+                            fill: $style_cream_text;
+                        }
+                    }
+                }
+            }
+            &.experiences .experiences .experience_item,
+            &.educations .educations .education_item,
+            &.projects .projects .project_item,
+            &.awards .awards .award_item,
+            &.certificates .certificates .certificate_item {
+                border-color: $style_cream_border;
+            }
+        }
+    }
+    .section {
+        &.header {
+            .widget {
+                &.contacts,
+                &.about,
+                &.languages,
+                &.socials,
+                &.hobbies {
+                    border-top: solid 1px $style_cream_border;
+                    border-bottom: solid 1px $style_cream_border;
+                }
+            }
+        }
+        &.sidebar {
+            border-right: solid 1px $style_cream_border;
+        }
+    }
+}

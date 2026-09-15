@@ -1,0 +1,1149 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+$style_dark_bg: #313131;
+$style_dark_text: #ffffff;
+$style_dark_border: #a2a2a2;
+$style_dark_icon: #c6c6c6;
+$style_dark_accent: #3c3c3c;
+$style_dark_fr: #6d6d6d;
+
+$style_pink_bg: hotpink;
+$style_pink_text: #61212d;
+$style_pink_border: #ec57a2;
+$style_pink_icon: #61212d;
+$style_pink_accent: #9d1f5f;
+$style_pink_fr: #ec57a2;
+$style_pink_header: #f761ac;
+
+$style_coffee_bg: #a52a2a;
+$style_coffee_text: #ffffff;
+$style_coffee_border: #e08543;
+$style_coffee_icon: #e97451;
+$style_coffee_accent: #e97451;
+$style_coffee_fr: #daa06d;
+$style_coffee_header: #ae2d2d;
+
+$style_tennis_bg: #03a64a;
+$style_tennis_text: #092b48;
+// $style_tennis_border: #e08543;
+$style_tennis_icon: #0fae55;
+// $style_tennis_accent: #e97451;
+$style_tennis_fr: #2aca70;
+$style_tennis_header: #0fae55;
+
+$style_cream_bg: #ffe8cd;
+$style_cream_text: #d57c40;
+// $style_cream_border: #e08543;
+$style_cream_icon: #fff2eb;
+// $style_cream_accent: #e97451;
+$style_cream_fr: #fff2eb;
+$style_cream_header: #fde2c2;
+
+$style_green_bg: #75b06f;
+$style_green_text: #2c5a60;
+$style_green_icon: #abd3a7;
+$style_green_fr: #abd3a7;
+$style_green_header: #76b76f;
+
+$style_red_bg: #f63049;
+$style_red_text: #791b3f;
+$style_red_icon: #ffffff;
+$style_red_fr: #d02752;
+$style_red_header: #ea334b;
+
+$style_blue_bg: #6e8cfb;
+$style_blue_text: #27326f;
+$style_blue_icon: #ffffff;
+$style_blue_fr: #636ccb;
+$style_blue_header: #6886f5;
+
+html.template.pdf,
+.html.pdf {
+    background-color: $background_color;
+    body {
+        background-color: $background_color;
+    }
+}
+
+html.template.pdf.dark,
+.html.pdf.dark {
+    background-color: $style_dark_bg;
+    body.dark {
+        background-color: $style_dark_bg;
+    }
+}
+body.template.dark,
+.body.dark {
+    background-color: $style_dark_bg;
+    color: $style_dark_text;
+    a {
+        color: $style_dark_text;
+    }
+    p {
+        color: $style_dark_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_dark_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_dark_text;
+        &::marker {
+            color: $style_dark_text;
+        }
+    }
+    .page {
+        .header-layout {
+            background-color: $style_dark_accent;
+            .section {
+                &.header-left,
+                &.header-middle,
+                &.header-right {
+                    .widget {
+                        &.image figure {
+                            background-color: $style_dark_accent;
+                        }
+                    }
+                }
+            }
+        }
+        .header-bg path {
+            fill: $style_dark_accent;
+        }
+        background-color: $style_dark_bg;
+        color: $style_dark_text;
+        p {
+            color: $style_dark_text;
+        }
+        a {
+            color: $style_dark_text;
+        }
+        .widget {
+            > h3,
+            .h3 {
+                color: $orange;
+            }
+            &.fullname {
+                color: $style_dark_text;
+            }
+            &.job_title {
+                color: $style_dark_border;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background-color: $style_dark_icon;
+                            svg {
+                                color: $style_dark_accent;
+                                stroke: $style_dark_accent;
+                                fill: $style_dark_accent;
+                            }
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_dark_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_dark_fr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_dark_icon;
+                            svg {
+                                color: $style_dark_accent;
+                                stroke: $style_dark_accent;
+                                fill: $style_dark_accent;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    .reference_item {
+                        svg {
+                            color: $style_dark_text;
+                            stroke: $style_dark_text;
+                            fill: $style_dark_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.pink,
+.html.pdf.pink {
+    background-color: $style_pink_bg;
+    body.pink {
+        background-color: $style_pink_bg;
+    }
+}
+body.template.pink,
+.body.pink {
+    background-color: $style_pink_bg;
+    color: $style_pink_text;
+    a {
+        color: $style_pink_text;
+    }
+    p {
+        color: $style_pink_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_pink_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_pink_text;
+        &::marker {
+            color: $style_pink_text;
+        }
+    }
+    .page {
+        .header-layout {
+            background-color: $style_pink_header;
+            .section {
+                &.header-left,
+                &.header-middle,
+                &.header-right {
+                    .widget {
+                        &.image figure {
+                            background-color: $style_pink_header;
+                        }
+                    }
+                }
+            }
+        }
+        .header-bg path {
+            fill: $style_pink_header;
+        }
+        background-color: $style_pink_bg;
+        color: $style_pink_text;
+        p {
+            color: $style_pink_text;
+        }
+        a {
+            color: $style_pink_text;
+        }
+        .widget {
+            > h3,
+            .h3 {
+                color: $style_pink_icon;
+            }
+            &.fullname {
+                color: $style_pink_text;
+            }
+            &.job_title {
+                color: $style_pink_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background-color: $style_pink_accent;
+                            svg {
+                                color: $style_pink_bg;
+                                stroke: $style_pink_bg;
+                                fill: $style_pink_bg;
+                            }
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_pink_icon;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_pink_fr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_pink_accent;
+                            svg {
+                                color: $style_pink_bg;
+                                stroke: $style_pink_bg;
+                                fill: $style_pink_bg;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    .reference_item {
+                        svg {
+                            color: $style_pink_text;
+                            stroke: $style_pink_text;
+                            fill: $style_pink_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.coffee,
+.html.pdf.coffee {
+    background-color: $style_coffee_bg;
+    body.coffee {
+        background-color: $style_coffee_bg;
+    }
+}
+body.template.coffee,
+.body.coffee {
+    background-color: $style_coffee_bg;
+    color: $style_coffee_text;
+    a {
+        color: $style_coffee_text;
+    }
+    p {
+        color: $style_coffee_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_coffee_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_coffee_text;
+        &::marker {
+            color: $style_coffee_text;
+        }
+    }
+    .page {
+        .header-layout {
+            background-color: $style_coffee_header;
+            .section {
+                &.header-left,
+                &.header-middle,
+                &.header-right {
+                    .widget {
+                        &.image figure {
+                            background-color: $style_coffee_header;
+                        }
+                    }
+                }
+            }
+        }
+        .header-bg path {
+            fill: $style_coffee_header;
+        }
+        background-color: $style_coffee_bg;
+        color: $style_coffee_text;
+        p {
+            color: $style_coffee_text;
+        }
+        a {
+            color: $style_coffee_text;
+        }
+        .widget {
+            > h3,
+            .h3 {
+                color: $style_coffee_text;
+            }
+            &.fullname {
+                color: $style_coffee_text;
+            }
+            &.job_title {
+                color: $style_coffee_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background-color: $style_coffee_accent;
+                            svg {
+                                color: $style_coffee_bg;
+                                stroke: $style_coffee_bg;
+                                fill: $style_coffee_bg;
+                            }
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_coffee_accent;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_coffee_fr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_coffee_accent;
+                            svg {
+                                color: $style_coffee_bg;
+                                stroke: $style_coffee_bg;
+                                fill: $style_coffee_bg;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    .reference_item {
+                        svg {
+                            color: $style_coffee_text;
+                            stroke: $style_coffee_text;
+                            fill: $style_coffee_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.tennis,
+.html.pdf.tennis {
+    background-color: $style_tennis_bg;
+    body.tennis {
+        background-color: $style_tennis_bg;
+    }
+}
+body.template.tennis,
+.body.tennis {
+    background-color: $style_tennis_bg;
+    color: $style_tennis_text;
+    a {
+        color: $style_tennis_text;
+    }
+    p {
+        color: $style_tennis_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_tennis_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_tennis_text;
+        &::marker {
+            color: $style_tennis_text;
+        }
+    }
+    .page {
+        .header-layout {
+            background-color: $style_tennis_header;
+            .section {
+                &.header-left,
+                &.header-middle,
+                &.header-right {
+                    .widget {
+                        &.image figure {
+                            background-color: $style_tennis_header;
+                        }
+                    }
+                }
+            }
+        }
+        .header-bg path {
+            fill: $style_tennis_header;
+        }
+        background-color: $style_tennis_bg;
+        color: $style_tennis_text;
+        p {
+            color: $style_tennis_text;
+        }
+        a {
+            color: $style_tennis_text;
+        }
+        .widget {
+            > h3,
+            .h3 {
+                color: $style_tennis_text;
+            }
+            &.fullname {
+                color: $style_tennis_text;
+            }
+            &.job_title {
+                color: $style_tennis_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background-color: $style_tennis_icon;
+                            svg {
+                                color: $style_tennis_text;
+                                stroke: $style_tennis_text;
+                                fill: $style_tennis_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_tennis_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_tennis_fr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_tennis_icon;
+                            svg {
+                                color: $style_tennis_text;
+                                stroke: $style_tennis_text;
+                                fill: $style_tennis_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    .reference_item {
+                        svg {
+                            color: $style_tennis_text;
+                            stroke: $style_tennis_text;
+                            fill: $style_tennis_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.cream,
+.html.pdf.cream {
+    background-color: $style_cream_bg;
+    body.cream {
+        background-color: $style_cream_bg;
+    }
+}
+body.template.cream,
+.body.cream {
+    background-color: $style_cream_bg;
+    color: $style_cream_text;
+    a {
+        color: $style_cream_text;
+    }
+    p {
+        color: $style_cream_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_cream_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_cream_text;
+        &::marker {
+            color: $style_cream_text;
+        }
+    }
+    .page {
+        .header-layout {
+            background-color: $style_cream_header;
+            .section {
+                &.header-left,
+                &.header-middle,
+                &.header-right {
+                    .widget {
+                        &.image figure {
+                            background-color: $style_cream_header;
+                        }
+                    }
+                }
+            }
+        }
+        .header-bg path {
+            fill: $style_cream_header;
+        }
+        background-color: $style_cream_bg;
+        color: $style_cream_text;
+        p {
+            color: $style_cream_text;
+        }
+        a {
+            color: $style_cream_text;
+        }
+        .widget {
+            > h3,
+            .h3 {
+                color: $style_cream_text;
+            }
+            &.fullname {
+                color: $style_cream_text;
+            }
+            &.job_title {
+                color: $style_cream_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background-color: $style_cream_icon;
+                            svg {
+                                color: $style_cream_text;
+                                stroke: $style_cream_text;
+                                fill: $style_cream_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_cream_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_cream_fr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_cream_icon;
+                            svg {
+                                color: $style_cream_text;
+                                stroke: $style_cream_text;
+                                fill: $style_cream_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    .reference_item {
+                        svg {
+                            color: $style_cream_text;
+                            stroke: $style_cream_text;
+                            fill: $style_cream_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.green,
+.html.pdf.green {
+    background-color: $style_green_bg;
+    body.green {
+        background-color: $style_green_bg;
+    }
+}
+body.template.green,
+.body.green {
+    background-color: $style_green_bg;
+    color: $style_green_text;
+    a {
+        color: $style_green_text;
+    }
+    p {
+        color: $style_green_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_green_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_green_text;
+        &::marker {
+            color: $style_green_text;
+        }
+    }
+    .page {
+        .header-layout {
+            background-color: $style_green_header;
+            .section {
+                &.header-left,
+                &.header-middle,
+                &.header-right {
+                    .widget {
+                        &.image figure {
+                            background-color: $style_green_header;
+                        }
+                    }
+                }
+            }
+        }
+        .header-bg path {
+            fill: $style_green_header;
+        }
+        background-color: $style_green_bg;
+        color: $style_green_text;
+        p {
+            color: $style_green_text;
+        }
+        a {
+            color: $style_green_text;
+        }
+        .widget {
+            > h3,
+            .h3 {
+                color: $style_green_text;
+            }
+            &.fullname {
+                color: $style_green_text;
+            }
+            &.job_title {
+                color: $style_green_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background-color: $style_green_icon;
+                            svg {
+                                color: $style_green_text;
+                                stroke: $style_green_text;
+                                fill: $style_green_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_green_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_green_fr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_green_icon;
+                            svg {
+                                color: $style_green_text;
+                                stroke: $style_green_text;
+                                fill: $style_green_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    .reference_item {
+                        svg {
+                            color: $style_green_text;
+                            stroke: $style_green_text;
+                            fill: $style_green_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.red,
+.html.pdf.red {
+    background-color: $style_red_bg;
+    body.red {
+        background-color: $style_red_bg;
+    }
+}
+body.template.red,
+.body.red {
+    background-color: $style_red_bg;
+    color: $style_red_text;
+    a {
+        color: $style_red_text;
+    }
+    p {
+        color: $style_red_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_red_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_red_text;
+        &::marker {
+            color: $style_red_text;
+        }
+    }
+    .page {
+        .header-layout {
+            background-color: $style_red_header;
+            .section {
+                &.header-left,
+                &.header-middle,
+                &.header-right {
+                    .widget {
+                        &.image figure {
+                            background-color: $style_red_header;
+                        }
+                    }
+                }
+            }
+        }
+        .header-bg path {
+            fill: $style_red_header;
+        }
+        background-color: $style_red_bg;
+        color: $style_red_text;
+        p {
+            color: $style_red_text;
+        }
+        a {
+            color: $style_red_text;
+        }
+        .widget {
+            > h3,
+            .h3 {
+                color: $style_red_text;
+            }
+            &.fullname {
+                color: $style_red_text;
+            }
+            &.job_title {
+                color: $style_red_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background-color: $style_red_fr;
+                            svg {
+                                color: $style_red_text;
+                                stroke: $style_red_text;
+                                fill: $style_red_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_red_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_red_fr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_red_fr;
+                            svg {
+                                color: $style_red_text;
+                                stroke: $style_red_text;
+                                fill: $style_red_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    .reference_item {
+                        svg {
+                            color: $style_red_text;
+                            stroke: $style_red_text;
+                            fill: $style_red_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.blue,
+.html.pdf.blue {
+    background-color: $style_blue_bg;
+    body.blue {
+        background-color: $style_blue_bg;
+    }
+}
+body.template.blue,
+.body.blue {
+    background-color: $style_blue_bg;
+    color: $style_blue_text;
+    a {
+        color: $style_blue_text;
+    }
+    p {
+        color: $style_blue_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_blue_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_blue_text;
+        &::marker {
+            color: $style_blue_text;
+        }
+    }
+    .page {
+        .header-layout {
+            background-color: $style_blue_header;
+            .section {
+                &.header-left,
+                &.header-middle,
+                &.header-right {
+                    .widget {
+                        &.image figure {
+                            background-color: $style_blue_header;
+                        }
+                    }
+                }
+            }
+        }
+        .header-bg path {
+            fill: $style_blue_header;
+        }
+        background-color: $style_blue_bg;
+        color: $style_blue_text;
+        p {
+            color: $style_blue_text;
+        }
+        a {
+            color: $style_blue_text;
+        }
+        .widget {
+            > h3,
+            .h3 {
+                color: $style_blue_text;
+            }
+            &.fullname {
+                color: $style_blue_text;
+            }
+            &.job_title {
+                color: $style_blue_text;
+            }
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            background-color: $style_blue_fr;
+                            svg {
+                                color: $style_blue_text;
+                                stroke: $style_blue_text;
+                                fill: $style_blue_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_blue_text;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_blue_fr;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        i {
+                            background-color: $style_blue_fr;
+                            svg {
+                                color: $style_blue_text;
+                                stroke: $style_blue_text;
+                                fill: $style_blue_text;
+                            }
+                        }
+                    }
+                }
+            }
+            &.references {
+                .references {
+                    .reference_item {
+                        svg {
+                            color: $style_blue_text;
+                            stroke: $style_blue_text;
+                            fill: $style_blue_text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

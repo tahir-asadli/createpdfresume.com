@@ -1,0 +1,777 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+/* ==========================================================================
+[Layouts]
+========================================================================== */
+html.template,
+.html.template {
+    .main-layout {
+        position: relative;
+        display: grid;
+        grid-template-columns: 273px auto;
+        gap: 20px;
+    }
+
+    /* ==========================================================================
+[Widgets]
+========================================================================== */
+    .widget {
+        padding: 15px 0 10px 0;
+
+        &.fullname {
+            margin: 0;
+            padding: 0;
+            font-size: 45px;
+            color: var(--color-heading-1);
+            line-height: 1.1;
+            font-weight: 500;
+            span {
+                color: var(--color-heading-1);
+                line-height: 1.1;
+            }
+        }
+
+        &.slogan {
+            margin: 0;
+            padding: 0;
+            font-size: 35px;
+            font-weight: 300;
+            line-height: 1.2;
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+
+        &.job_title {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        &.about {
+            position: relative;
+            p {
+                margin: 0;
+            }
+            > span {
+                // position: absolute;
+                // background: var(--color-background);
+                // // color: var(--color-text-secondary);
+                // font-size: 12px;
+                // padding: 0 10px;
+                // text-transform: uppercase;
+                // left: -42px;
+                // writing-mode: vertical-rl;
+                // height: 100%;
+                // top: 0;
+                // bottom: 0;
+                // margin: auto;
+                // text-align: center;
+                // &:empty {
+                //     display: none;
+                // }
+            }
+        }
+
+        &.web,
+        &.address,
+        &.email,
+        &.phone {
+            padding: 0;
+            margin: 0 0 5px 0;
+            display: block;
+        }
+        &.contacts {
+            .contacts {
+                color: var(--color-text-primary);
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 5px;
+                > * {
+                    min-width: 0;
+                }
+                .contact_item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    svg {
+                        width: 15px;
+                    }
+                }
+            }
+        }
+
+        &.image {
+            img {
+                width: 160px;
+                height: 160px;
+                border-radius: 160px;
+            }
+        }
+
+        &.skills {
+            .skills {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                > * {
+                    min-width: 0;
+                }
+                .skill_item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
+        }
+
+        &.languages {
+            .languages {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-top: 15px;
+                > * {
+                    min-width: 0;
+                }
+                .language_item {
+                    display: flex;
+                    align-items: center;
+                    line-height: 1;
+                    justify-content: space-between;
+                    .progress {
+                        max-width: 200px;
+                        width: 100%;
+                        background-color: var(--color-progress-bg);
+                        span {
+                            display: block;
+                            height: 6px;
+                            background: var(--color-progress-fr);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.experiences {
+            .experiences {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                .experience_item {
+                    padding: 10px 0;
+                    position: relative;
+                    .experience_years {
+                        font-family: "Playfair Display", serif;
+                        font-size: 14px;
+                        margin: 0 0 5px 0;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        &.educations {
+            .educations {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                .education_item {
+                    position: relative;
+                    padding: 10px 0;
+                    .education_years {
+                        background: var(--color-background);
+                        font-family: "Playfair Display", serif;
+                        font-size: 14px;
+                        margin: 0 0 5px 0;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        &.socials {
+            .socials {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                > * {
+                    min-width: 0;
+                }
+                .social_item {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    i {
+                        flex-shrink: 0;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--color-icon-bg);
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 30px;
+                        svg {
+                            fill: white;
+                            display: inline-block;
+                            width: 50%;
+                            height: 50%;
+                        }
+                    }
+                    > div,
+                    > a {
+                        display: flex;
+                        flex-direction: column;
+                        > span {
+                            &:first-child {
+                                font-size: 13px;
+                                font-style: italic;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.projects {
+            .projects {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .project_item {
+                    position: relative;
+                    > .project_year {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.awards {
+            .awards {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .award_item {
+                    position: relative;
+                    > .award_year {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.certificates {
+            .certificates {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .certificate_item {
+                    position: relative;
+                    .certificate_year {
+                        font-style: normal;
+                    }
+                    > .certificate_year {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.hobbies {
+            .hobbies {
+                margin-top: 15px;
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                .hobby_item {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 5px;
+                    svg {
+                        width: 32px;
+                        height: 32px;
+                        color: var(--color-hobbie-color);
+                    }
+                    span {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        &.references {
+            .references {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                row-gap: 20px;
+                > * {
+                    min-width: 0;
+                }
+                .reference_item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1px;
+                    .reference_name {
+                    }
+                    .reference_job_title {
+                    }
+                    .reference_job_phone,
+                    .reference_job_email {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        svg {
+                            width: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ==========================================================================
+[Sections]
+========================================================================== */
+
+    .section {
+        &.sidebar {
+            position: relative;
+            padding-left: 30px;
+            padding-right: 30px;
+            h3 {
+                font-size: 15px;
+                font-weight: 500;
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+            .widget {
+                > h3 {
+                    font-size: 15px;
+                    font-weight: 500;
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+                }
+                &.languages {
+                    .languages {
+                        .language_item {
+                            .progress {
+                                max-width: 100px;
+                            }
+                        }
+                    }
+                }
+
+                &.contacts {
+                    .contacts {
+                        grid-template-columns: 1fr;
+                        gap: 10px;
+                    }
+                }
+                &.about {
+                    display: flex;
+                    flex-direction: column;
+                    > p {
+                        order: 1;
+                        margin: 0 0 0 0;
+                    }
+                    > span.about_title {
+                        order: 0;
+                        position: static;
+                        writing-mode: initial;
+                        font-size: 15px;
+                        font-weight: 500;
+                        padding: 0;
+                        text-transform: initial;
+                        text-align: left;
+                        display: block;
+                        margin: 0 0 0 0;
+                    }
+                }
+                &.socials {
+                    .socials {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.skills {
+                    .skills {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.languages {
+                    .languages {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.awards {
+                    .award_item {
+                        .award_title {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &.references {
+                    .references {
+                        grid-template-columns: 1fr;
+                        .reference_item {
+                            .reference_name {
+                            }
+                        }
+                    }
+                }
+                &.educations {
+                    .educations {
+                        gap: 10px;
+                        .education_item {
+                            padding: 0 0;
+                            .education_years {
+                                position: static;
+                                writing-mode: initial;
+                                text-align: left;
+                                height: initial;
+                                min-height: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+                &.experiences {
+                    .experiences {
+                        gap: 10px;
+                        .experience_item {
+                            padding: 0 0;
+                            .experience_years {
+                                position: static;
+                                writing-mode: initial;
+                                text-align: left;
+                                height: initial;
+                                min-height: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+
+                &.hobbies {
+                    .hobbies {
+                        gap: 10px;
+                        flex-direction: column;
+                        .hobby_item {
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 10px;
+                            svg {
+                                width: 22px;
+                                height: 22px;
+                            }
+                            span {
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+            h4 {
+                font-size: 14px;
+            }
+            &:before,
+            &:after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                top: 0;
+                height: 100%;
+                width: 3px;
+                opacity: 0.7;
+                // background-color: var(--color-border);
+                // mask-size: 2px;
+                // mask-repeat: repeat-y;
+                // mask-image: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 8' width='3' height='8'%3E%3Cstyle%3E .s0 %7B opacity: .7;fill: %23a7a9ab %7D %3C/style%3E%3Cpath id='Shape 1' fill-rule='evenodd' class='s0' d='m1.5 3c-0.83 0-1.5-0.67-1.5-1.5 0-0.83 0.67-1.5 1.5-1.5 0.83 0 1.5 0.67 1.5 1.5 0 0.83-0.67 1.5-1.5 1.5z'/%3E%3C/svg%3E");
+
+                background-image: url("data:image/svg+xml,%3Csvg version='1.2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 8' width='3' height='8'%3E%3Cstyle%3E .s0 %7B opacity: .7;fill: %23a7a9ab %7D %3C/style%3E%3Cpath id='Shape 1' fill-rule='evenodd' class='s0' d='m1.5 3c-0.83 0-1.5-0.67-1.5-1.5 0-0.83 0.67-1.5 1.5-1.5 0.83 0 1.5 0.67 1.5 1.5 0 0.83-0.67 1.5-1.5 1.5z'/%3E%3C/svg%3E");
+                background-repeat: repeat-y;
+                background-size: 2px;
+            }
+            &:before {
+                right: 0;
+            }
+
+            &:after {
+                right: -27px;
+            }
+        }
+
+        &.content {
+            padding-left: 30px;
+            max-width: 470px;
+            .widget {
+                &.experiences {
+                    .experiences {
+                        .experience_item {
+                            &.format-year {
+                                min-height: 120px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                .experience_years {
+                                    text-align: center;
+                                    font-size: 11px;
+                                    letter-spacing: 1.9px;
+                                    text-transform: uppercase;
+                                    font-family: Poppins, sans-serif;
+                                    position: absolute;
+                                    left: -42px;
+                                    writing-mode: vertical-rl;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    padding: 0 10px;
+                                    min-height: 120px;
+                                    color: var(--color-text-secondary);
+                                    span {
+                                        background: var(--color-background);
+                                        &:first-child {
+                                            padding-top: 10px;
+                                        }
+                                        &:last-child {
+                                            padding-bottom: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.educations {
+                    .educations {
+                        .education_item {
+                            &.format-year {
+                                min-height: 120px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                .education_years {
+                                    letter-spacing: 1.9px;
+                                    font-size: 11px;
+                                    font-family: Poppins, sans-serif;
+                                    text-transform: uppercase;
+                                    position: absolute;
+                                    left: -42px;
+                                    writing-mode: vertical-rl;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    padding: 0 10px;
+                                    min-height: 120px;
+                                    text-align: center;
+                                    color: var(--color-text-secondary);
+                                    span {
+                                        background: var(--color-background);
+                                        &:first-child {
+                                            padding-top: 10px;
+                                        }
+                                        &:last-child {
+                                            padding-bottom: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.projects {
+                    .projects {
+                        .project_item {
+                            &.format-year,
+                            &.format-month,
+                            &.format-monthname {
+                                min-height: 70px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                .project_name {
+                                    > span:after {
+                                        display: none;
+                                    }
+                                    .project_year {
+                                        display: none;
+                                    }
+                                }
+                                > .project_year {
+                                    text-align: center;
+                                    display: inline-block;
+                                    font-size: 11px;
+                                    letter-spacing: 1.9px;
+                                    text-transform: uppercase;
+                                    font-family: Poppins, sans-serif;
+                                    position: absolute;
+                                    left: -42px;
+                                    writing-mode: vertical-rl;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    padding: 0 10px;
+                                    min-height: 120px;
+                                    color: var(--color-text-secondary);
+                                    span {
+                                        background: var(--color-background);
+                                        &:first-child {
+                                            padding-top: 10px;
+                                        }
+                                        &:last-child {
+                                            padding-bottom: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.awards {
+                    .awards {
+                        .award_item {
+                            &.format-year,
+                            &.format-month,
+                            &.format-monthname {
+                                min-height: 70px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                .award_title {
+                                    > span:after {
+                                        display: none;
+                                    }
+                                    .award_year {
+                                        display: none;
+                                    }
+                                }
+                                > .award_year {
+                                    text-align: center;
+                                    display: inline-block;
+                                    font-size: 11px;
+                                    letter-spacing: 1.9px;
+                                    text-transform: uppercase;
+                                    font-family: Poppins, sans-serif;
+                                    position: absolute;
+                                    left: -42px;
+                                    writing-mode: vertical-rl;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    padding: 0 10px;
+                                    min-height: 120px;
+                                    color: var(--color-text-secondary);
+                                    span {
+                                        background: var(--color-background);
+                                        &:first-child {
+                                            padding-top: 10px;
+                                        }
+                                        &:last-child {
+                                            padding-bottom: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.certificates {
+                    .certificates {
+                        .certificate_item {
+                            &.format-year,
+                            &.format-month,
+                            &.format-monthname {
+                                min-height: 70px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                h5.has-children {
+                                    > span:after {
+                                        display: none;
+                                    }
+                                    .certificate_year {
+                                        display: none;
+                                    }
+                                }
+                                > .certificate_year {
+                                    text-align: center;
+                                    display: inline-block;
+                                    font-size: 11px;
+                                    letter-spacing: 1.9px;
+                                    text-transform: uppercase;
+                                    font-family: Poppins, sans-serif;
+                                    position: absolute;
+                                    left: -42px;
+                                    writing-mode: vertical-rl;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    padding: 0 10px;
+                                    min-height: 120px;
+                                    color: var(--color-text-secondary);
+                                    span {
+                                        background: var(--color-background);
+                                        &:first-child {
+                                            padding-top: 10px;
+                                        }
+                                        &:last-child {
+                                            padding-bottom: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.about {
+                    position: relative;
+                    padding: 10px 0;
+                    p {
+                        margin: 0;
+                    }
+                    > span {
+                        position: absolute;
+                        background: var(--color-background);
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        left: -33px;
+                        writing-mode: vertical-rl;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        text-align: center;
+                        display: inline-block;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        &:empty {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

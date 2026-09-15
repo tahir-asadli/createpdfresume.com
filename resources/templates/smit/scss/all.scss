@@ -1,0 +1,18 @@
+@use "./partials/_colors" as *;
+@use "./partials/_general" as *;
+@use "./partials/_widgets" as *;
+@use "./partials/_styles" as *;
+* {
+    box-sizing: border-box;
+}
+
+html.template,
+.html,
+body.template,
+.body {
+    margin: 0;
+    background: $background_color;
+    .page {
+        background-color: $background_color;
+    }
+}

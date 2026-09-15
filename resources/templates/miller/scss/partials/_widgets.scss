@@ -1,0 +1,504 @@
+@use "colors" as *;
+/* ==========================================================================
+[Layouts]
+========================================================================== */
+html.template,
+.html.template {
+    .main-layout,
+    .top-layout {
+        display: grid;
+        gap: 30px;
+        row-gap: 0;
+        > * {
+            min-width: 0;
+        }
+    }
+    .main-layout {
+        grid-template-columns: 3fr 4fr;
+    }
+    .top-layout {
+        grid-template-columns: auto 200px;
+    }
+
+    .page {
+        > * {
+            padding: 0 20px 0 20px;
+            &:first-child {
+                padding: 20px 20px 0 20px;
+            }
+        }
+    }
+
+    /* ==========================================================================
+[Widgets]
+========================================================================== */
+    .widget {
+        padding: 5px 0 20px 0;
+        > h3,
+        &.h3 {
+            font-size: 23px;
+            border-bottom: solid 2px $black;
+            padding-bottom: 5px;
+        }
+        &.fullname {
+            margin: 0;
+            line-height: 1;
+            span {
+                // display: block;
+                line-height: 60px;
+            }
+            font-size: 75px;
+        }
+        &.job_title {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 300;
+            &.bold {
+                font-weight: bold;
+            }
+            line-height: 30px;
+        }
+        &.slogan {
+            margin: 0;
+            font-size: 30px;
+            border: none;
+            line-height: 1;
+        }
+        &.web,
+        &.address,
+        &.email,
+        &.phone {
+            margin: 0 0 0 0;
+            padding: 0 0 5px 0 !important;
+            display: block;
+        }
+        &.contacts {
+            .contacts {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                .contact_item {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.2px;
+                    line-height: 1.4;
+                    font-size: 11px;
+                    i {
+                        flex-shrink: 0;
+                        border-radius: 4px;
+                        border: solid 1.5px $black;
+                        padding: 4px;
+                        display: flex;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            color: $black;
+                            fill: $black;
+                            stroke: $black;
+                        }
+                    }
+                }
+            }
+        }
+        &.image {
+            figure {
+                position: relative;
+                display: inline-block;
+                width: 170px;
+                height: 210px;
+                &.radius-5 {
+                    &:after {
+                        border-radius: 5px;
+                    }
+                }
+                &.radius-9999 {
+                    &:after {
+                        border-radius: 9999px;
+                    }
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                // opacity: 0.85;
+                // mix-blend-mode: screen;
+            }
+        }
+
+        &.skills {
+            .skills {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-top: 15px;
+                > * {
+                    min-width: 0;
+                }
+                .skill_item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    .progress {
+                        width: 100%;
+                        position: relative;
+                        background-color: $black;
+                        height: 2px;
+                        span {
+                            display: block;
+                            height: 6px;
+                            background-color: $black;
+                            position: absolute;
+                            top: -2px;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.languages {
+            .languages {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-top: 15px;
+                > * {
+                    min-width: 0;
+                }
+                .language_item {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    .progress {
+                        width: 100%;
+                        position: relative;
+                        background-color: $black;
+                        height: 2px;
+                        max-width: 200px;
+                        margin-left: auto;
+                        span {
+                            display: block;
+                            height: 6px;
+                            background-color: $black;
+                            position: absolute;
+                            top: -2px;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &.experiences {
+            .experiences {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+                .experience_item {
+                    position: relative;
+                    min-width: 0;
+                    // .experience_position {
+                    //     display: flex;
+                    //     justify-content: space-between;
+                    //     font-size: 16px;
+                    //     position: relative;
+                    // }
+                    // .experience_location {
+                    //     font-size: 14px;
+                    //     font-weight: 500;
+                    // }
+                    .experience_years {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+        &.educations {
+            .educations {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+                .education_item {
+                    position: relative;
+                    .education_years {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        &.socials {
+            .socials {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 15px;
+                .social_item {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    font-size: 11px;
+                    i {
+                        flex-shrink: 0;
+                        border-radius: 4px;
+                        border: solid 1.5px $black;
+                        display: flex;
+                        padding: 4px;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            fill: $black;
+                            stroke: $black;
+                            color: $black;
+                        }
+                    }
+                    > div {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+        &.projects {
+            .projects {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 3fr 4fr;
+                gap: 20px;
+                .project_item {
+                    h5.project_year {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        &.awards {
+            .awards {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 15px;
+                .award_item {
+                    position: relative;
+                    .award_year {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        &.certificates {
+            .certificates {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 15px;
+                .certificate_item {
+                    position: relative;
+                    .certificate_name {
+                        em {
+                            font-style: normal;
+                        }
+                    }
+                    .certificate_year {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: white;
+                        background: $black;
+                        padding: 1px 5px;
+                        border-radius: 3px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        &.hobbies {
+            .hobbies {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 20px;
+                row-gap: 10px;
+                margin-top: 15px;
+                background: $black;
+                border-radius: 5px;
+                padding: 10px;
+                .hobby_item {
+                    display: flex;
+                    min-width: 50px;
+                    align-items: center;
+                    color: $wheat;
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        color: $wheat;
+                        svg {
+                            width: 20px;
+                            fill: $wheat;
+                            stroke: $wheat;
+                            color: $wheat;
+                        }
+                    }
+                }
+            }
+        }
+        &.references {
+            .references {
+                margin-top: 15px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                .reference_item {
+                    position: relative;
+                    padding-bottom: 5px;
+                    .reference_job_title {
+                        margin-bottom: 3px;
+                    }
+                    .reference_job_phone,
+                    .reference_job_email {
+                        display: inline-flex;
+                        align-items: center;
+                    }
+                    svg {
+                        width: 14px;
+                        color: $black;
+                        fill: $black;
+                        stroke: $black;
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ==========================================================================
+[Sections]
+========================================================================== */
+
+    .section {
+        &.half {
+            .widget {
+                &.contacts {
+                    .contacts {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.languages {
+                    .languages {
+                        .language_item {
+                            .progress {
+                                max-width: 150px;
+                            }
+                        }
+                    }
+                }
+                &.socials {
+                    .socials {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.experiences {
+                    .experiences {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.educations {
+                    .educations {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.projects {
+                    .projects {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.awards {
+                    .awards {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.certificates {
+                    .certificates {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.references {
+                    .references {
+                        gap: 10px;
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+        &.header-left {
+            .widget {
+                &.socials {
+                    .socials {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+            }
+        }
+        &.header-right {
+            .widget {
+                &.hobbies {
+                    .hobbies {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+        &.header-left,
+        &.header-right {
+            .widget {
+                padding: 0 0 10px 0;
+            }
+        }
+        &.header {
+            grid-column: 1/-1;
+            .padding {
+                margin: 0 0 5px 0;
+            }
+        }
+        &.footer-left {
+            .widget {
+            }
+        }
+        &.footer-right {
+            .widget {
+                &.contacts {
+                    .contacts {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &.socials {
+                    .socials {
+                        grid-template-columns: 1fr 1fr;
+                    }
+                }
+            }
+        }
+        &.footer-left,
+        &.footer-right {
+            .widget {
+                &.hobbies {
+                    .hobbies {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}

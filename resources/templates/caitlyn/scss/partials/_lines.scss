@@ -1,0 +1,194 @@
+.widget {
+    &.fullname {
+        > div.lines-container {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            > div.lines {
+                position: absolute;
+                pointer-events: none;
+                top: 0;
+                width: 300%;
+                height: 300%;
+                rotate: -64deg;
+                transform-origin: top left;
+                z-index: 0;
+                left: -120px;
+                em {
+                    position: absolute;
+                    display: block;
+                    width: 1px;
+                    height: 1000px;
+                    background: #ddd;
+                    pointer-events: none;
+                    @for $i from 1 through 80 {
+                        &:nth-child(#{$i}) {
+                            left: #{$i * 5}px;
+                        }
+                        // ul:nth-child(3n + #{$i * 3}) {
+                        //     background-color: lighten($base-color, $i * 5%);
+                        // }
+                    }
+
+                    // &:nth-child(1) {
+                    //     left: 10px;
+                    // }
+                    // &:nth-child(2) {
+                    //     left: 20px;
+                    // }
+                    // &:nth-child(3) {
+                    //     left: 30px;
+                    // }
+                    // &:nth-child(4) {
+                    //     left: 40px;
+                    // }
+                    // &:nth-child(5) {
+                    //     left: 50px;
+                    // }
+                    // &:nth-child(6) {
+                    //     left: 60px;
+                    // }
+                    // &:nth-child(7) {
+                    //     left: 70px;
+                    // }
+                    // &:nth-child(8) {
+                    //     left: 80px;
+                    // }
+                    // &:nth-child(9) {
+                    //     left: 90px;
+                    // }
+                    // &:nth-child(10) {
+                    //     left: 100px;
+                    // }
+                    // &:nth-child(11) {
+                    //     left: 110px;
+                    // }
+                    // &:nth-child(12) {
+                    //     left: 120px;
+                    // }
+                    // &:nth-child(13) {
+                    //     left: 130px;
+                    // }
+                    // &:nth-child(14) {
+                    //     left: 140px;
+                    // }
+                    // &:nth-child(15) {
+                    //     left: 150px;
+                    // }
+                    // &:nth-child(16) {
+                    //     left: 160px;
+                    // }
+                    // &:nth-child(17) {
+                    //     left: 170px;
+                    // }
+                    // &:nth-child(18) {
+                    //     left: 180px;
+                    // }
+                    // &:nth-child(19) {
+                    //     left: 190px;
+                    // }
+                    // &:nth-child(20) {
+                    //     left: 200px;
+                    // }
+                    // &:nth-child(21) {
+                    //     left: 210px;
+                    // }
+                    // &:nth-child(22) {
+                    //     left: 220px;
+                    // }
+                    // &:nth-child(23) {
+                    //     left: 230px;
+                    // }
+                    // &:nth-child(24) {
+                    //     left: 240px;
+                    // }
+                    // &:nth-child(25) {
+                    //     left: 250px;
+                    // }
+                    // &:nth-child(26) {
+                    //     left: 260px;
+                    // }
+                    // &:nth-child(27) {
+                    //     left: 270px;
+                    // }
+                    // &:nth-child(28) {
+                    //     left: 280px;
+                    // }
+                    // &:nth-child(29) {
+                    //     left: 290px;
+                    // }
+                    // &:nth-child(30) {
+                    //     left: 300px;
+                    // }
+                    // &:nth-child(31) {
+                    //     left: 310px;
+                    // }
+                    // &:nth-child(32) {
+                    //     left: 320px;
+                    // }
+                    // &:nth-child(33) {
+                    //     left: 330px;
+                    // }
+                    // &:nth-child(34) {
+                    //     left: 340px;
+                    // }
+                    // &:nth-child(35) {
+                    //     left: 350px;
+                    // }
+                    // &:nth-child(36) {
+                    //     left: 360px;
+                    // }
+                    // &:nth-child(37) {
+                    //     left: 370px;
+                    // }
+                    // &:nth-child(38) {
+                    //     left: 380px;
+                    // }
+                    // &:nth-child(39) {
+                    //     left: 390px;
+                    // }
+                    // &:nth-child(40) {
+                    //     left: 400px;
+                    // }
+                    // &:nth-child(41) {
+                    //     left: 410px;
+                    // }
+                    // &:nth-child(42) {
+                    //     left: 420px;
+                    // }
+                    // &:nth-child(43) {
+                    //     left: 430px;
+                    // }
+                    // &:nth-child(44) {
+                    //     left: 0;
+                    // }
+                    // &:nth-child(45) {
+                    //     left: -10px;
+                    // }
+                    // &:nth-child(46) {
+                    //     left: -20px;
+                    // }
+                    // &:nth-child(47) {
+                    //     left: -30px;
+                    // }
+                    // &:nth-child(48) {
+                    //     left: -40px;
+                    // }
+                    // &:nth-child(49) {
+                    //     left: -50px;
+                    // }
+                    // &:nth-child(50) {
+                    //     left: -60px;
+                    // }
+                    // &:nth-child(51) {
+                    //     left: -70px;
+                    // }
+                }
+            }
+        }
+    }
+}

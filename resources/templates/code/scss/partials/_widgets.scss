@@ -1,0 +1,265 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+/* ==========================================================================
+[Layouts]
+========================================================================== */
+html.template,
+.html.template {
+    .main-layout {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        gap: 30px;
+        row-gap: 0;
+        > * {
+            min-width: 0;
+        }
+    }
+
+    .page {
+        > * {
+            padding: 40px;
+        }
+    }
+
+    /* ==========================================================================
+[Widgets]
+========================================================================== */
+    .widget {
+        padding: 0 0 10px 0;
+        > h3 {
+            text-transform: uppercase;
+            letter-spacing: -0.3px;
+        }
+        h4,
+        h5 {
+            font-size: 16px;
+        }
+        h4 {
+            font-weight: bold;
+        }
+        h5 {
+            font-style: italic;
+        }
+        &.image {
+            figure {
+                position: relative;
+                display: inline-block;
+                width: 170px;
+                height: 170px;
+                &.radius-5 {
+                    &:after {
+                        border-radius: 5px;
+                    }
+                }
+                &.radius-9999 {
+                    &:after {
+                        border-radius: 9999px;
+                    }
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &.fullname {
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+        }
+        &.web,
+        &.phone,
+        &.email,
+        &.address {
+            display: block;
+            margin: 0 0 5px 0;
+        }
+        &.job_title {
+            line-height: 1;
+            margin: 0;
+            font-size: 17px;
+        }
+        &.slogan {
+            font-size: 19px;
+        }
+        &.contacts {
+            .contacts {
+                margin-top: 0;
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+                .contact_item {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 400;
+                    align-items: center;
+                    line-height: 1;
+                }
+            }
+        }
+        &.skills {
+            .skills {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 10px;
+                margin-top: 0;
+                > * {
+                    min-width: 0;
+                }
+                .skill_item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
+        }
+        &.languages {
+            .languages {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 0;
+                > * {
+                    min-width: 0;
+                }
+                .language_item {
+                    display: flex;
+                    align-items: center;
+                    &:after {
+                        content: ", ";
+                    }
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &.socials {
+            .socials {
+                margin-top: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                color: $gray;
+                a {
+                    text-decoration: underline !important;
+                }
+            }
+        }
+        &.experiences {
+            .experiences {
+                display: grid;
+                margin-top: 0;
+                gap: 15px;
+                .experience_item {
+                    position: relative;
+                    min-width: 0;
+                }
+            }
+        }
+
+        &.educations {
+            .educations {
+                margin-top: 0;
+                display: grid;
+                gap: 15px;
+                .education_item {
+                    position: relative;
+                    min-width: 0;
+                }
+            }
+        }
+        &.projects {
+            .projects {
+                margin-top: 0;
+                display: grid;
+                gap: 15px;
+                .project_item {
+                    position: relative;
+                    min-width: 0;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        &.awards {
+            .awards {
+                margin-top: 0;
+                display: grid;
+                gap: 15px;
+                .award_item {
+                    position: relative;
+                    min-width: 0;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        &.certificates {
+            .certificates {
+                margin-top: 0;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 15px;
+                .certificate_item {
+                    position: relative;
+                    min-width: 0;
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+        }
+        &.hobbies {
+            .hobbies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                .hobby_item {
+                    &:after {
+                        content: ", ";
+                    }
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &.references {
+            .references {
+                margin-top: 0;
+                display: grid;
+                gap: 15px;
+                .reference_item {
+                    position: relative;
+                    min-width: 0;
+                    &:last-child {
+                        border: none;
+                    }
+                    &:nth-child(2n) {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ==========================================================================
+[Sections]
+========================================================================== */
+
+    .section {
+        &.sidebar {
+            grid-column: 1/2;
+        }
+        &.content {
+            grid-column: 2/-1;
+        }
+    }
+}

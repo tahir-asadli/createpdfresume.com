@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" class="template {{canvas}} {{style}}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style></style>
+  <style id="global"></style>
+  <style id="view"></style>
+  <title id="title">{{title}}</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const divs = document.querySelectorAll('.has-children');
+      Object.keys(divs).forEach(function (index) {
+        const item = divs[index];
+        let childrenCount = 0;
+        const visibleChildren = Array.from(item.children).filter(
+          function (child) {
+            if (getComputedStyle(child).display == 'none') {
+              delete child.remove();
+            }
+            return getComputedStyle(child).display !== 'none'
+          }
+        );
+        item.classList.add(`has-${visibleChildren.length}-children`)
+      });
+    });
+  </script>
+</head>
+
+<body class="template {{style}}">
+  <div id="page-{{page}}" class="page relative">
+    <div class="top-layout has-children">
+      <div class="section header-left" name="header-left"></div>
+      <div class="section header-right" name="header-right"></div>
+    </div>
+    <div class="main-layout">
+      <div class="section content" name="content">
+        <h1 class="widget fullname" name="fullname">{{fullname}}</h1>
+        <h3 class="widget job_title" name="job_title">{{job_title}}</h3>
+        <h6 name="slogan" class="widget slogan">{{slogan}}</h6>
+        <div class="widget about" name="about">
+          <h3 id="about_title">{{about_title}}</h3>
+          <p id="about_content">{{about_content}}</p>
+        </div>
+        <div class="widget image" name="image">{{image}}</div>
+        <div class="widget contacts" name="contacts">
+          <h3 id="contact_title">{{contact_title}}</h3>
+          <a href="{{contact_url}}" target="_blank" style="color: inherit;text-decoration: none;" class="contact_item">
+            <h5>{{icon}}{{contact_item}}</h5>
+          </a>
+        </div>
+        <div class="widget languages" name="languages">
+          <h3 id="languages_title">{{languages_title}}</h3>
+          <div class="language_item">
+            <h5>{{language_name}}</h5>
+            <div class="progress-container">
+              <div class="progress"><span class="percent{{language_level}}">
+                  <div class="dots">
+                    <div class="dot">&nbsp;</div>
+                    <div class="dot">&nbsp;</div>
+                    <div class="dot">&nbsp;</div>
+                    <div class="dot">&nbsp;</div>
+                    <div class="dot">&nbsp;</div>
+                  </div>
+                </span></div>
+              <div class="dots">
+                <div class="dot">&nbsp;</div>
+                <div class="dot">&nbsp;</div>
+                <div class="dot">&nbsp;</div>
+                <div class="dot">&nbsp;</div>
+                <div class="dot">&nbsp;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="widget skills" name="skills">
+          <h3 id="skills_title">{{skills_title}}</h3>
+          <div class="skill_item">
+            <h5>{{skill_name}}</h5>
+          </div>
+        </div>
+        <div class="widget experiences" name="experiences">
+          <h3 class="section_title" id="experiences_title">{{experiences_title}}</h3>
+          <div class="experience_item">
+            <h4 class="experience_position has-children "><span>{{experience_position}}</span><span class="experience_years has-children cal-icon dash">{{experience_years}}</span></h4>
+            <h5 class="experience_location has-children comma">
+              <span>{{experience_company}}</span><span>{{experience_location}}</span>
+            </h5>
+            <p class="experience_about">{{experience_about}}</p>
+          </div>
+        </div>
+        <div class="widget educations" name="educations">
+          <h3 class="section-title" id="educations_title">{{educations_title}}</h3>
+          <div class="education_item">
+            <h4 class="education_school has-children"><span class="education_field">{{education_school}}</span><span class="education_years has-children cal-icon dash">{{education_years}}</span>
+            </h4>
+            <h5 class="has-children dash">
+              <span class="education_degree">{{education_degree}}</span>
+              <span class="education_field">{{education_field}}</span>
+            </h5>
+            <p class="education_description">{{education_description}}</p>
+          </div>
+        </div>
+        <div class="widget socials" name="socials">
+          <h3 id="socials_title">{{socials_title}}</h3>
+          <a href="{{social_url}}" target="_blank" style="color: inherit;text-decoration: none;" class="social_item">
+            <i class=" {{social_site}}">{{icon}}</i>
+            <h5>
+              <span>{{social_name}}</span>
+            </h5>
+          </a>
+        </div>
+        <div class="widget projects" name="projects">
+          <h3 id="projects_title">{{projects_title}}</h3>
+          <div class="project_item">
+            <h4 class="project_name has-children"><span>{{project_name}}</span>
+              <span class="project_year cal-icon">{{project_year}}</span>
+            </h4>
+            <p class="project_description">{{project_description}}</p>
+            <a target="_blank" href="{{project_url}}" style="color: inherit;text-decoration: none;" class="project_url">{{project_url}}</a>
+          </div>
+        </div>
+        <div class="widget awards" name="awards">
+          <h3 id="awards_title">{{awards_title}}</h3>
+          <div class="award_item">
+            <h4 class="award_title has-children"><span>{{award_name}}</span><span class="award_year cal-icon">{{award_year}}</span></h4>
+            <h5 class="award_organization">{{award_organization}}</h5>
+            <p class="award_description">{{award_description}}</p>
+          </div>
+        </div>
+        <div class="widget certificates" name="certificates">
+          <h3 id="certificates_title" class="font-medium">{{certificates_title}}</h3>
+          <div class="certificate_item">
+            <h4 class="certificate_name has-children"><span>{{certificate_name}}</span><span class="certificate_year cal-icon">{{certificate_year}}</span></h4>
+            <h5 class="certificate_organization">{{certificate_organization}}</h5>
+            <p class="certificate_description">{{certificate_description}}</p>
+          </div>
+        </div>
+        <div class="widget hobbies" name="hobbies">
+          <h3 class="hobbies_title">{{hobbies_title}}</h3>
+          <h5 class="hobby_item">{{icon}}<span>{{hobby_title}}</span></h5>
+        </div>
+        <div class="widget references" name="references">
+          <h3 class="references_title">{{references_title}}</h3>
+          <div class="reference_item">
+            <h4 class="reference_name">{{reference_name}}</h4>
+            <h5 class="reference_job_title">{{reference_position}}</h5>
+            <div class="reference_job_phone">{{phone_icon}}{{reference_phone}}</div>
+            <div class="reference_job_email">{{email_icon}}{{reference_email}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-layout has-children">
+      <div class="section footer-left" name="footer-left">
+      </div>
+      <div class="section footer-right" name="footer-right"></div>
+    </div>
+  </div><!-- .page relative -->
+</body>
+
+</html>

@@ -1,0 +1,836 @@
+/* ==========================================================================
+[Colors]
+========================================================================== */
+@use "colors" as *;
+
+$style_dark_bg: #313131;
+$style_dark_fr: #282828;
+$style_dark_text: #ffffff;
+$style_dark_border: #c4c4c4;
+$style_dark_accent: #6f7071;
+
+$style_pink_bg: #ff69b4;
+$style_pink_fr: #ffffff;
+$style_pink_text: #61212d;
+$style_pink_border: #881951;
+$style_pink_accent: #c83f84;
+
+$style_coffee_bg: #ae7f61;
+$style_coffee_fr: #996849;
+$style_coffee_text: #5a3e2d;
+$style_coffee_border: #5a3e2d;
+$style_coffee_accent: #cc997a;
+
+$style_tennis_bg: #cbe399;
+$style_tennis_fr: #8dc16a;
+$style_tennis_text: #466233;
+$style_tennis_border: #466233;
+$style_tennis_accent: #8dc16a;
+
+$style_cream_bg: #fff39a;
+$style_cream_fr: #dfca2c;
+$style_cream_text: #2350ab;
+$style_cream_border: #2350ab;
+$style_cream_accent: #7096e1;
+
+$style_green_bg: #53ae65;
+$style_green_fr: #28933e;
+$style_green_text: #1e5129;
+$style_green_border: #1b4d26;
+$style_green_accent: #94d0a1;
+
+$style_red_bg: #f2003c;
+$style_red_fr: #95220b;
+$style_red_text: #ffffff;
+$style_red_border: #ffffff;
+$style_red_accent: #bd0936;
+
+$style_blue_bg: #1e90ff;
+$style_blue_fr: #b2cbfb;
+$style_blue_text: #191970;
+$style_blue_border: #191970;
+$style_blue_accent: #0d79e1;
+
+html.template.pdf,
+.html.pdf {
+    background-color: $background_color;
+    body {
+        background-color: $background_color;
+    }
+}
+
+html.template.pdf.dark,
+.html.pdf.dark {
+    background-color: $style_dark_bg;
+    body.dark {
+        background-color: $style_dark_bg;
+    }
+}
+body.template.dark,
+.body.dark {
+    background-color: $style_dark_bg;
+    color: $style_dark_text;
+    a {
+        color: $style_dark_text;
+    }
+    p {
+        color: $style_dark_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_dark_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_dark_text;
+        &::marker {
+            color: $style_dark_text;
+        }
+    }
+    .page {
+        background-color: $style_dark_bg;
+        color: $style_dark_text;
+        p {
+            color: $style_dark_text;
+        }
+        a {
+            color: $style_dark_text;
+        }
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                fill: $style_dark_text;
+                                stroke: $style_dark_text;
+                                color: $style_dark_text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_dark_accent;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_dark_border;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        svg {
+                            fill: $style_dark_text;
+                        }
+                        > div {
+                            span {
+                                color: $style_dark_text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.pink,
+.html.pdf.pink {
+    background-color: $style_pink_bg;
+    body.pink {
+        background-color: $style_pink_bg;
+    }
+}
+body.template.pink,
+.body.pink {
+    background-color: $style_pink_bg;
+    color: $style_pink_text;
+    a {
+        color: $style_pink_text;
+    }
+    p {
+        color: $style_pink_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_pink_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_pink_text;
+        &::marker {
+            color: $style_pink_text;
+        }
+    }
+    .page {
+        background-color: $style_pink_bg;
+        color: $style_pink_text;
+        p {
+            color: $style_pink_text;
+        }
+        a {
+            color: $style_pink_text;
+        }
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                fill: $style_pink_text;
+                                stroke: $style_pink_text;
+                                color: $style_pink_text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_pink_border;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_pink_accent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        svg {
+                            fill: $style_pink_text;
+                        }
+                        > div {
+                            span {
+                                color: $style_pink_text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.coffee,
+.html.pdf.coffee {
+    background-color: $style_coffee_bg;
+    body.coffee {
+        background-color: $style_coffee_bg;
+    }
+}
+body.template.coffee,
+.body.coffee {
+    background-color: $style_coffee_bg;
+    color: $style_coffee_text;
+    a {
+        color: $style_coffee_text;
+    }
+    p {
+        color: $style_coffee_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_coffee_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_coffee_text;
+        &::marker {
+            color: $style_coffee_text;
+        }
+    }
+    .page {
+        background-color: $style_coffee_bg;
+        color: $style_coffee_text;
+        p {
+            color: $style_coffee_text;
+        }
+        a {
+            color: $style_coffee_text;
+        }
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                fill: $style_coffee_text;
+                                stroke: $style_coffee_text;
+                                color: $style_coffee_text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_coffee_border;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_coffee_accent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        svg {
+                            fill: $style_coffee_text;
+                        }
+                        > div {
+                            span {
+                                color: $style_coffee_text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.tennis,
+.html.pdf.tennis {
+    background-color: $style_tennis_bg;
+    body.tennis {
+        background-color: $style_tennis_bg;
+    }
+}
+body.template.tennis,
+.body.tennis {
+    background-color: $style_tennis_bg;
+    color: $style_tennis_text;
+    a {
+        color: $style_tennis_text;
+    }
+    p {
+        color: $style_tennis_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_tennis_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_tennis_text;
+        &::marker {
+            color: $style_tennis_text;
+        }
+    }
+    .page {
+        background-color: $style_tennis_bg;
+        color: $style_tennis_text;
+        p {
+            color: $style_tennis_text;
+        }
+        a {
+            color: $style_tennis_text;
+        }
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                fill: $style_tennis_text;
+                                stroke: $style_tennis_text;
+                                color: $style_tennis_text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_tennis_border;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_tennis_accent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        svg {
+                            fill: $style_tennis_text;
+                        }
+                        > div {
+                            span {
+                                color: $style_tennis_text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.cream,
+.html.pdf.cream {
+    background-color: $style_cream_bg;
+    body.cream {
+        background-color: $style_cream_bg;
+    }
+}
+body.template.cream,
+.body.cream {
+    background-color: $style_cream_bg;
+    color: $style_cream_text;
+    a {
+        color: $style_cream_text;
+    }
+    p {
+        color: $style_cream_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_cream_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_cream_text;
+        &::marker {
+            color: $style_cream_text;
+        }
+    }
+    .page {
+        background-color: $style_cream_bg;
+        color: $style_cream_text;
+        p {
+            color: $style_cream_text;
+        }
+        a {
+            color: $style_cream_text;
+        }
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                fill: $style_cream_text;
+                                stroke: $style_cream_text;
+                                color: $style_cream_text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_cream_border;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_cream_accent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        svg {
+                            fill: $style_cream_text;
+                        }
+                        > div {
+                            span {
+                                color: $style_cream_text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.green,
+.html.pdf.green {
+    background-color: $style_green_bg;
+    body.green {
+        background-color: $style_green_bg;
+    }
+}
+body.template.green,
+.body.green {
+    background-color: $style_green_bg;
+    color: $style_green_text;
+    a {
+        color: $style_green_text;
+    }
+    p {
+        color: $style_green_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_green_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_green_text;
+        &::marker {
+            color: $style_green_text;
+        }
+    }
+    .page {
+        background-color: $style_green_bg;
+        color: $style_green_text;
+        p {
+            color: $style_green_text;
+        }
+        a {
+            color: $style_green_text;
+        }
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                fill: $style_green_text;
+                                stroke: $style_green_text;
+                                color: $style_green_text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_green_border;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_green_accent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        svg {
+                            fill: $style_green_text;
+                        }
+                        > div {
+                            span {
+                                color: $style_green_text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.red,
+.html.pdf.red {
+    background-color: $style_red_bg;
+    body.red {
+        background-color: $style_red_bg;
+    }
+}
+body.template.red,
+.body.red {
+    background-color: $style_red_bg;
+    color: $style_red_text;
+    a {
+        color: $style_red_text;
+    }
+    p {
+        color: $style_red_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_red_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_red_text;
+        &::marker {
+            color: $style_red_text;
+        }
+    }
+    .page {
+        background-color: $style_red_bg;
+        color: $style_red_text;
+        p {
+            color: $style_red_text;
+        }
+        a {
+            color: $style_red_text;
+        }
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                fill: $style_red_text;
+                                stroke: $style_red_text;
+                                color: $style_red_text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_red_border;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_red_accent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        svg {
+                            fill: $style_red_text;
+                        }
+                        > div {
+                            span {
+                                color: $style_red_text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+html.template.pdf.blue,
+.html.pdf.blue {
+    background-color: $style_blue_bg;
+    body.blue {
+        background-color: $style_blue_bg;
+    }
+}
+body.template.blue,
+.body.blue {
+    background-color: $style_blue_bg;
+    color: $style_blue_text;
+    a {
+        color: $style_blue_text;
+    }
+    p {
+        color: $style_blue_text;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $style_blue_text;
+    }
+
+    ul li,
+    ol li {
+        color: $style_blue_text;
+        &::marker {
+            color: $style_blue_text;
+        }
+    }
+    .page {
+        background-color: $style_blue_bg;
+        color: $style_blue_text;
+        p {
+            color: $style_blue_text;
+        }
+        a {
+            color: $style_blue_text;
+        }
+        .widget {
+            &.contacts {
+                .contacts {
+                    .contact_item {
+                        i {
+                            svg {
+                                fill: $style_blue_text;
+                                stroke: $style_blue_text;
+                                color: $style_blue_text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.languages {
+                .languages {
+                    .language_item {
+                        .progress-container {
+                            .progress {
+                                span {
+                                    .dots {
+                                        .dot {
+                                            background-color: $style_blue_border;
+                                        }
+                                    }
+                                }
+                            }
+                            .dots {
+                                .dot {
+                                    background: $style_blue_accent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.socials {
+                .socials {
+                    .social_item {
+                        svg {
+                            fill: $style_blue_text;
+                        }
+                        > div {
+                            span {
+                                color: $style_blue_text;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.main-layout {
+    grid-template-columns: 220px auto;
+    display: grid;
+    gap: 30px;
+    row-gap: 0;
+    > * {
+        min-width: 0;
+    }
+}
+
+.page {
+    > * {
+        padding: 0 50px 0 50px;
+        &:first-child {
+            padding: 50px 50px 0 50px;
+        }
+    }
+}
