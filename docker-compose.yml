@@ -5,21 +5,33 @@ services:
       - '8080:80'
     environment:
       DB_HOST: db
-      DB_DATABASE: laravel
-      DB_USERNAME: laravel
-      DB_PASSWORD: secret
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./.env.app:/var/www/html/.env
+      - ./docker/entrypoint.sh:/var/www/html/entrypoint.sh:ro
     depends_on:
       - db
+    networks:
+      - app-network
 
   db:
     image: mysql:8.0
+    command: --sql-mode="NO_ENGINE_SUBSTITUTION"
     environment:
-      MYSQL_DATABASE: laravel
-      MYSQL_USER: laravel
-      MYSQL_PASSWORD: secret
-      MYSQL_ROOT_PASSWORD: rootsecret
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
 
 volumes:
   db_data:

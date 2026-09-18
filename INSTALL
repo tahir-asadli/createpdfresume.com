@@ -1,0 +1,9 @@
+
+# Testing
+docker compose config
+docker compose exec db mysql -u root -p
+
+docker build -t cpr .
+docker compose up -d
+
+fill .env.app file
