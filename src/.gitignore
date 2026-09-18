@@ -27,3 +27,4 @@ yarn-error.log
 /.zed
 /draft.yaml
 /.blueprint
+nohup.out
