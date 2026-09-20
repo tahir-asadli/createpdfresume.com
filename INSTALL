@@ -38,3 +38,6 @@ npm -v # Should print "11.19.0".
 
 npm i
 npm run build
+supervisorctl status
+
+php artisan queue:work
