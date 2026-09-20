@@ -7,3 +7,15 @@ docker build -t cpr .
 docker compose up -d
 
 fill .env.app file
+# libappindicator1
+apt-get update
+apt-get install -y curl wget wget unzip fonts-liberation
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+apt install ./google-chrome-stable_current_amd64.deb
+
+
+copy /storage/app to ./app_data
+
+docker cp ./app_data/. createpdfresumecom-app-1:/var/www/html/storage/app
+
+http://resume.local:8080/

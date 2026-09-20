@@ -1,5 +1,5 @@
 .env.app
-
+app_data
 .src/.phpunit.cache
 .src/node_modules
 .src/public/build

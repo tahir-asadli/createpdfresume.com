@@ -82,6 +82,7 @@ class Resume extends Model
             }
             file_put_contents($page_html_file_path, $page_html_content);
             $command = "google-chrome --no-sandbox --headless --disable-gpu --print-to-pdf=\"$page_pdf_file_path\" $page_html_file_path";
+            info($command);
             $command_result = Process::run($command);
             if ($command_result->successful()) {
                 $pages_pdf_files .= $page_pdf_file_path . ' ';
