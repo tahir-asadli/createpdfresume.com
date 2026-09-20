@@ -6,6 +6,7 @@ docker compose exec db mysql -u root -p
 docker build -t cpr .
 docker compose up -d
 
+docker build --no-cache --progress=plain -t cpr .
 fill .env.app file
 # libappindicator1
 apt-get update

@@ -3,6 +3,9 @@ set -e
 if [ ! -f .env ]; then
     cp .env.app .env
 fi
+
+
+cp -r ./app_data/ /var/www/html/storage/app
 # php artisan key:generate
 # php artisan storage:link
 # php artisan config:cache

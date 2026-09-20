@@ -11,10 +11,14 @@ RUN composer install \
 # --- Stage 2: Frontend assets (skip if no Vite/Mix) ---
 FROM node:20-alpine AS frontend
 WORKDIR /app
-COPY ./src/package*.json ./
+# COPY ./src/package*.json ./
+# RUN npm i
+# COPY ./src/resources/ resources/
+# COPY ./src/vite.config.js ./
+# RUN npm run build
+
+COPY ./src .
 RUN npm i
-COPY ./src/resources/ resources/
-COPY ./src/vite.config.js ./
 RUN npm run build
 
 # --- Stage 3: Final image ---
@@ -40,7 +44,7 @@ COPY --from=frontend /app/public/build ./public/build
 
 RUN mkdir -p /var/www/.chrome-data /var/www/html/storage/app/chrome-tmp \
     && chown -R www-data:www-data /var/www/.chrome-data /var/www/html/storage/app/chrome-tmp
-
+    
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache \
     && php /var/www/html/artisan key:generate \
