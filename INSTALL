@@ -2,6 +2,8 @@
 
 ## First run
 
+
+
 # Testing
 docker compose config
 docker compose exec db mysql -u root -p
@@ -43,5 +45,6 @@ npm -v # Should print "11.19.0".
 npm i
 npm run build
 supervisorctl status
+supervisorctl restart
 
 php artisan queue:work

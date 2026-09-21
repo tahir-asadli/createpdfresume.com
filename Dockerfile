@@ -39,7 +39,7 @@ RUN npm run build
     && chown -R www-data:www-data /var/www/.chrome-data /var/www/html/storage/app/chrome-tmp
     
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
     # && php /var/www/html/artisan key:generate \
     # && php /var/www/html/artisan storage:link \
     # && php /var/www/html/artisan config:cache \
