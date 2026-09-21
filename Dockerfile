@@ -3,7 +3,7 @@ FROM php:8.4-apache
 
 WORKDIR /var/www/html
 COPY ./src .
-COPY ./.env.app .env
+# COPY ./.env.app .env
 # COPY ./app_data/. ./storage/app
 
 
@@ -40,11 +40,11 @@ RUN npm run build
     
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache \
-    && php /var/www/html/artisan key:generate \
-    && php /var/www/html/artisan storage:link \
-    && php /var/www/html/artisan config:cache \
-    && php /var/www/html/artisan route:cache \
-    && php /var/www/html/artisan view:cache 
+    # && php /var/www/html/artisan key:generate \
+    # && php /var/www/html/artisan storage:link \
+    # && php /var/www/html/artisan config:cache \
+    # && php /var/www/html/artisan route:cache \
+    # && php /var/www/html/artisan view:cache 
 
 COPY docker/apache-laravel.conf /etc/apache2/sites-available/000-default.conf
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
