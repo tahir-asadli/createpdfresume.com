@@ -4,7 +4,7 @@ FROM php:8.4-apache
 WORKDIR /var/www/html
 COPY ./src .
 COPY ./.env.app .env
-COPY ./app_data/. ./storage/app
+# COPY ./app_data/. ./storage/app
 
 
 RUN apt-get update && apt-get install -y \
