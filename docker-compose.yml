@@ -1,6 +1,7 @@
 services:
   app:
-    image: cpr
+    image: ghcr.io/tahir-asadli/cpr-docker-image:latest
+    # entrypoint: ['/var/www/html/entrypoint.sh']
     ports:
       - '8080:80'
     environment:
@@ -9,8 +10,6 @@ services:
       DB_USERNAME: ${DB_USERNAME}
       DB_PASSWORD: ${DB_PASSWORD}
     volumes:
-      # - ./.env.app:/var/www/html/.env
-      - ./docker/entrypoint.sh:/var/www/html/entrypoint.sh
       - app_data:/var/www/html/storage/app
     depends_on:
       - db

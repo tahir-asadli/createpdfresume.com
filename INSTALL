@@ -2,23 +2,37 @@
 
 ## First run
 
+there should be ./backup/init.sql file. can be empty file
 
-
-# Testing
-docker compose config
-docker compose exec db mysql -u root -p
-
-docker build -t cpr .
 docker compose up -d
+github passphrase serv
+docker compose pull && docker compose up -d 
 
-docker build --no-cache --progress=plain -t cpr .
-fill .env.app file
+
+docker cp ./app_data/. createpdfresumecom-app-1:/var/www/html/storage/app
+docker cp ./.env.app createpdfresumecom-app-1:/var/www/html/.env
+php artisan key:generate
+php artisan storage:link
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+supervisorctl restart all
+
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+# Testing
+
+docker compose config docker compose exec db mysql -u root -p
+
+docker build -t cpr . docker compose up -d
+or
+docker build -t cpr-docker-image:latest .
+docker tag mekteblinet:1.0.1 ghcr.io/tahir-asadli/cpr-docker-image:latest
+
+docker build --no-cache --progress=plain -t cpr . fill .env.app file
+
 # libappindicator1
-apt-get update
-apt-get install -y curl wget wget unzip fonts-liberation
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-apt install ./google-chrome-stable_current_amd64.deb
 
+apt-get update apt-get install -y curl wget wget unzip fonts-liberation wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb apt install ./google-chrome-stable_current_amd64.deb
 
 copy /storage/app to ./app_data
 
@@ -26,25 +40,26 @@ docker cp ./app_data/. createpdfresumecom-app-1:/var/www/html/storage/app
 
 http://resume.local:8080/
 
-
 # Download and install nvm:
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.7/install.sh | bash
 
 # in lieu of restarting the shell
+
 \. "$HOME/.nvm/nvm.sh"
 
 # Download and install Node.js:
+
 nvm install 24
 
 # Verify the Node.js version:
+
 node -v # Should print "v24.21.0".
 
 # Verify npm version:
+
 npm -v # Should print "11.19.0".
 
-npm i
-npm run build
-supervisorctl status
-supervisorctl restart
+npm i npm run build supervisorctl status supervisorctl restart
 
 php artisan queue:work
