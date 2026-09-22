@@ -2,3 +2,6 @@ services:
   app:
     volumes:
       - ./src/app:/var/www/html/app
+      - ./src/config:/var/www/html/config
+      - ./src/resources:/var/www/html/resources
+      - ./src/routes:/var/www/html/routes

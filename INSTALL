@@ -11,6 +11,12 @@ docker compose pull && docker compose up -d
 
 docker cp ./app_data/. createpdfresumecom-app-1:/var/www/html/storage/app
 docker cp ./.env.app createpdfresumecom-app-1:/var/www/html/.env
+
+
+php artisan config:clear
+php artisan route:clear
+
+
 php artisan key:generate
 php artisan storage:link
 php artisan config:cache
