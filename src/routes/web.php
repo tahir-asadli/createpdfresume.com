@@ -201,7 +201,6 @@ Route::pattern('locale', 'en|az|tr|ru|es');
 Route::prefix('/{locale?}')->group(function () {
 
     Route::get('/', function () {
-        return 'change';
         return view('new.index');
     })->name('home');
 
