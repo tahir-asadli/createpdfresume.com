@@ -28,4 +28,14 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    // server: {
+    //     host: '0.0.0.0', // Allows connections from outside the container
+    //     port: 5173,
+    //     hmr: {
+    //         host: 'resume.local', // Points the browser back to your host machine for live reloading
+    //     },
+    //     watch: {
+    //         usePolling: true, // Necessary if live reloading doesn't work on Windows/WSL2
+    //     },
+    // },
 });

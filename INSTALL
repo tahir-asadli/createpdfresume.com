@@ -25,15 +25,42 @@ php artisan route:cache
 php artisan view:cache
 supervisorctl restart all
 
+# Development
 docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
-# Testing
+docker cp ./.env.app createpdfresumecom-app-1:/var/www/html/.env
+
+docker exec -it createpdfresumecom-app-1 bash
+rm -f bootstrap/cache/*.php && php artisan optimize:clear
+
+php artisan config:clear
+php artisan route:clear
+
+
+# Update
+docker build -t cpr-docker-image:latest .
+docker push ghcr.io/tahir-asadli/cpr-docker-image:latest
+docker compose down
+docker compose pull && docker compose up -d 
+docker cp ./.env.app createpdfresumecom-app-1:/var/www/html/.env
+rm -f bootstrap/cache/*.php && php artisan optimize:clear
+
+
+php artisan key:generate
+php artisan storage:link
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+supervisorctl restart all
+
 
 docker compose config docker compose exec db mysql -u root -p
 
-docker build -t cpr . docker compose up -d
+docker build -t cpr .
+docker compose up -d
 or
 docker build -t cpr-docker-image:latest .
-docker tag mekteblinet:1.0.1 ghcr.io/tahir-asadli/cpr-docker-image:latest
+<!-- docker tag cpr-docker-image ghcr.io/tahir-asadli/cpr-docker-image:latest -->
+docker push ghcr.io/tahir-asadli/cpr-docker-image:latest
 
 docker build --no-cache --progress=plain -t cpr . fill .env.app file
 

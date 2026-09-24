@@ -5,3 +5,4 @@ services:
       - ./src/config:/var/www/html/config
       - ./src/resources:/var/www/html/resources
       - ./src/routes:/var/www/html/routes
+      - ./src/vite.config.js:/var/www/html/vite.config.js
